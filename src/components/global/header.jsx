@@ -9,7 +9,7 @@ function Header( {heading , subtext ,buttonText , img , bgcolor , path} ) {
     const navigate = useNavigate();
 
     return (
-        <Box id={'header'}
+        <Box
             sx={{
                 position: 'relative',
                 minHeight: '100vh',
