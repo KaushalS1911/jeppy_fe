@@ -1,32 +1,48 @@
 import React from 'react';
-import {Box, Container, Typography} from "@mui/material";
-import aboutComponent61 from "../../assets/images/home/About/Iso-and-fssi-certificates-900x900x65x65-02 1.png"
-import aboutComponent62 from "../../assets/images/home/About/Iso-and-fssi-certificates-900x900x65x65-04 1.png"
-import aboutComponent63 from "../../assets/images/home/About/Iso-and-fssi-certificates-900x900x65x65-06 1.png"
+import { Box, Container, Typography, Grid } from "@mui/material";
+import certificate1 from '../../assets/images/aboutus/certificates/167-1671625_halal-certification-services-halal-india-logo (1).png';
+import certificate2 from '../../assets/images/aboutus/certificates/WhatsApp Image 2025-05-06 at 10.55.42 AM.jpeg';
+import certificate3 from '../../assets/images/aboutus/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM (1).jpeg';
+import certificate4 from '../../assets/images/aboutus/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM.jpeg';
+import certificate5 from '../../assets/images/aboutus/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM (2).jpeg';
 
 function OurCertificates() {
     return (
-        <>
-            <Box sx={{padding: "50px 0"}}>
-                <Container maxWidth={"xl"}>
-                    <Box>
-                        <Typography sx={{fontWeight: "700", fontSize: "36px", textAlign: "center", lineHeight: "65px"}}>Our
-                            Certificates</Typography>
-                    </Box>
-                    <Box sx={{display: "flex",gap:{lg:"40px",xs:"40px"},width:"70%",margin:"auto",padding:"20px", justifyContent: "space-between", alignItems: "center"}}>
-                        <Box>
-                            <img src={aboutComponent63} style={{height:"auto",width:"100%"}} alt=""/>
-                        </Box>
-                        <Box>
-                            <img src={aboutComponent62} style={{height:"auto",width:"100%"}} alt=""/>
-                        </Box>
-                        <Box>
-                            <img src={aboutComponent61} style={{height:"auto",width:"100%"}} alt=""/>
-                        </Box>
-                    </Box>
-                </Container>
-            </Box>
-        </>
+        <Box sx={{ padding: "50px 0" }}>
+            <Container maxWidth="xl">
+                <Box>
+                    <Typography
+                        sx={{
+                            fontWeight: 700,
+                            fontSize: "36px",
+                            textAlign: "center",
+                            lineHeight: "65px"
+                        }}
+                    >
+                        Our Certificates
+                    </Typography>
+                </Box>
+                <Grid container spacing={4} justifyContent="center" sx={{ marginTop: 2 }}>
+                    {[certificate1, certificate2, certificate3, certificate4 ,certificate5].map((cert, index) => (
+                        <Grid item size={{xs:12 ,  sm:6 , lg:2}} key={index}>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                }}
+                            >
+                                <img
+                                    src={cert}
+                                    alt={`certificate-${index + 1}`}
+                                    style={{ height: "300px", width: "300px", objectFit: "contain" }}
+                                />
+                            </Box>
+                        </Grid>
+                    ))}
+                </Grid>
+            </Container>
+        </Box>
     );
 }
 

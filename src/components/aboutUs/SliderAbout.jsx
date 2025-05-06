@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef} from 'react';
 import {
     Box,
     Typography,
@@ -73,9 +73,6 @@ function SliderAbout() {
 
     const theme = useTheme();
 
-    useEffect(() => {
-        // Swiper will pick up refs after component mounts
-    }, []);
 
     return (
         <Box sx={{backgroundColor: '#fff',  paddingY:"60px"}}>
@@ -158,7 +155,6 @@ function SliderAbout() {
                             paddingBottom: '60px',
                         }}
                         onSwiper={(swiper) => {
-                            // Connect refs after swiper is initialized
                             setTimeout(() => {
                                 swiper.params.navigation.prevEl = prevRef.current;
                                 swiper.params.navigation.nextEl = nextRef.current;
@@ -206,7 +202,7 @@ function SliderAbout() {
                                 <Box
                                     display="flex"
                                     justifyContent="center"
-                                    sx={{height: '100%'}} // Ensure full slide height
+                                    sx={{height: '100%'}}
                                 >
 
                                     <Card

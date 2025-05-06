@@ -22,8 +22,8 @@ import img4 from '../../assets/images/products/Bacon-Chips-400x400 1.png';
 import img5 from '../../assets/images/products/Button-12mm-400x400 1.png';
 import img6 from '../../assets/images/products/Button-12mm-400x400 2.png';
 import img7 from '../../assets/images/products/Button-14mm-400x400 1.png';
-import img8 from '../../assets/images/products/Crab-400x400 1.png';
-import img9 from '../../assets/images/products/Engine-Rider-400x400 1.png';
+// import img8 from '../../assets/images/products/Crab-400x400 1.png';
+// import img9 from '../../assets/images/products/Engine-Rider-400x400 1.png';
 import img10 from '../../assets/images/products/Flower-Button-400x400 1.png';
 import img11 from '../../assets/images/products/Garlic-400x400 1.png';
 import img12 from '../../assets/images/products/Garlic-Ring-9mm-400x400 1.png';
@@ -42,7 +42,7 @@ const categories = [
     '2D Pellets',
     '3D Pellets',
     'Micro Pellets',
-    'Potato Pallets',
+    // 'Potato Pallets',
     'Protein Pellets',
     'Sheeted Pellets',
     'Veggi Pellets',
@@ -57,8 +57,8 @@ const productData = [
     {id: 5, name: 'PENNE - 4MM', image: img5, category: '3D Pellets'},
     {id: 6, name: 'BASKET 9', image: img6, category: 'Micro Pellets'},
     {id: 7, name: 'BUTTON 12MM', image: img7, category: 'Micro Pellets'},
-    {id: 8, name: 'BUTTON 14MM', image: img8, category: 'Potato Pallets'},
-    {id: 9, name: 'CRAB', image: img9, category: 'Potato Pallets'},
+    // {id: 8, name: 'BUTTON 14MM', image: img8, category: 'Potato Pallets'},
+    // {id: 9, name: 'CRAB', image: img9, category: 'Potato Pallets'},
     {id: 10, name: 'ENGINE RIDER', image: img10, category: 'Protein Pellets'},
     {id: 11, name: 'FLOWER BUTTON', image: img11, category: 'Protein Pellets'},
     {id: 12, name: 'GARLIC RING 9MM', image: img12, category: 'Sheeted Pellets'},

@@ -81,7 +81,7 @@ function HeroSection() {
 
             gsap.set(mainImageLabelRef.current, {
                 opacity: 0,
-                y: -20
+                y: -20,
             });
 
             const tl = gsap.timeline({
@@ -172,7 +172,6 @@ function HeroSection() {
 
     return (
         <Box ref={sectionRef} sx={{ position: 'relative', width: '100%', minHeight: '100vh', overflow: 'hidden' }}>
-            {/* Background */}
             <Box sx={{
                 position: 'absolute',
                 top: 0, left: 0,
@@ -194,7 +193,6 @@ function HeroSection() {
                 }} />
             </Box>
 
-            {/* Content Section */}
             <Box data-content-section sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -262,10 +260,9 @@ function HeroSection() {
                 </Box>
             </Box>
 
-            {/* Image Section */}
             <Box data-image-section sx={{
                 position: 'absolute',
-                top: { xs: '55%', sm: '50%' },
+                top: { xs: '60%', sm: '62%' },
                 left: { sm: '60%', xs: '50%' },
                 transform: 'translate(-50%, -50%)',
                 width: '100%',
@@ -275,7 +272,6 @@ function HeroSection() {
                 alignItems: 'center',
                 zIndex: 5
             }}>
-                {/* Main Image Label (Cereal Based) */}
                 <Typography ref={mainImageLabelRef} sx={{
                     color: '#FFFFFF',
                     fontWeight: 'bold',
@@ -288,7 +284,7 @@ function HeroSection() {
                     borderRadius: '12px',
                     position: 'absolute',
                     zIndex: 6,
-                    top: '50%',
+                    top: '40%',
                     left: '50%',
                     transform: 'translate(-50%, -50%)'
                 }}>

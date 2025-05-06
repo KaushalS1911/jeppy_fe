@@ -145,11 +145,11 @@ const Footer = () => {
                                     flexDirection: 'column',
                                     alignItems: {xs: 'center', md: 'flex-start'}
                                 }}>
-                                    {quickLink.map((text) => (
+                                    {quickLink.map((text , index) => (
                                         <Box
-                                            key={text}
+                                            key={index}
                                             component={Link}
-                                            to="/"
+                                            to={text.path}
                                             sx={{
                                                 display: 'block',
                                                 color: 'white',
@@ -185,7 +185,6 @@ const Footer = () => {
                                         '3D Pallets',
                                         'Gluten Free Pallets',
                                         'Micro Pallets',
-                                        'Potato Pallets',
                                         'Sheeted Pallets',
                                         'Veggi Pallets',
                                     ].map((text) => (

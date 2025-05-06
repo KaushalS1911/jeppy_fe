@@ -24,75 +24,77 @@ const productData = [
     ['Ingredients', 'Wheat flour - corn starch - salt'],
 ];
 
-const MadStickSection = () => {
+const SingleProduct = () => {
     return (
-        <Container maxWidth={"xl"}>
-            <Box sx={{p: {xs: 0, sm: "4"}, mx: 'auto'}}>
-                <Grid container spacing={4} alignItems="center">
-                    {/* Left: Images */}
-                    <Grid item size={{xs: 12, md: 6}}>
-                        <Box sx={{display:{sm:'flex',md:'block'}}}>
-                            <Box sx={{textAlign: 'center', mb: 2}}>
-                                <Box
-                                    component="img"
-                                    src={img}
-                                    alt="Mad Stick Product"
-                                    sx={{
-                                        width: {xs:'300px',sm:'220px',md:'300px'},
-                                        maxWidth: '100%',
-                                        height: 'auto',
-                                    }}
-                                />
+        <Box sx={{pt:"150px"}}>
+            <Container maxWidth={"xl"}>
+                <Box sx={{p: {xs: 0, sm: "4"}, mx: 'auto'}}>
+                    <Grid container spacing={4} alignItems="center">
+                        {/* Left: Images */}
+                        <Grid item size={{xs: 12, md: 6}}>
+                            <Box sx={{display: {sm: 'flex', md: 'block'}}}>
+                                <Box sx={{textAlign: 'center', mb: 2}}>
+                                    <Box
+                                        component="img"
+                                        src={img}
+                                        alt="Mad Stick Product"
+                                        sx={{
+                                            width: {xs: '300px', sm: '220px', md: '300px'},
+                                            maxWidth: '100%',
+                                            height: 'auto',
+                                        }}
+                                    />
+                                </Box>
+                                <Box sx={{textAlign: 'center'}}>
+                                    <Box
+                                        component="img"
+                                        src={size}
+                                        alt="Mad Stick Size"
+                                        sx={{
+                                            width: {xs: '80%', sm: '60%', md: '70%'},
+                                            maxWidth: '100%',
+                                            height: 'auto',
+                                        }}
+                                    />
+                                </Box>
                             </Box>
-                            <Box sx={{textAlign: 'center'}}>
-                                <Box
-                                    component="img"
-                                    src={size}
-                                    alt="Mad Stick Size"
-                                    sx={{
-                                        width: {xs: '80%', sm: '60%', md: '70%'},
-                                        maxWidth: '100%',
-                                        height: 'auto',
-                                    }}
-                                />
-                            </Box>
-                        </Box>
+                        </Grid>
+
+                        {/* Right: Text Content */}
+                        <Grid item size={{xs: 12, md: 6}}>
+                            <Typography variant="h5" color="orange" fontWeight="bold" gutterBottom>
+                                MAD STICK
+                            </Typography>
+                            <Typography variant="subtitle2" gutterBottom>
+                                Product Code : 111
+                            </Typography>
+
+                            <Typography variant="h6" gutterBottom>
+                                Product Parameters
+                            </Typography>
+
+                            <Table size="small">
+                                <TableBody>
+                                    {productData.map(([label, value], index) => (
+                                        <TableRow key={index}>
+                                            <TableCell sx={{fontWeight: 'bold'}}>{label}</TableCell>
+                                            <TableCell>{value}</TableCell>
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+
+                            <Typography variant="body2" sx={{mt: 2, color: 'gray'}}>
+                                Many pellets, including the one in the picture, are manufactured using a dough foil
+                                which texture/design is protected by Community and International trademarks and other
+                                MAFIN IP rights.
+                            </Typography>
+                        </Grid>
                     </Grid>
-
-                    {/* Right: Text Content */}
-                    <Grid item size={{xs: 12, md: 6}}>
-                        <Typography variant="h5" color="orange" fontWeight="bold" gutterBottom>
-                            MAD STICK
-                        </Typography>
-                        <Typography variant="subtitle2" gutterBottom>
-                            Product Code : 111
-                        </Typography>
-
-                        <Typography variant="h6" gutterBottom>
-                            Product Parameters
-                        </Typography>
-
-                        <Table size="small">
-                            <TableBody>
-                                {productData.map(([label, value], index) => (
-                                    <TableRow key={index}>
-                                        <TableCell sx={{fontWeight: 'bold'}}>{label}</TableCell>
-                                        <TableCell>{value}</TableCell>
-                                    </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-
-                        <Typography variant="body2" sx={{mt: 2, color: 'gray'}}>
-                            Many pellets, including the one in the picture, are manufactured using a dough foil
-                            which texture/design is protected by Community and International trademarks and other
-                            MAFIN IP rights.
-                        </Typography>
-                    </Grid>
-                </Grid>
-            </Box>
-        </Container>
+                </Box>
+            </Container>
+        </Box>
     );
 };
 
-export default MadStickSection;
+export default SingleProduct;

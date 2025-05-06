@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box, useTheme} from "@mui/material";
-import Img1 from '../../assets/images/ourprocess/ManufacturingProcessSteps/Fleppycrew.jpg'
+import Img1 from '../../assets/images/ourprocess/ManufacturingProcessSteps/Team (1).png'
 
 function FleppyCrew() {
     const theme = useTheme();

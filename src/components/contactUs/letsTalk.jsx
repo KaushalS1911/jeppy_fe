@@ -76,7 +76,7 @@ function LetsTalk() {
                 // maxWidth: '1200px',
                 // mx: 'auto',
                 bgcolor: '#FAFAFA',
-                borderRadius: 0,
+                borderRadius: 4,
                 overflow: 'hidden'
             }}>
                 <Typography
@@ -294,7 +294,7 @@ function LetsTalk() {
                                                     label="General Inquiry"
                                                 />
                                             </RadioGroup>
-                                                <Typography variant="caption" color="error">{errors.subject?.message}</Typography>
+                                            <Typography variant="caption" color="error">{errors.subject?.message}</Typography>
                                         </FormControl>
                                     )}
                                 />

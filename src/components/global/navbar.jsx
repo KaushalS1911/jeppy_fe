@@ -3,7 +3,6 @@ import {
     Box,
     Container,
     IconButton,
-    Button,
     Collapse,
     List,
     ListItem, useTheme
@@ -21,7 +20,7 @@ const navItems = [
 ];
 
 function Navbar() {
-const [a,setA] = useState(null);
+    const [a,setA] = useState(null);
     const location = useLocation();
 
     useEffect(() => {
@@ -29,13 +28,13 @@ const [a,setA] = useState(null);
         setA(b);
     }, [location]);
     const [menuOpen, setMenuOpen] = useState(false);
-  const theme = useTheme();
+    const theme = useTheme();
 
     const toggleMenu = () => setMenuOpen((prev) => !prev);
 
     return (
         <Box sx={{
-            position: a ? "sticky" : "absolute",
+            position: "fixed",
             width:'100%',
             px: {xs:3 , md:5},
             zIndex: 999,
@@ -44,7 +43,7 @@ const [a,setA] = useState(null);
                 maxWidth="xxl"
                 sx={{
                     backgroundColor: a ? `${theme.palette.saffron}` : '#fff',
-                    borderRadius: {md:'50px',xs:'50px'},
+                    borderRadius: '15px',
                     display: 'flex',
                     flexDirection: 'column',
                     px: 3,
@@ -52,7 +51,6 @@ const [a,setA] = useState(null);
                     mt: 2,
                 }}
             >
-                {/* Top Navigation Row */}
                 <Box sx={{
                     display: 'flex',
                     alignItems: 'center',
@@ -60,12 +58,10 @@ const [a,setA] = useState(null);
                     width: '100%',
                     padding:"0px 41px"
                 }}>
-                    {/* Logo */}
                     <Box component={Link} to="/" sx={{ display: 'flex', alignItems: 'center' }}>
                         <Box component="img" src={Logo} alt="Logo" sx={{ height: {md:"100%" , xs:"40px"} }} />
                     </Box>
 
-                    {/* Desktop Navigation */}
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 4 }}>
                         {navItems.map(({ label, path }) => (
                             <Box
@@ -88,22 +84,19 @@ const [a,setA] = useState(null);
                         ))}
                     </Box>
 
-                    {/* Mobile Menu Icon */}
-                <IconButton
-                    edge="end"
-                    onClick={toggleMenu}
-                    sx={{ display: { xs: 'block', md: 'none' } }}
-                >
-                    {menuOpen ? <CloseIcon /> : <MenuIcon />}
-                </IconButton>
+                    <IconButton
+                        edge="end"
+                        onClick={toggleMenu}
+                        sx={{ display: { xs: 'block', md: 'none' } , alignItems:"center" , color: a ? "#fff" : '#000' }}
+                    >
+                        {menuOpen ? <CloseIcon /> : <MenuIcon />}
+                    </IconButton>
 
                 </Box>
 
-                {/* Mobile Dropdown Drawer Inside Navbar */}
                 <Collapse in={menuOpen} timeout="auto" unmountOnExit>
                     <Box
                         sx={{
-                            // mt: 1,
                             display: { xs: 'block', md: 'none' },
                             pt:'10px',
                         }}
