@@ -13,7 +13,7 @@ import {Link, useLocation} from 'react-router-dom';
 import Logo from '../../assets/images/global/logo.jpg';
 
 const navItems = [
-    { label: 'Our Products', path: '/products' },
+    { label: 'Products', path: '/products' },
     { label: 'Our Process', path: '/process' },
     { label: 'About us', path: '/about' },
     { label: 'Contact', path: '/contact' },
