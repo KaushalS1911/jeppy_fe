@@ -5,7 +5,7 @@ import Img1 from '../../assets/images/ourprocess/ManufacturingProcessSteps/Team 
 function FleppyCrew() {
     const theme = useTheme();
     return (
-        <Box sx={{py:8}}>
+        <Box sx={{py:10}}>
             <Box
                 sx={{
                     display: 'flex',

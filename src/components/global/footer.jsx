@@ -55,54 +55,54 @@ const Footer = () => {
                             ))}
                         </Box>
 
-                        <Typography sx={{
-                            mb: 1,
-                            mt: {xs: 4, md: 6},
-                            textAlign: {xs: 'center', md: 'left'},
-                            fontSize: {xs: '16px', sm: '18px'}
-                        }}>
-                            Let's Connect with us for updates
-                        </Typography>
-                        <Box sx={{display: 'flex', alignItems: 'center' , justifyContent: {xs:"center" , md:"unset"}, mt: 3}}>
-                            <TextField
-                                variant="standard"
-                                placeholder="Enter Your E-mail Address"
-                                InputProps={{
-                                    disableUnderline: false,
-                                    endAdornment: (
-                                        <InputAdornment position="end">
-                                            <IconButton sx={{color: 'white', p: 0}}>
-                                                <ArrowOutwardIcon/>
-                                            </IconButton>
-                                        </InputAdornment>
-                                    ),
-                                }}
-                                sx={{
-                                    input: {
-                                        color: 'white',
-                                        fontWeight: 'bold',
-                                        '::placeholder': {
-                                            color: 'white',
-                                            fontSize: {xs: '14px', sm: '16px'},
-                                            opacity: 1,
-                                            fontWeight: 'bold',
-                                        },
-                                    },
-                                    '& .MuiInputBase-root': {
-                                        pb: '4px',
-                                    },
-                                    '& .MuiInput-underline:before': {
-                                        borderBottomColor: 'rgba(255,255,255,0.5)',
-                                    },
-                                    '& .MuiInput-underline:hover:before': {
-                                        borderBottomColor: 'white',
-                                    },
-                                    '& .MuiInput-underline:after': {
-                                        borderBottomColor: 'white',
-                                    },
-                                }}
-                            />
-                        </Box>
+                        {/*<Typography sx={{*/}
+                        {/*    mb: 1,*/}
+                        {/*    mt: {xs: 4, md: 6},*/}
+                        {/*    textAlign: {xs: 'center', md: 'left'},*/}
+                        {/*    fontSize: {xs: '16px', sm: '18px'}*/}
+                        {/*}}>*/}
+                        {/*    Let's Connect with us for updates*/}
+                        {/*</Typography>*/}
+                        {/*<Box sx={{display: 'flex', alignItems: 'center' , justifyContent: {xs:"center" , md:"unset"}, mt: 3}}>*/}
+                        {/*    <TextField*/}
+                        {/*        variant="standard"*/}
+                        {/*        placeholder="Enter Your E-mail Address"*/}
+                        {/*        InputProps={{*/}
+                        {/*            disableUnderline: false,*/}
+                        {/*            endAdornment: (*/}
+                        {/*                <InputAdornment position="end">*/}
+                        {/*                    <IconButton sx={{color: 'white', p: 0}}>*/}
+                        {/*                        <ArrowOutwardIcon/>*/}
+                        {/*                    </IconButton>*/}
+                        {/*                </InputAdornment>*/}
+                        {/*            ),*/}
+                        {/*        }}*/}
+                        {/*        sx={{*/}
+                        {/*            input: {*/}
+                        {/*                color: 'white',*/}
+                        {/*                fontWeight: 'bold',*/}
+                        {/*                '::placeholder': {*/}
+                        {/*                    color: 'white',*/}
+                        {/*                    fontSize: {xs: '14px', sm: '16px'},*/}
+                        {/*                    opacity: 1,*/}
+                        {/*                    fontWeight: 'bold',*/}
+                        {/*                },*/}
+                        {/*            },*/}
+                        {/*            '& .MuiInputBase-root': {*/}
+                        {/*                pb: '4px',*/}
+                        {/*            },*/}
+                        {/*            '& .MuiInput-underline:before': {*/}
+                        {/*                borderBottomColor: 'rgba(255,255,255,0.5)',*/}
+                        {/*            },*/}
+                        {/*            '& .MuiInput-underline:hover:before': {*/}
+                        {/*                borderBottomColor: 'white',*/}
+                        {/*            },*/}
+                        {/*            '& .MuiInput-underline:after': {*/}
+                        {/*                borderBottomColor: 'white',*/}
+                        {/*            },*/}
+                        {/*        }}*/}
+                        {/*    />*/}
+                        {/*</Box>*/}
 
                         <Box sx={{
                             pt: {xs: 5, md: 9},

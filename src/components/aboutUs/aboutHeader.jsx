@@ -23,7 +23,7 @@ function AboutHeader() {
         >
             {/* Background Video */}
             <iframe
-                src="https://www.youtube.com/embed/pZsd9cHwzIg?autoplay=1&mute=1&loop=1&playlist=pZsd9cHwzIg&controls=0&showinfo=0&modestbranding=1"
+                src="https://www.youtube.com/embed/pZsd9cHwzIg?autoplay=1&mute=1&loop=1&playlist=pZsd9cHwzIg&controls=0&showinfo=0&modestbranding=1&cc_load_policy=0"
                 title="Background Video"
                 frameBorder="0"
                 allow="autoplay; fullscreen"
@@ -36,7 +36,7 @@ function AboutHeader() {
                     height: '100%',
                     objectFit: 'cover',
                     zIndex: 0,
-                    pointerEvents: 'none' // So it doesn't block clicks
+                    pointerEvents: 'none'
                 }}
             />
 
@@ -55,8 +55,8 @@ function AboutHeader() {
             />
 
             {/* Foreground Content */}
-            <Container sx={{ position: 'relative', zIndex: 2 }}>
-                <Typography
+            <Container sx={{position: 'relative', zIndex: 2}}>
+            <Typography
                     variant="h3"
                     sx={{
                         fontWeight: 700,

@@ -19,7 +19,6 @@ function HeroSection() {
     const sectionRef = useRef(null);
     const orangeBgRef = useRef(null);
     const mainImageRef = useRef(null);
-    const mainImageLabelRef = useRef(null); // New reference for the "Cereal Based" label
 
     const productRefs = {
         veggie: useRef(null),
@@ -79,11 +78,6 @@ function HeroSection() {
                 y: -20
             });
 
-            gsap.set(mainImageLabelRef.current, {
-                opacity: 0,
-                y: -20,
-            });
-
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: sectionRef.current,
@@ -126,13 +120,6 @@ function HeroSection() {
                 duration: 2,
                 ease: "power1.inOut"
             }, 0);
-
-            tl.to(mainImageLabelRef.current, {
-                opacity: 1,
-                y: 0,
-                duration: 1.5,
-                ease: "back.out(1.7)"
-            }, 1);
 
             Object.keys(productRefs).forEach((product, index) => {
                 const imgRef = productRefs[product].current;
@@ -211,7 +198,7 @@ function HeroSection() {
                 zIndex: 5,
                 pb: { xs: 4, sm: 0 }
             }}>
-                <Typography variant="h1" sx={{
+                <Typography className={'monserrat'} variant="h1" sx={{
                     fontWeight: 800,
                     fontSize: { xs: "28px", sm: "36px", md: "48px", lg: "64px" },
                     color: "#172600",
@@ -272,25 +259,6 @@ function HeroSection() {
                 alignItems: 'center',
                 zIndex: 5
             }}>
-                <Typography ref={mainImageLabelRef} sx={{
-                    color: '#FFFFFF',
-                    fontWeight: 'bold',
-                    fontSize: { xs: '10px', sm: '12px', md: '14px', lg: '16px', xl: '18px' },
-                    mb: { xs: 0.5, sm: 1 },
-                    whiteSpace: 'nowrap',
-                    textShadow: '0px 2px 4px rgba(0,0,0,0.3)',
-                    backgroundColor: 'rgba(0,0,0,0.2)',
-                    padding: '4px 8px',
-                    borderRadius: '12px',
-                    position: 'absolute',
-                    zIndex: 6,
-                    top: '40%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)'
-                }}>
-                    Cereal Based
-                </Typography>
-
                 <Box ref={mainImageRef} component="img" src={mainImage} alt="Main Product" sx={{
                     width: { xs: '300px', sm: '230px', md: '270px', lg: '330px', xl: '600px' },
                     height: { xs: '300px', sm: '230px', md: '270px', lg: '330px', xl: '600px' },
@@ -301,7 +269,7 @@ function HeroSection() {
                 }} />
                 <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
                     {[{ id: 'veggie', name: 'Veggie Snacks', img: veggieSnacks },
-                        { id: 'potato', name: 'Potato Snacks', img: potatoSnacks },
+                        { id: 'potato', name: 'Cereal Based', img: potatoSnacks },
                         { id: 'cereal', name: 'High Protein', img: cerealBased },
                         { id: 'glutenFree', name: 'Gluten Free', img: glutenFree }]
                         .map(product => (

@@ -9,11 +9,20 @@
     font-family: "Plus Jakarta Sans", sans-serif !important;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 
 img {
     max-width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+.monserrat{
+    font-family: "Montserrat", sans-serif !important;
+    letter-spacing: 1px;
 }
 
 /*#root {*/

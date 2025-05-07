@@ -14,19 +14,17 @@ import Img1 from '../../assets/images/home/Product/Gluten-Free-Group-Pics.png';
 import Img2 from '../../assets/images/home/Product/3D-Group-Pic.png';
 import Img3 from '../../assets/images/home/Product/Group-2D-Pic.png';
 import Img4 from '../../assets/images/home/Product/Micro-Pellets-Group-Pics.png';
-import Img5 from '../../assets/images/home/Product/Potato-Group-Pics.png';
 import Img6 from '../../assets/images/home/Product/Protein-Group.png';
 import Img7 from '../../assets/images/home/Product/Sheeted-Group-Pic.png';
 import Img8 from '../../assets/images/home/Product/Veggi-Group-Pic.png';
 
-const categories = ['All', 'Cereal Based', 'Potato', 'Vegetable', 'High-Protein', 'Gluten Free'];
+const categories = ['All', 'Cereal Based', 'Vegetable', 'High-Protein', 'Gluten Free'];
 
 const products = [
     {id: 1, name: '2D Papad Snacks', category: 'All', image: Img3},
     {id: 2, name: '2D Papad Snacks', category: 'Cereal Based', image: Img2},
     {id: 3, name: '2D Papad Snacks', category: 'Vegetable', image: Img8},
     {id: 4, name: '2D Papad Snacks', category: 'High-Protein', image: Img6},
-    {id: 5, name: '2D Papad Snacks', category: 'Potato', image: Img5},
     {id: 6, name: '2D Papad Snacks', category: 'Cereal Based', image: Img7},
     {id: 7, name: '2D Papad Snacks', category: 'Gluten Free', image: Img1},
     {id: 8, name: '2D Papad Snacks', category: 'Vegetable', image: Img4},
@@ -81,7 +79,7 @@ function Products() {
                                 px: {xs: 1.5, md: 2},
                                 whiteSpace: 'nowrap',
                                 minWidth: 'auto',
-                                fontSize: {xs: '18px', md: '24px'},
+                                fontSize: {xs: '18px', md: '22px'},
                             }}
                         >
                             {category}
@@ -100,7 +98,7 @@ function Products() {
                             key={product.id}
                             sx={{display: 'flex', mx: {xs: 2, sm: "unset"}}}
                         >
-                            <Card
+                            <Box
                                 sx={{
                                     width: '100%',
                                     height: '390px',
@@ -108,9 +106,9 @@ function Products() {
                                     flexDirection: 'column',
                                     justifyContent: 'space-between',
                                     textAlign: 'center',
-                                    backgroundColor: 'rgba(240, 240, 240, 1)',
+                                    // backgroundColor: 'rgba(240, 240, 240, 1)',
                                     p: {xs: 1.5, md: 2},
-                                    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)',
+                                    // boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)',
                                     transition: 'transform 0.5s ease, box-shadow 0.3s ease',
                                     '&:hover': {
                                         transform: 'translateY(-10px)',
@@ -118,18 +116,6 @@ function Products() {
                                     borderRadius: '8px',
                                 }}
                             >
-                                <CardContent sx={{p: 0, display: 'flex', justifyContent: 'start'}}>
-                                    <Typography
-                                        fontWeight={600}
-                                        sx={{
-                                            fontSize: {xs: '16px', md: '20px'},
-                                            fontWeight: 700,
-                                            color:"#141414"
-                                        }}
-                                    >
-                                        {product.name}
-                                    </Typography>
-                                </CardContent>
                                 <Box sx={{flexGrow: 0}}>
                                     <CardMedia
                                         component="img"
@@ -143,7 +129,19 @@ function Products() {
                                         }}
                                     />
                                 </Box>
-                                <Box sx={{pt: 1, pb: 1, display: 'flex', justifyContent: 'start'}}>
+                                <Box sx={{p: 0, display: 'flex', justifyContent: 'center'}}>
+                                    <Typography
+                                        fontWeight={600}
+                                        sx={{
+                                            fontSize: {xs: '16px', md: '18px'},
+                                            fontWeight: 700,
+                                            color:"#141414"
+                                        }}
+                                    >
+                                        {product.name}
+                                    </Typography>
+                                </Box>
+                                <Box sx={{pt: 1, pb: 1, display: 'flex', justifyContent: 'center'}}>
                                     <Button
                                         variant="contained"
                                         sx={{
@@ -166,7 +164,7 @@ function Products() {
                                         View
                                     </Button>
                                 </Box>
-                            </Card>
+                            </Box>
                         </Grid>
                     ))}
                 </Grid>

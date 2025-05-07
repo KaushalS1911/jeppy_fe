@@ -31,6 +31,7 @@ function Snackingvision() {
 
                         <Typography
                             variant="h5"
+                            className={'monserrat'}
                             sx={{
                                 fontWeight: 700,
                                 fontSize: {md: "55px", sm: "39px", xs: "28px"},

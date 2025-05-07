@@ -4,7 +4,7 @@ import vegetarianIcon from '../../assets/images/products/istockphoto-1297289529-
 import halalIcon from '../../assets/images/products/Halal-logo.jpg';
 import kosherIcon from '../../assets/images/products/kosher.png';
 import veganIcon from '../../assets/images/products/yy3w44ku51zb1.png';
-import celiacIcon from '../../assets/images/products/image-placeholder-title.png';
+import celiacIcon from '../../assets/images/products/gluten-free-grain-icon-free-vector.jpg';
 
 const suitabilityData = [
     { label: 'Vegetarian', icon: vegetarianIcon },

@@ -1,9 +1,11 @@
 import React from 'react';
 import {Box, Typography, Grid, Container} from '@mui/material';
 import imgstep4 from "../../assets/images/ourprocess/ManufacturingProcessSteps/QualityControl.png";
-import image1 from "../../assets/images/ourprocess/ManufacturingProcessSteps/createdby1.png";
-import image2 from "../../assets/images/ourprocess/ManufacturingProcessSteps/createdby2.png";
-import image3 from "../../assets/images/ourprocess/ManufacturingProcessSteps/createdby3.png";
+import certificate1 from '../../assets/images/global/certificates/167-1671625_halal-certification-services-halal-india-logo (1).png';
+import certificate2 from '../../assets/images/global/certificates/unnamed.png';
+import certificate3 from '../../assets/images/global/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM (1).jpeg';
+import certificate4 from '../../assets/images/global/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM.jpeg';
+import certificate5 from '../../assets/images/global/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM (2).jpeg';
 
 function Ourprocessstep4() {
     const data = {
@@ -14,9 +16,11 @@ function Ourprocessstep4() {
             "Latest instruments are used to ensure snacks meet quality benchmarks."
         ],
         certifiedBy: [
-            {image: image1,},
-            {image: image2,},
-            {image: image3,},
+            {image: certificate1,},
+            {image: certificate2,},
+            {image: certificate3,},
+            {image: certificate4,},
+            {image: certificate5,},
         ],
         image: imgstep4,
     };
@@ -43,10 +47,10 @@ function Ourprocessstep4() {
                                 {data.step}
                             </Typography>
 
-                            <Typography variant="h4" sx={{
+                            <Typography variant="h4" className={'monserrat'} sx={{
                                 fontWeight: 700,
-                                fontSize: {xl: "48px", sm: "36px", xs: "28px"},
-                                mb: 2,
+                                fontSize: { xl: "44px", sm: "34px", xs: "30px" },
+                                my: 2,
                             }}>
                                 {data.title}
                             </Typography>
@@ -60,7 +64,7 @@ function Ourprocessstep4() {
                         }}>
                             {data.description.map((line, idx) => (
                                 <Typography key={idx} sx={{
-                                    fontSize: {xl: "24px", sm: "18px", xs: "16px"},
+                                    fontSize: { xl: "22px", sm: "18px", xs: "16px" },
                                     fontWeight: 500,
                                     mb: 1,
                                 }}>
@@ -68,7 +72,7 @@ function Ourprocessstep4() {
                                 </Typography>
                             ))}
 
-                            <Typography sx={{my: 3, fontWeight: 700, fontSize: {xl: "24px", sm: "18px", xs: "16px"},}}>
+                            <Typography sx={{my: 3, fontWeight: 700, fontSize: { xl: "22px", sm: "18px", xs: "16px" },}}>
                                 Certified by:
                             </Typography>
 
@@ -89,7 +93,7 @@ function Ourprocessstep4() {
                                         <img
                                             src={cert.image}
                                             alt={cert.label}
-                                            style={{width: 65, height: 65, objectFit: 'contain'}}
+                                            style={{width: 65, height: 65, objectFit: 'cover'}}
                                         />
 
                                     </Box>

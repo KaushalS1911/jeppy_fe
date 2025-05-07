@@ -30,6 +30,7 @@ function Ourprocessstep5() {
                         py: 8,
                         flexDirection: {xs: 'column', lg: 'row'},
                         justifyContent: 'space-between',
+                        alignItems: {lg:'center' , xs:"unset"},
                     }}>
                         <Box sx={{
                             pl: {xs: 2, sm: 4, md: 6, lg: 6},
@@ -46,17 +47,17 @@ function Ourprocessstep5() {
                                 {item.steps}
                             </Typography>
 
-                            <Typography variant="h6" sx={{
-                                mb: 2,
+                            <Typography variant="h6" className={'monserrat'} sx={{
+                                my: 2,
                                 fontWeight: 700,
-                                fontSize: {xl: "48px", sm: "36px", xs: "32px"},
-                                color: "#FFF",
+                                fontSize: { xl: "44px", sm: "34px", xs: "30px" },
+                                color: "#000",
                             }}>
                                 {item.title}
                             </Typography>
 
                             <Typography sx={{
-                                fontSize: {xl: "24px", sm: "20px", xs: "18px"},
+                                fontSize: { xl: "22px", sm: "18px", xs: "16px" },
                                 fontWeight: 500,
                                 mb: 1,
                                 color:"#FFF"
@@ -68,7 +69,7 @@ function Ourprocessstep5() {
                                 listStyleType: 'disc',
                                 pl: 2,
                                 fontWeight: 500,
-                                fontSize: {xl: "24px", sm: "20px", xs: "18px"},
+                                fontSize: { xl: "22px", sm: "18px", xs: "16px" },
                             }}>
                                 {item.points.map((point, pointIndex) => (
                                     <ListItem key={pointIndex} sx={{display: 'list-item' , color:"#FFF"}}>
@@ -76,7 +77,7 @@ function Ourprocessstep5() {
                                             primary={point}
                                             primaryTypographyProps={{
                                                 sx: {
-                                                    fontSize: { xl: '24px', sm: '20px', xs: '16px' },
+                                                    fontSize: { xl: "22px", sm: "18px", xs: "16px" },
                                                     fontWeight: 500,
                                                 },
                                             }}
@@ -87,7 +88,7 @@ function Ourprocessstep5() {
 
                             <Typography sx={{
                                 mt: 2,
-                                fontSize: {xl: "24px", sm: "20px", xs: "18px"},
+                                fontSize: { xl: "22px", sm: "18px", xs: "16px" },
                                 fontWeight: 500,
                                 color:"#FFF"
                             }}>
@@ -95,11 +96,11 @@ function Ourprocessstep5() {
                             </Typography>
                         </Box>
 
-                        <Box>
+                        <Box sx={{width:{lg:'1000px' , xs:"100%"} , height:{lg:'550px', xs:"100%"}}}>
                             <img
                                 src={item.image}
                                 alt={`${item.title} illustration`}
-                                style={{width: '100%', height: '100%'}}
+                                style={{width: '100%', height: '100%' , objectFit:"cover"}}
                             />
                         </Box>
                     </Box>

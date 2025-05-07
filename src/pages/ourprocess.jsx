@@ -28,7 +28,7 @@ function Ourprocess() {
             <Ourprocessstep4/>
             <Ourprocessstep5/>
             <FleppyCrew/>
-            <LetsConnect/>
+            {/*<LetsConnect/>*/}
         </>
     );
 }

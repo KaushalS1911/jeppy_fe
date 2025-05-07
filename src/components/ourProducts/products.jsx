@@ -87,6 +87,7 @@ const Products = () => {
         <Container maxWidth={"xl"}>
             <Box sx={{py: {xs: 4, md: 5}}}>
                 <Typography
+                    className={'monserrat'}
                     variant="h5"
                     fontWeight={600}
                     textAlign="center"

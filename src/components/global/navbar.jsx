@@ -68,10 +68,11 @@ function Navbar() {
                                 key={label}
                                 component={Link}
                                 to={path}
+                                className={'monserrat'}
                                 sx={{
                                     color: a ? "#fff" :  "#000",
                                     p:0,
-                                    fontWeight: 400,
+                                    fontWeight: 500,
                                     textTransform: 'none',
                                     fontSize: '20px',
                                     transition: '0.3s',

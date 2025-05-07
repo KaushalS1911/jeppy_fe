@@ -29,7 +29,7 @@ function OurSolution() {
     return (
         <Box sx={{padding:"90px 0"}}>
             <Container maxWidth="xl">
-                <Typography sx={{
+                <Typography className={'monserrat'} sx={{
                     fontSize: {md: "36px", sm: "28px", xs: "20px"},
                     fontWeight: 700,
                     textAlign: "center"
@@ -77,11 +77,12 @@ function OurSolution() {
                                     color: "#1A202C",
                                     fontSize: {md: "24px", sm: "20px", xs: "16px"},
                                     fontWeight: 600,
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    py:2
                                 }}>
                                     {item.title}
                                 </Typography>
-                                <Box sx={{fontSize: {sm: "14px", xs: "12px"}, color: "#1A202C", textAlign: "center"}}>
+                                <Box sx={{fontSize: {sm: "16px", xs: "14px"}, color: "#1A202C", textAlign: "center"}}>
                                     {item.description}
                                 </Box>
                             </Box>

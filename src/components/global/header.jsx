@@ -37,6 +37,7 @@ function Header( {heading , subtext ,buttonText , img , bgcolor , path} ) {
         >
             <Container sx={{ position: 'relative', zIndex: 1 }}>
                 <Typography
+                    className={'monserrat'}
                     variant="h3"
                     sx={{
                         fontWeight: 700,

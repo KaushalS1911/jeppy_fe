@@ -17,53 +17,54 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import aboutsliderimg from '../../assets/images/home/About/Vector.png';
 import aboutsliderline from "../../assets/images/home/About/Vector 5.png"
+import img1 from '../../assets/images/aboutus/slider/Screenshot 2025-05-07 142727.png'
 
 
 const cards = [
     {
         since: "1987s",
         description: "Jayant Snacks and Beverages Pvt. Ltd. was founded in Rajkot, India, marking the beginning of our journey in the snack industry.",
-        image: "/images/design.jpg"
+        image: img1
     },
     {
         since: "1990s",
         description: "Expanded production capacity and began supplying ready-to-fry Papad Snacks across India.",
-        image: "/images/development.jpg"
+        image: img1
     },
     {
         since: "2000s",
         description: "Introduced 2D, 3D, laminated, and punched snack shapes — establishing our position as a leader in snack innovation.",
-        image: "/images/ai.jpg"
+        image: img1
     },
     {
         since: "2010s",
         description: "Launched our popular brands JEPPY and WOW, gaining strong market recognition.",
-        image: "/images/productivity.jpg"
+        image: img1
     },
     {
         since: "2015s",
         description: "Scaled up R&D, launching 100+ new product trials yearly and creating hundreds of unique shapes.",
-        image: "/images/animation.jpg"
+        image: img1
     },
     {
         since: "2018s",
         description: "Expanded into international markets, exporting to clients across Asia, Africa, and the Middle East.",
-        image: "/images/animation.jpg"
+        image: img1
     },
     {
         since: "2020s",
         description: "Introduced air-roast snack options to meet evolving health-conscious demands.",
-        image: "/images/animation.jpg"
+        image: img1
     },
     {
         since: "2023s",
         description: "Established four fully operational plants, increasing supply capacity and flexibility for custom manufacturing.",
-        image: "/images/animation.jpg"
+        image: img1
     },
     {
         since: "2025s",
         description: "On a mission to become the Global Leader in Snack Papad, with more innovations and expansion underway.",
-        image: "/images/animation.jpg"
+        image: img1
     }
 ];
 
@@ -79,11 +80,12 @@ function SliderAbout() {
             <Container maxWidth="xl">
                 <Typography
                     variant="h3"
+                    className={'monserrat'}
                     sx={{
                         fontWeight: 700,
                         textAlign: 'center',
                         mb: 5,
-                        color: '#333',
+                        color: '#000',
                         fontSize: "36px",
                         padding: '20px',
                     }}

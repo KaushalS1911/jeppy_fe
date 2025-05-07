@@ -52,10 +52,10 @@ function Ourprocessstep1() {
                         <Box sx={{flexGrow: 1}}>
                             <Box sx={{display: 'flex'}}>
                                 <Box sx={{flex: 1}}>
-                                    <Typography variant="h6" sx={{
-                                        mb: 2,
+                                    <Typography variant="h6" className={'monserrat'} sx={{
+                                        my: 2,
                                         fontWeight: '700',
-                                        fontSize: { xl: "48px", sm: "36px", xs: "32px" },
+                                        fontSize: { xl: "44px", sm: "34px", xs: "30px" },
                                     }}>
                                         {item.title}
                                     </Typography>
@@ -63,7 +63,7 @@ function Ourprocessstep1() {
                                         listStyleType: 'disc',
                                         pl: 2 ,
                                         fontWeight: 500,
-                                        fontSize: { xl: "24px", sm: "20px", xs: "16px" },
+                                        fontSize: { xl: "22px", sm: "18px", xs: "16px" },
 
                                     }}>
                                         {item.points.map((point, pointIndex) => (
@@ -75,7 +75,7 @@ function Ourprocessstep1() {
                                                         primary={point}
                                                         primaryTypographyProps={{
                                                             sx: {
-                                                                fontSize: { xl: '24px', sm: '20px', xs: '16px' },
+                                                                fontSize: { xl: '22px', sm: '18px', xs: '16px' },
                                                                 fontWeight: 500,
                                                             },
                                                         }}
@@ -86,7 +86,7 @@ function Ourprocessstep1() {
                                                             primary={point.text}
                                                             primaryTypographyProps={{
                                                                 sx: {
-                                                                    fontSize: { xl: '24px', sm: '20px', xs: '16px' },
+                                                                    fontSize: { xl: '22px', sm: '18px', xs: '16px' },
                                                                     fontWeight: 500,
                                                                 },
                                                             }}
@@ -104,7 +104,7 @@ function Ourprocessstep1() {
                                                                         primary={subpoint}
                                                                         primaryTypographyProps={{
                                                                             sx: {
-                                                                                fontSize: { xl: '24px', sm: '20px', xs: '16px' },
+                                                                                fontSize: { xl: '22px', sm: '18px', xs: '16px' },
                                                                                 fontWeight: 500,
                                                                             },
                                                                         }}
@@ -123,13 +123,14 @@ function Ourprocessstep1() {
                         </Box>
                     </Box>
 
-                    <Box >
+                    <Box sx={{width:{lg:'1000px' , xs:"100%"}}}>
                         <img
                             src={item.image}
                             alt="Raw Material Procurement"
                             style={{
                                 width: '100%',
                                 height: '100%',
+                                objectFit:"cover"
                             }}
                         />
                     </Box>

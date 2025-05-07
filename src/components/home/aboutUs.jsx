@@ -14,6 +14,7 @@ function AboutUs() {
             }}>
                 {/* Section Title */}
                 <Typography
+                    className={'monserrat'}
                     variant="h2"
                     sx={{
                         fontSize: { xs: "28px", sm: "32px", md: "36px" },
@@ -40,9 +41,10 @@ function AboutUs() {
                         px: { xs: 2, sm: 3, md: 0 }
                     }}>
                         <Typography
+                            className={'monserrat'}
                             variant="h3"
                             sx={{
-                                fontSize: { xs: "32px", sm: "40px", md: "48px" },
+                                fontSize: { xs: "30px", sm: "38px", md: "44px" },
                                 fontWeight: 700,
                                 lineHeight: { xs: "110%", md: "100%" },
                                 textAlign: { xs: "center", md: "left" },
@@ -56,7 +58,7 @@ function AboutUs() {
                         <Typography
                             variant="body1"
                             sx={{
-                                fontSize: { xs: "16px", sm: "18px", md: "20px" , lg: "24px" },
+                                fontSize: { xs: "16px", sm: "18px", md: "20px" , lg: "22px" },
                                 fontWeight: 500,
                                 lineHeight: { xs: "28px", md: "34px" },
                                 mb: 4,

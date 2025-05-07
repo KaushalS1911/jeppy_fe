@@ -22,11 +22,11 @@ function OurPartners() {
 
     return (
         <Box>
-            <Typography sx={{ fontSize: { md: "36px", sm: "28px", xs: "20px" }, fontWeight: 700, textAlign: "center", color: "#000" , pb:4 }}>
+            <Typography className={'monserrat'} sx={{ fontSize: { md: "36px", sm: "28px", xs: "20px" }, fontWeight: 700, textAlign: "center", color: "#000" , pb:4 }}>
                 Our Success Partners
             </Typography>
 
-            <Box sx={{ mt: 4, px: 2 ,background: `${theme.palette.saffron}` , py:5}}>
+            <Box sx={{ mt: 4, px: 2 ,background: `${theme.palette.saffron}` , py:6}}>
                 <Swiper
                     modules={[Autoplay]}
                     spaceBetween={0}
@@ -39,15 +39,15 @@ function OurPartners() {
                     }}
                     allowTouchMove={false}
                     breakpoints={{
-                        640: { slidesPerView: 3 },
-                        768: { slidesPerView: 5 },
-                        1024: { slidesPerView: 6 },
+                        640: { slidesPerView: 2 },
+                        768: { slidesPerView: 3 },
+                        1024: { slidesPerView: 5 },
                     }}
                 >
                     {images.map((img, index) => (
                         <SwiperSlide key={index}>
                             <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                                <img src={img} alt={`partner-${index}`} style={{ height: "60px", objectFit: "contain" }} />
+                                <img src={img} alt={`partner-${index}`} style={{ height: "90px", objectFit: "contain" }} />
                             </Box>
                         </SwiperSlide>
                     ))}

@@ -55,10 +55,10 @@ function Ourprocessstep2() {
                             {item.steps}
                         </Typography>
 
-                        <Typography variant="h6" sx={{
-                            mb: 2,
+                        <Typography variant="h6" className={'monserrat'} sx={{
+                            my: 2,
                             fontWeight: 700,
-                            fontSize: { xl: "48px", sm: "36px", xs: "32px" },
+                            fontSize: { xl: "44px", sm: "34px", xs: "30px" },
                             textWrap:"wrap",
                         }}>
                             {item.title}
@@ -68,7 +68,7 @@ function Ourprocessstep2() {
                             listStyleType: 'disc',
                             pl: 3,
                             fontWeight: 500,
-                            fontSize: { xl: "24px", sm: "20px", xs: "16px" },
+                            fontSize: { xl: "22px", sm: "18px", xs: "16px" },
                         }}>
                             {item.points.map((point, pointIndex) => (
                                 <ListItem key={pointIndex} sx={{ display: 'list-item' }}>
@@ -76,7 +76,7 @@ function Ourprocessstep2() {
                                         primary={point}
                                         primaryTypographyProps={{
                                             sx: {
-                                                fontSize: { xl: '24px', sm: '20px', xs: '16px' },
+                                                fontSize: { xl: "22px", sm: "18px", xs: "16px" },
                                                 fontWeight: 500,
                                             },
                                         }}
