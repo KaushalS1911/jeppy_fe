@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Typography, Container, Grid} from "@mui/material";
+import {Box, Typography, Container, Grid, useTheme} from "@mui/material";
 import bgimg from '../../assets/images/home/Milestone/assortment-salt-crackers_114579-65525.jpg';
 import CountUp from "react-countup";
 import {useInView} from 'react-intersection-observer';
@@ -12,30 +12,30 @@ const milestones = [
 ];
 
 function Milestone() {
-    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.3 });
+    const [ref, inView] = useInView({triggerOnce: true, threshold: 0.3});
+    const theme = useTheme();
 
     return (
-        <Box sx={{ py: 10 }} ref={ref}>
-            <Container maxWidth="xl">
-                <Box
-                    sx={{
-                        py: { xs: 4, sm: 5, md: 4 },
-                        px: { xs: 2, sm: 3, md: 4 },
-                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('${bgimg}')`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: { md: 'center', xs: "right" },
-                        backgroundRepeat: 'no-repeat',
-                        color: '#fff',
-                        borderRadius: '16px',
-                    }}
-                >
+        <Box sx={{py: 10}} ref={ref}>
+            <Box
+                sx={{
+                    py: {xs: 4, sm: 5, md: 4},
+                    px: {xs: 2, sm: 3, md: 4},
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('${bgimg}')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    color: '#fff',
+                }}
+            >
+                <Container maxWidth="xl">
                     <Grid container spacing={4} alignItems="center">
-                        <Grid item  size={{xs: 12, md: 4, lg: 3}}>
-                            <Box sx={{ display: "flex", justifyContent: "center" }}>
+                        <Grid item size={{xs: 12, md: 4, lg: 3}}>
+                            <Box sx={{display: "flex", justifyContent: "center"}}>
                                 <Box
                                     sx={{
-                                        width: { xs: 180, md: 250, xl: 280 },
-                                        height: { xs: 180, md: 250, xl: 280 },
+                                        width: {xs: 180, md: 250, xl: 280},
+                                        height: {xs: 180, md: 250, xl: 280},
                                         borderRadius: "50%",
                                         bgcolor: "rgba(255, 238, 220, 1)",
                                         display: "flex",
@@ -45,10 +45,10 @@ function Milestone() {
                                 >
                                     <Box
                                         sx={{
-                                            width: { xs: 150, md: 200, xl: 230 },
-                                            height: { xs: 150, md: 200, xl: 230 },
+                                            width: {xs: 150, md: 200, xl: 230},
+                                            height: {xs: 150, md: 200, xl: 230},
                                             borderRadius: "50%",
-                                            bgcolor: "#F28A1E",
+                                            bgcolor: `${theme.palette.saffron}`,
                                             display: "flex",
                                             flexDirection: "column",
                                             alignItems: "center",
@@ -56,10 +56,18 @@ function Milestone() {
                                             color: "white"
                                         }}
                                     >
-                                        <Typography variant="h2" sx={{ fontSize: { xs: "60px", md: "90px" }, fontWeight: 700, lineHeight: 1 }}>
+                                        <Typography variant="h2" sx={{
+                                            fontSize: {xs: "60px", md: "90px"},
+                                            fontWeight: 700,
+                                            lineHeight: 1
+                                        }}>
                                             30
                                         </Typography>
-                                        <Typography variant="h6" sx={{ fontSize: { xs: "20px", md: "24px" }, fontWeight: 500, letterSpacing: "1px" }}>
+                                        <Typography variant="h6" sx={{
+                                            fontSize: {xs: "20px", md: "24px"},
+                                            fontWeight: 500,
+                                            letterSpacing: "1px"
+                                        }}>
                                             YEARS
                                         </Typography>
                                     </Box>
@@ -71,22 +79,27 @@ function Milestone() {
                             <Grid container spacing={3}>
                                 {milestones.map((item, index) => (
                                     <Grid item size={{xs: 6, sm: 3}} key={index}>
-                                        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+                                        <Box sx={{
+                                            display: "flex",
+                                            flexDirection: "column",
+                                            alignItems: "center",
+                                            textAlign: "center"
+                                        }}>
                                             <Typography
                                                 variant="h3"
                                                 sx={{
-                                                    fontSize: { xs: "28px", sm: "36px", md: "48px" },
+                                                    fontSize: {xs: "28px", sm: "36px", md: "48px"},
                                                     fontWeight: 700,
                                                 }}
                                             >
-                                                {inView && <CountUp end={+item.value} duration={2.5} />}
+                                                {inView && <CountUp end={+item.value} duration={2.5}/>}
                                                 {!inView && 0}
                                                 {item.sufix}
                                             </Typography>
                                             <Typography
                                                 variant="body2"
                                                 sx={{
-                                                    fontSize: { xs: "14px", md: "16px" },
+                                                    fontSize: {xs: "14px", md: "16px"},
                                                     fontWeight: 500,
                                                     whiteSpace: 'pre-line'
                                                 }}
@@ -99,8 +112,8 @@ function Milestone() {
                             </Grid>
                         </Grid>
                     </Grid>
-                </Box>
-            </Container>
+                </Container>
+            </Box>
         </Box>
     );
 }

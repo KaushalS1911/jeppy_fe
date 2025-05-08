@@ -34,11 +34,11 @@ function OurCompany() {
             {/* Logo Container */}
             <Box sx={{
                 display: "flex",
-                flexDirection: {xs: "column", md: "row"},
+                flexDirection: {xs: "column", sm: "row"},
                 justifyContent: "center",
                 alignItems: "stretch",
                 mb: 10,
-                height: {xs: 240, sm: 280, md: 500},
+                height: {xs: 300, sm: 350, md: 500},
             }}>
                 {/* WOW Logo */}
                 <Box sx={{
@@ -59,7 +59,8 @@ function OurCompany() {
                         left: 0,
                         right: 0,
                         bottom: 0,
-                        background: "radial-gradient(circle at top right, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%)",
+                        background: 'linear-gradient(90deg, #caefd7, #f4f4f4, #abc9e9)',
+
                         pointerEvents: "none"
                     }
                 }}>
@@ -96,7 +97,7 @@ function OurCompany() {
                         left: 0,
                         right: 0,
                         bottom: 0,
-                        background: "radial-gradient(circle at top left, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%)",
+                        background: "linear-gradient(90deg, #d3f3f1, #e9b7ce)",
                         pointerEvents: "none"
                     }
                 }}>

@@ -26,7 +26,7 @@ function OurPartners() {
                 Our Success Partners
             </Typography>
 
-            <Box sx={{ mt: 4, px: 2 ,background: `${theme.palette.saffron}` , py:6}}>
+            <Box sx={{ mt: 4, px: 2 ,background: `${theme.palette.saffron}` , py: {sm:8 , xs:5}}}>
                 <Swiper
                     modules={[Autoplay]}
                     spaceBetween={0}
@@ -41,13 +41,14 @@ function OurPartners() {
                     breakpoints={{
                         640: { slidesPerView: 2 },
                         768: { slidesPerView: 3 },
-                        1024: { slidesPerView: 5 },
+                        1024: { slidesPerView: 4 },
+                        1500: { slidesPerView: 5 },
                     }}
                 >
                     {images.map((img, index) => (
                         <SwiperSlide key={index}>
-                            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                                <img src={img} alt={`partner-${index}`} style={{ height: "90px", objectFit: "contain" }} />
+                            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" ,px:2 }}>
+                                <img src={img} alt={`partner-${index}`} style={{ height: "120px", objectFit: "contain" }} />
                             </Box>
                         </SwiperSlide>
                     ))}

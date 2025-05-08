@@ -148,13 +148,12 @@ function HeroSection() {
             const handleResize = () => ScrollTrigger.refresh(true);
             window.addEventListener('resize', handleResize);
 
-            // Clean up scroll triggers on unmount
             return () => {
                 window.removeEventListener('resize', handleResize);
             };
-        }, sectionRef); // sectionRef is the root of this context
+        }, sectionRef);
 
-        return () => ctx.revert(); // ✅ kills all animations and scrollTriggers created in context
+        return () => ctx.revert();
     }, [isMobile, isTablet, isLargeScreen]);
 
     return (

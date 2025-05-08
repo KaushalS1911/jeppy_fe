@@ -152,7 +152,7 @@ function Products() {
                                             '&:hover': {
                                                 border: `2px solid ${theme.palette.saffron}`,
                                                 backgroundColor: 'transparent',
-                                                color: "#000",
+                                                color: `${theme.palette.saffron}`,
                                                 boxShadow: 'none',
                                             },
                                             boxShadow: "none",
