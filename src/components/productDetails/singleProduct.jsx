@@ -45,18 +45,18 @@ const SingleProduct = () => {
                                         }}
                                     />
                                 </Box>
-                                <Box sx={{textAlign: 'center'}}>
-                                    <Box
-                                        component="img"
-                                        src={size}
-                                        alt="Mad Stick Size"
-                                        sx={{
-                                            width: {xs: '80%', sm: '60%', md: '70%'},
-                                            maxWidth: '100%',
-                                            height: 'auto',
-                                        }}
-                                    />
-                                </Box>
+                                {/*<Box sx={{textAlign: 'center'}}>*/}
+                                {/*    <Box*/}
+                                {/*        component="img"*/}
+                                {/*        src={size}*/}
+                                {/*        alt="Mad Stick Size"*/}
+                                {/*        sx={{*/}
+                                {/*            width: {xs: '80%', sm: '60%', md: '70%'},*/}
+                                {/*            maxWidth: '100%',*/}
+                                {/*            height: 'auto',*/}
+                                {/*        }}*/}
+                                {/*    />*/}
+                                {/*</Box>*/}
                             </Box>
                         </Grid>
 

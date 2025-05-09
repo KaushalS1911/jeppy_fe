@@ -1,6 +1,7 @@
 import React from 'react';
-import {Box, Typography, List, ListItem, ListItemText, useTheme} from '@mui/material';
+import { Box, Typography, List, ListItem, ListItemText, useTheme } from '@mui/material';
 import imgstep3 from "../../assets/images/ourprocess/ManufacturingProcessSteps/Hygiene&Automation.png";
+import 'aos/dist/aos.css';
 
 function Ourprocessstep3() {
     const theme = useTheme();
@@ -23,36 +24,56 @@ function Ourprocessstep3() {
         <Box sx={{ backgroundColor: `${theme.palette.saffron}` }}>
             <Box sx={{margin: {sm: '0 30px', lg: "0 auto", xs: "0 10px"}}}>
                 {data.map((item, index) => (
-                    <Box key={index} sx={{
-                        display: 'flex',
-                        py: 8,
-                        flexDirection: {xs: 'column', lg: 'row'},
-                        justifyContent: 'space-between',
-                        alignItems: {lg:'center' , xs:"unset"},
-                    }}>
-                        <Box sx={{
-                            pl: {xs: 2, sm: 4, md: 6, lg: 6},
-                            py: {xs: 1, sm: 2, md: 3, lg: 4},
-                        }}>
-                            <Typography variant="h5" sx={{
-                                fontSize: {xl: "24px", sm: "20px", xs: "16px"},
-                                lineHeight: '24px',
-                                color: "#FFF",
-                                fontWeight: 300,
-                                mr: 2,
-                            }}>
+                    <Box
+                        key={index}
+                        sx={{
+                            display: 'flex',
+                            py: 8,
+                            flexDirection: {xs: 'column', lg: 'row'},
+                            justifyContent: 'space-between',
+                            alignItems: {lg:'center', xs:"unset"},
+                        }}
+                    >
+                        <Box
+                            data-aos="fade-right"
+                            data-aos-duration="1200"
+                            sx={{
+                                pl: {xs: 2, sm: 4, md: 6, lg: 6},
+                                py: {xs: 1, sm: 2, md: 3, lg: 4},
+                            }}
+                        >
+                            <Typography
+                                data-aos="fade-up"
+                                data-aos-delay="200"
+                                variant="h5"
+                                sx={{
+                                    fontSize: {xl: "24px", sm: "20px", xs: "16px"},
+                                    lineHeight: '24px',
+                                    color: "#FFF",
+                                    fontWeight: 300,
+                                    mr: 2,
+                                }}
+                            >
                                 {item.steps}
                             </Typography>
 
-                            <Typography variant="h6" className={'monserrat'} sx={{
-                                my: 2,
-                                fontWeight: 700,
-                                fontSize: { xl: "44px", sm: "34px", xs: "30px" },
-                            }}>
+                            <Typography
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                                variant="h6"
+                                className={'monserrat'}
+                                sx={{
+                                    my: 2,
+                                    fontWeight: 700,
+                                    fontSize: { xl: "44px", sm: "34px", xs: "30px" },
+                                }}
+                            >
                                 {item.title}
                             </Typography>
 
                             <List
+                                data-aos="fade-up"
+                                data-aos-delay="400"
                                 dense
                                 sx={{
                                     listStyleType: 'disc',
@@ -62,7 +83,12 @@ function Ourprocessstep3() {
                                 }}
                             >
                                 {item.points.map((point, pointIndex) => (
-                                    <ListItem key={pointIndex} sx={{ display: 'list-item', color: '#fff' }}>
+                                    <ListItem
+                                        key={pointIndex}
+                                        data-aos="fade-up"
+                                        data-aos-delay={400 + (pointIndex * 100)}
+                                        sx={{ display: 'list-item', color: '#fff' }}
+                                    >
                                         <ListItemText
                                             primary={point}
                                             primaryTypographyProps={{
@@ -75,10 +101,13 @@ function Ourprocessstep3() {
                                     </ListItem>
                                 ))}
                             </List>
-
                         </Box>
 
-                        <Box sx={{height: {lg:"470px" , xs:"100%"} , alignItems: 'center',display:"flex"}}>
+                        <Box
+                            data-aos="fade-left"
+                            data-aos-duration="1200"
+                            sx={{height: {lg:"470px", xs:"100%"}, alignItems: 'center', display:"flex"}}
+                        >
                             <img
                                 src={item.image}
                                 alt={`${item.title} illustration`}

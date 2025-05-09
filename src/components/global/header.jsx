@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Box, Button, Container, Typography, useTheme} from "@mui/material";
 import {useNavigate} from "react-router-dom";
+import 'aos/dist/aos.css';
 
-function Header( {heading , subtext ,buttonText , img , bgcolor , path} ) {
-
+function Header({ heading, subtext, buttonText, img, bgcolor, path }) {
     const theme = useTheme();
-
     const navigate = useNavigate();
 
     return (
@@ -45,6 +44,8 @@ function Header( {heading , subtext ,buttonText , img , bgcolor , path} ) {
                         color: '#161616',
                         fontSize: {md: "64px", sm: "48px", xs: "36px"},
                     }}
+                    data-aos="fade-down"
+                    data-aos-delay="200"
                 >
                     {heading}
                 </Typography>
@@ -55,6 +56,8 @@ function Header( {heading , subtext ,buttonText , img , bgcolor , path} ) {
                         color: '#000',
                         fontSize: {md: "24px", sm: "20px", xs: "16px"},
                     }}
+                    data-aos="fade-up"
+                    data-aos-delay="400"
                 >
                     {subtext}
                 </Typography>
@@ -77,6 +80,8 @@ function Header( {heading , subtext ,buttonText , img , bgcolor , path} ) {
                         },
                     }}
                     onClick={() => navigate(path)}
+                    data-aos="zoom-in"
+                    data-aos-delay="600"
                 >
                     {buttonText}
                 </Button>

@@ -4,9 +4,7 @@ import {
     Typography,
     Button,
     Grid,
-    Card,
     CardMedia,
-    CardContent,
     Container, useTheme,
 } from '@mui/material';
 
@@ -41,7 +39,7 @@ function Products() {
 
     return (
         <Container maxWidth="xl">
-            <Box sx={{py: {xs: 4, md: 5}}}>
+            <Box sx={{py: {xs: 5, md: 10}}}>
                 <Typography
                     variant="h5"
                     fontWeight={600}
@@ -106,9 +104,7 @@ function Products() {
                                     flexDirection: 'column',
                                     justifyContent: 'space-between',
                                     textAlign: 'center',
-                                    // backgroundColor: 'rgba(240, 240, 240, 1)',
                                     p: {xs: 1.5, md: 2},
-                                    // boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)',
                                     transition: 'transform 0.5s ease, box-shadow 0.3s ease',
                                     '&:hover': {
                                         transform: 'translateY(-10px)',

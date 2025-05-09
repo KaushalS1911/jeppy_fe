@@ -10,6 +10,8 @@ import Contactus from "./pages/contactus.jsx";
 import Footer from "./components/global/footer.jsx";
 import ProductSlider from "./components/productDetails/productSlider.jsx";
 import {useEffect} from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function App() {
@@ -21,6 +23,19 @@ function App() {
         }, [pathname]);
         return null;
     }
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: true,
+            offset: 120,
+            easing: 'ease-in-out'
+        });
+
+        return () => {
+        };
+    }, []);
 
     return (
         <main>

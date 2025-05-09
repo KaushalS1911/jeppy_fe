@@ -1,9 +1,10 @@
 import React from 'react';
-import {Box, Typography, List, ListItem, ListItemText, useTheme} from '@mui/material';
-import imgstep5 from "../../assets/images/ourprocess/ManufacturingProcessSteps/Packaging&Storage.png"
+import { Box, Typography, List, ListItem, ListItemText, useTheme } from '@mui/material';
+import imgstep5 from "../../assets/images/ourprocess/ManufacturingProcessSteps/Packaging&Storage.png";
+import 'aos/dist/aos.css';
+
 
 function Ourprocessstep5() {
-
     const theme = useTheme();
 
     const data = [
@@ -25,54 +26,86 @@ function Ourprocessstep5() {
         <Box sx={{ backgroundColor: `${theme.palette.saffron}` }}>
             <Box sx={{margin: {sm: '0 30px', lg: "0 auto", xs: "0 10px"}}}>
                 {data.map((item, index) => (
-                    <Box key={index} sx={{
-                        display: 'flex',
-                        py: 8,
-                        flexDirection: {xs: 'column', lg: 'row'},
-                        justifyContent: 'space-between',
-                        alignItems: {lg:'center' , xs:"unset"},
-                    }}>
-                        <Box sx={{
-                            pl: {xs: 2, sm: 4, md: 6, lg: 6},
-                            py: {xs: 1, sm: 2, md: 3, lg: 4},
-                            maxWidth: '600px',
-                        }}>
-                            <Typography variant="h5" sx={{
-                                fontSize: {xl: "24px", sm: "20px", xs: "16px"},
-                                lineHeight: '24px',
-                                fontWeight: 300,
-                                mb: 1,
-                                color:"#FFF"
-                            }}>
+                    <Box
+                        key={index}
+                        sx={{
+                            display: 'flex',
+                            py: 8,
+                            flexDirection: {xs: 'column', lg: 'row'},
+                            justifyContent: 'space-between',
+                            alignItems: {lg:'center', xs:"unset"},
+                        }}
+                    >
+                        <Box
+                            data-aos="fade-right"
+                            data-aos-duration="1200"
+                            sx={{
+                                pl: {xs: 2, sm: 4, md: 6, lg: 6},
+                                py: {xs: 1, sm: 2, md: 3, lg: 4},
+                                maxWidth: '600px',
+                            }}
+                        >
+                            <Typography
+                                data-aos="fade-up"
+                                data-aos-delay="200"
+                                variant="h5"
+                                sx={{
+                                    fontSize: {xl: "24px", sm: "20px", xs: "16px"},
+                                    lineHeight: '24px',
+                                    fontWeight: 300,
+                                    mb: 1,
+                                    color:"#FFF"
+                                }}
+                            >
                                 {item.steps}
                             </Typography>
 
-                            <Typography variant="h6" className={'monserrat'} sx={{
-                                my: 2,
-                                fontWeight: 700,
-                                fontSize: { xl: "44px", sm: "34px", xs: "30px" },
-                                color: "#000",
-                            }}>
+                            <Typography
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                                variant="h6"
+                                className={'monserrat'}
+                                sx={{
+                                    my: 2,
+                                    fontWeight: 700,
+                                    fontSize: { xl: "44px", sm: "34px", xs: "30px" },
+                                    color: "#000",
+                                }}
+                            >
                                 {item.title}
                             </Typography>
 
-                            <Typography sx={{
-                                fontSize: { xl: "22px", sm: "18px", xs: "16px" },
-                                fontWeight: 500,
-                                mb: 1,
-                                color:"#FFF"
-                            }}>
+                            <Typography
+                                data-aos="fade-up"
+                                data-aos-delay="400"
+                                sx={{
+                                    fontSize: { xl: "22px", sm: "18px", xs: "16px" },
+                                    fontWeight: 500,
+                                    mb: 1,
+                                    color:"#FFF"
+                                }}
+                            >
                                 {item.intro}
                             </Typography>
 
-                            <List dense sx={{
-                                listStyleType: 'disc',
-                                pl: 2,
-                                fontWeight: 500,
-                                fontSize: { xl: "22px", sm: "18px", xs: "16px" },
-                            }}>
+                            <List
+                                data-aos="fade-up"
+                                data-aos-delay="500"
+                                dense
+                                sx={{
+                                    listStyleType: 'disc',
+                                    pl: 2,
+                                    fontWeight: 500,
+                                    fontSize: { xl: "22px", sm: "18px", xs: "16px" },
+                                }}
+                            >
                                 {item.points.map((point, pointIndex) => (
-                                    <ListItem key={pointIndex} sx={{display: 'list-item' , color:"#FFF"}}>
+                                    <ListItem
+                                        key={pointIndex}
+                                        data-aos="fade-up"
+                                        data-aos-delay={500 + (pointIndex * 100)}
+                                        sx={{display: 'list-item', color:"#FFF"}}
+                                    >
                                         <ListItemText
                                             primary={point}
                                             primaryTypographyProps={{
@@ -86,21 +119,29 @@ function Ourprocessstep5() {
                                 ))}
                             </List>
 
-                            <Typography sx={{
-                                mt: 2,
-                                fontSize: { xl: "22px", sm: "18px", xs: "16px" },
-                                fontWeight: 500,
-                                color:"#FFF"
-                            }}>
+                            <Typography
+                                data-aos="fade-up"
+                                data-aos-delay="800"
+                                sx={{
+                                    mt: 2,
+                                    fontSize: { xl: "22px", sm: "18px", xs: "16px" },
+                                    fontWeight: 500,
+                                    color:"#FFF"
+                                }}
+                            >
                                 {item.footer}
                             </Typography>
                         </Box>
 
-                        <Box sx={{width:{lg:'1000px' , xs:"100%"} , height:{lg:'550px', xs:"100%"}}}>
+                        <Box
+                            data-aos="fade-left"
+                            data-aos-duration="1200"
+                            sx={{width:{lg:'1000px', xs:"100%"}, height:{lg:'550px', xs:"100%"}}}
+                        >
                             <img
                                 src={item.image}
                                 alt={`${item.title} illustration`}
-                                style={{width: '100%', height: '100%' , objectFit:"cover"}}
+                                style={{width: '100%', height: '100%', objectFit:"cover"}}
                             />
                         </Box>
                     </Box>

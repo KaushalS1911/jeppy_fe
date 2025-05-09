@@ -5,13 +5,8 @@ import {
     Container,
     Typography,
     Grid,
-    TextField,
-    InputAdornment,
-    IconButton,
-    Link as MuiLink,
     useTheme,
 } from '@mui/material';
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import Logo from '../../assets/images/global/logo.jpg';
 
 const Footer = () => {
@@ -19,7 +14,7 @@ const Footer = () => {
     const navigate = useNavigate();
 
     const quickLink = [
-        { label: 'Our Products', path: '/products' },
+        { label: 'Products', path: '/products' },
         { label: 'Our Process', path: '/process' },
         { label: 'About us', path: '/about' },
         { label: 'Contact', path: '/contact' },

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography, Grid } from "@mui/material";
+import 'aos/dist/aos.css';
 import certificate1 from '../../assets/images/global/certificates/167-1671625_halal-certification-services-halal-india-logo (1).png';
 import certificate2 from '../../assets/images/global/certificates/unnamed.png';
 import certificate3 from '../../assets/images/global/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM (1).jpeg';
@@ -7,6 +8,7 @@ import certificate4 from '../../assets/images/global/certificates/WhatsApp Image
 import certificate5 from '../../assets/images/global/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM (2).jpeg';
 
 function OurCertificates() {
+
     return (
         <Box sx={{ padding: "50px 0" }}>
             <Container maxWidth="xl">
@@ -18,22 +20,21 @@ function OurCertificates() {
                         textAlign: "center",
                         lineHeight: "65px"
                     }}
+                    data-aos="fade-down"
                 >
                     Our Certificates
                 </Typography>
                 <Grid container spacing={4} justifyContent="center" sx={{ marginTop: 5 }}>
                     {[certificate1, certificate2, certificate3, certificate4, certificate5].map((cert, index) => (
-                        <Grid item size={{xs:12 ,  sm:6 , lg:4,xl:2}} key={index}>
+                        <Grid item size={{xs:12, sm:6, lg:4, xl:2}} key={index}>
                             <Box
                                 sx={{
-                                    // width: "100%",
-                                    // height: "300px",
                                     display: "flex",
                                     justifyContent: "center",
                                     alignItems: "center",
-                                    // overflow: "hidden",
-                                    // borderRadius: "8px",
                                 }}
+                                data-aos="zoom-in"
+                                data-aos-delay={index * 100}
                             >
                                 <img
                                     src={cert}

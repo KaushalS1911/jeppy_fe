@@ -1,8 +1,11 @@
 import React from 'react';
 import { Box, Typography, List, ListItem, ListItemText } from '@mui/material';
 import imgstep2 from "../../assets/images/ourprocess/ManufacturingProcessSteps/CoreProductionProcess.png";
+import 'aos/dist/aos.css';
 
 function Ourprocessstep2() {
+
+
     const data = [
         {
             steps: "STEP 2",
@@ -22,56 +25,87 @@ function Ourprocessstep2() {
     ];
 
     return (
-        <Box sx={{ margin: {sm:'0 30px' , lg:"0 auto" , xs:"0 10px"}}}>
+        <Box sx={{ margin: {sm:'0 30px', lg:"0 auto", xs:"0 10px"}}}>
             {data.map((item, index) => (
-                <Box key={index} sx={{
-                    display: 'flex',
-                    py: 8,
-                    flexDirection: { xs: 'column', lg: 'row' },
-                    justifyContent: 'start',
-                }}>
-                    <Box sx={{
+                <Box
+                    key={index}
+                    sx={{
                         display: 'flex',
-                        justifyContent: 'center',
-                    }}>
+                        py: 8,
+                        flexDirection: { xs: 'column', lg: 'row' },
+                        justifyContent: 'start',
+                    }}
+                >
+                    <Box
+                        data-aos="fade-right"
+                        data-aos-duration="1200"
+                        sx={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                        }}
+                    >
                         <img
                             src={item.image}
                             alt={`${item.title} illustration`}
-                            style={{ width: '100%', height: '100%' , objectFit:"contain" }}
+                            style={{ width: '100%', height: '100%', objectFit:"contain" }}
                         />
                     </Box>
 
-                    <Box sx={{
-                        py: { xs: 2, sm: 3, md: 4, lg: 4 },
-                        pl: {lg:8 , xs:"unset"}
-                    }}>
-                        <Typography variant="h5" sx={{
-                            fontSize: { xl: "24px", sm: "20px", xs: "16px" },
-                            lineHeight: '24px',
-                            color: "rgba(242, 138, 30, 1)",
-                            fontWeight: 300,
-                            // mr: 2,
-                        }}>
+                    <Box
+                        data-aos="fade-left"
+                        data-aos-duration="1200"
+                        sx={{
+                            py: { xs: 2, sm: 3, md: 4, lg: 4 },
+                            pl: {lg:8, xs:"unset"}
+                        }}
+                    >
+                        <Typography
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                            variant="h5"
+                            sx={{
+                                fontSize: { xl: "24px", sm: "20px", xs: "16px" },
+                                lineHeight: '24px',
+                                color: "rgba(242, 138, 30, 1)",
+                                fontWeight: 300,
+                            }}
+                        >
                             {item.steps}
                         </Typography>
 
-                        <Typography variant="h6" className={'monserrat'} sx={{
-                            my: 2,
-                            fontWeight: 700,
-                            fontSize: { xl: "44px", sm: "34px", xs: "30px" },
-                            textWrap:"wrap",
-                        }}>
+                        <Typography
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                            variant="h6"
+                            className={'monserrat'}
+                            sx={{
+                                my: 2,
+                                fontWeight: 700,
+                                fontSize: { xl: "44px", sm: "34px", xs: "30px" },
+                                textWrap:"wrap",
+                            }}
+                        >
                             {item.title}
                         </Typography>
 
-                        <List dense sx={{
-                            listStyleType: 'disc',
-                            pl: 3,
-                            fontWeight: 500,
-                            fontSize: { xl: "22px", sm: "18px", xs: "16px" },
-                        }}>
+                        <List
+                            data-aos="fade-up"
+                            data-aos-delay="400"
+                            dense
+                            sx={{
+                                listStyleType: 'disc',
+                                pl: 3,
+                                fontWeight: 500,
+                                fontSize: { xl: "22px", sm: "18px", xs: "16px" },
+                            }}
+                        >
                             {item.points.map((point, pointIndex) => (
-                                <ListItem key={pointIndex} sx={{ display: 'list-item' }}>
+                                <ListItem
+                                    key={pointIndex}
+                                    data-aos="fade-up"
+                                    data-aos-delay={400 + (pointIndex * 100)}
+                                    sx={{ display: 'list-item' }}
+                                >
                                     <ListItemText
                                         primary={point}
                                         primaryTypographyProps={{

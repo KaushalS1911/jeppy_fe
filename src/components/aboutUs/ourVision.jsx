@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Container, Typography } from "@mui/material";
+import {Box, Container, Typography} from "@mui/material";
+import 'aos/dist/aos.css';
 
 const visionData = [
     {
@@ -13,14 +14,19 @@ const visionData = [
 ];
 
 function OurVision() {
+
     return (
-        <Container maxWidth={"xl"} sx={{ padding: { xs: '2rem', sm: '4rem', md: '6rem' } }}>
-            <Box sx={{ paddingTop: '3rem' }}>
+        <Container maxWidth={"xl"} sx={{padding: {xs: '2rem', sm: '4rem', md: '6rem'}}}>
+            <Box
+                sx={{paddingTop: '3rem'}}
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
                 <Box
                     sx={{
-                        display: { xs: 'column', md : 'flex',  },
-                        gap: { xs: '30px', sm: '40px', md: '50px' },
-                        flexDirection: { xs: 'column', sm: 'row' },
+                        display: {xs: 'column', md: 'flex',},
+                        gap: {xs: '30px', sm: '40px', md: '50px'},
+                        flexDirection: {xs: 'column', sm: 'row'},
                         justifyContent: 'space-between',
                         alignItems: 'stretch',
                     }}
@@ -29,18 +35,18 @@ function OurVision() {
                         <Box
                             key={index}
                             sx={{
-                                flex: { xs: '1 1 100%', sm: '1 1 48%' },
+                                flex: {xs: '1 1 100%', sm: '1 1 48%'},
                                 borderRadius: "12px",
                                 margin: "10px 0",
                                 backgroundColor: "#fff",
-                                padding: { xs: '20px', sm: '50px 40px'},
+                                padding: {xs: '20px', sm: '50px 40px'},
                                 boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'center',
                                 alignItems: 'flex-start',
                                 minHeight: '250px',
-                                transition:'0.3s',
+                                transition: '0.3s',
                                 '&:hover': {
                                     transform: 'translateY(-8px)',
                                     background: 'linear-gradient(147deg,rgba(242, 138, 30, 1) 0%, rgba(194, 111, 25, 1) 100%)',
@@ -52,27 +58,32 @@ function OurVision() {
                                     color: '#FFF',
                                 }
                             }}
+                            data-aos={index === 0 ? "fade-right" : "fade-left"}
+                            data-aos-delay={200 + (index * 150)}
                         >
-                            <Typography className={'monserrat'}
+                            <Typography
+                                className={'monserrat'}
                                 sx={{
-                                    fontSize: { xs: "30px", sm: "36px" },
+                                    fontSize: {xs: "30px", sm: "36px"},
                                     color: "#0c2253",
                                     paddingBottom: "20px",
                                     fontWeight: 'bold',
                                     textAlign: 'center',
                                     letterSpacing: '1px',
-                                    transition:'0.3s',
+                                    transition: '0.3s',
                                 }}
                             >
                                 {item.title}
                             </Typography>
-                            <Typography className={'desc'}
+                            <Typography
+                                className={'desc'}
                                 sx={{
-                                    fontSize: { xs: "19px", sm: "21px" ,md: "24px" },
-                                    lineHeight: { xs: "25px", sm: "30px" ,md: "40px" },
+                                    fontSize: {xs: "19px", sm: "21px", md: "24px"},
+                                    lineHeight: {xs: "25px", sm: "30px", md: "40px"},
                                     color: "#525252",
-                                    textAlign: 'justify',
-                                    transition:'0.3s',
+                                    // textAlign: 'justify',
+                                    transition: '0.3s',
+                                    letterSpacing:"1px"
                                 }}
                             >
                                 {item.description}

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef} from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { Box, Typography, Button, useTheme, useMediaQuery } from '@mui/material';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -32,7 +32,6 @@ function HeroSection() {
         cereal: useRef(null),
         glutenFree: useRef(null)
     };
-
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
@@ -133,7 +132,17 @@ function HeroSection() {
                     x: pos.x,
                     y: pos.y,
                     duration: 1.5,
-                    ease: "back.out(1.7)"
+                    ease: "back.out(1.7)",
+                    onComplete: () => {
+                        // Add continuous floating animation after the image appears
+                        gsap.to(imgRef, {
+                            y: pos.y + (isMobile ? 10 : 20),
+                            duration: 2 + Math.random() * 1,
+                            repeat: -1,
+                            yoyo: true,
+                            ease: "sine.inOut"
+                        });
+                    }
                 }, 1 + index * 0.1);
 
                 tl.to(labelRef, {
@@ -141,7 +150,17 @@ function HeroSection() {
                     x: pos.x,
                     y: pos.y - yOffset,
                     duration: 1.5,
-                    ease: "back.out(1.7)"
+                    ease: "back.out(1.7)",
+                    onComplete: () => {
+                        // Add continuous floating animation to the label as well
+                        gsap.to(labelRef, {
+                            y: (pos.y - yOffset) + (isMobile ? 5 : 10),
+                            duration: 2.5 + Math.random() * 1,
+                            repeat: -1,
+                            yoyo: true,
+                            ease: "sine.inOut"
+                        });
+                    }
                 }, 1 + index * 0.1 + 0.1);
             });
 

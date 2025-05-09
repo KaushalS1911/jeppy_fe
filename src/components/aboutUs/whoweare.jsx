@@ -1,36 +1,49 @@
 import React from 'react';
 import {Box, Typography, Grid, Container} from '@mui/material';
 import palletimg from "../../assets/images/aboutus/pallets.jpg";
+import 'aos/dist/aos.css';
 
 function Whoweare() {
+
     return (
         <>
             <Box>
-                <Box sx={{
-                    backgroundColor: 'rgba(242, 138, 30, 1)',
-                }}>
-                    <Typography className={'monserrat'} sx={{
-                        fontWeight: 700,
-                        fontSize: {md: "36px", sm: "32px", xs: "28px"},
-                        textAlign: 'center',
-                        color: 'white',
-                        py: {
-                            xs: 3,
-                            sm: 3,
-                            md: 3,
-                            lg: 5,
-                            xl: 5,
-                        }
-                    }}>Who we are</Typography>
-                    <Container maxWidth="xl" sx={{
-                        py: {
-                            xs: 0,
-                            sm: 3,
-                            md: 4,
-                            lg: 5,
-                            xl: 5,
-                        },
-                    }}>
+                <Box
+                    sx={{
+                        backgroundColor: 'rgba(242, 138, 30, 1)',
+                    }}
+                >
+                    <Typography
+                        className={'monserrat'}
+                        sx={{
+                            fontWeight: 700,
+                            fontSize: {md: "36px", sm: "32px", xs: "28px"},
+                            textAlign: 'center',
+                            color: 'white',
+                            py: {
+                                xs: 3,
+                                sm: 3,
+                                md: 3,
+                                lg: 5,
+                                xl: 5,
+                            }
+                        }}
+                        data-aos="fade-down"
+                    >
+                        Who we are
+                    </Typography>
+                    <Container
+                        maxWidth="xl"
+                        sx={{
+                            py: {
+                                xs: 0,
+                                sm: 3,
+                                md: 4,
+                                lg: 5,
+                                xl: 5,
+                            },
+                        }}
+                    >
                         <Grid container spacing={5}>
                             <Grid item size={{xs: 12, lg: 6}}>
                                 <Typography
@@ -39,10 +52,11 @@ function Whoweare() {
                                         fontSize: {xs: '16px', sm: '20px', md: '24px'},
                                         lineHeight: 1.7,
                                         color: 'white',
-
                                     }}
+                                    data-aos="fade-right"
+                                    data-aos-delay="200"
                                 >
-                                    At Jayant Snacks and Beverages Pvt. Ltd., we’ve been shaping the future of Papad
+                                    At Jayant Snacks and Beverages Pvt. Ltd., we've been shaping the future of Papad
                                     Snacks since 1987. Popularly known by our brands JEPPY and WOW, we are a leading
                                     manufacturer and exporter of ready-to-fry and air-roast Papad Snacks, headquartered
                                     in
@@ -63,6 +77,8 @@ function Whoweare() {
                                             xl: 10,
                                         },
                                     }}
+                                    data-aos="fade-left"
+                                    data-aos-delay="300"
                                 >
                                     Established in 1987
                                 </Typography>
@@ -76,10 +92,11 @@ function Whoweare() {
                             xs: 'block',
                             sm: 'block',
                             md: 'block',
-                            lg: 'none', // Hide on large screens and above
+                            lg: 'none',
                             xl: 'none',
                         },
                     }}
+                    data-aos="fade-up"
                 >
                     <Box
                         component="img"
@@ -94,35 +111,46 @@ function Whoweare() {
                 </Box>
 
                 <Box>
-                    <Container maxWidth="xl" sx={{
-                        py: {
-                            xs: 3,
-                            sm: 3,
-                            md: 4,
-                            lg: 5,
-                            xl: 5,
-                        },
-                    }}>
+                    <Container
+                        maxWidth="xl"
+                        sx={{
+                            py: {
+                                xs: 3,
+                                sm: 3,
+                                md: 4,
+                                lg: 5,
+                                xl: 5,
+                            },
+                        }}
+                    >
                         <Grid container spacing={5}>
                             <Grid item size={{xs: 12, lg: 6}}>
-                                <Typography sx={{
-                                    fontWeight: 500,
-                                    fontSize: {xs: '16px', sm: '20px', md: '24px'},
-                                    marginBottom: '24px',
-
-
-                                }}>With 30+ years of expertise, we’ve mastered the art of creating delicious and
-                                    innovative
-                                    snacks from cereals, lentils, vegetables, and multigrain flours. Our portfolio
-                                    includes
-                                    2D, 3D, laminated, and punched shapes loved by customers across the
-                                    globe.</Typography>
-                                <Typography sx={{
-                                    fontWeight: 500,
-                                    fontSize: {xs: '16px', sm: '20px', md: '24px'},
-                                }}>Backed by a strong R&D culture, we conduct research on 100–150 new products annually,
+                                <Typography
+                                    sx={{
+                                        fontWeight: 500,
+                                        fontSize: {xs: '16px', sm: '20px', md: '24px'},
+                                        marginBottom: '24px',
+                                    }}
+                                    data-aos="fade-up"
+                                    data-aos-delay="300"
+                                >
+                                    With 30+ years of expertise, we've mastered the art of creating delicious and
+                                    innovative snacks from cereals, lentils, vegetables, and multigrain flours. Our portfolio
+                                    includes 2D, 3D, laminated, and punched shapes loved by customers across the
+                                    globe.
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontWeight: 500,
+                                        fontSize: {xs: '16px', sm: '20px', md: '24px'},
+                                    }}
+                                    data-aos="fade-up"
+                                    data-aos-delay="450"
+                                >
+                                    Backed by a strong R&D culture, we conduct research on 100–150 new products annually,
                                     developing over 300 unique shapes and thousands of formulations to
-                                    date.</Typography>
+                                    date.
+                                </Typography>
                             </Grid>
                         </Grid>
                     </Container>
@@ -179,10 +207,12 @@ function Whoweare() {
                             },
                             zIndex: 10,
                         }}
+                        data-aos="fade-left"
+                        data-aos-offset="300"
+                        data-aos-duration="1500"
                     />
                 </Box>
             </Box>
-
         </>
     );
 }

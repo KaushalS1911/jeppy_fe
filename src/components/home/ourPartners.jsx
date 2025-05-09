@@ -21,7 +21,7 @@ function OurPartners() {
     const theme = useTheme();
 
     return (
-        <Box>
+        <Box sx={{py: {xs: 5, md: 10}}}>
             <Typography className={'monserrat'} sx={{ fontSize: { md: "36px", sm: "28px", xs: "20px" }, fontWeight: 700, textAlign: "center", color: "#000" , pb:4 }}>
                 Our Success Partners
             </Typography>

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Box, Button, Container, Typography, useTheme } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import 'aos/dist/aos.css';
 
 function AboutHeader() {
     const theme = useTheme();
     const navigate = useNavigate();
-
     return (
         <Box
             id="header"
@@ -21,7 +21,6 @@ function AboutHeader() {
                 zIndex: 1,
             }}
         >
-            {/* Background Video */}
             <iframe
                 src="https://www.youtube.com/embed/pZsd9cHwzIg?autoplay=1&mute=1&loop=1&playlist=pZsd9cHwzIg&controls=0&showinfo=0&modestbranding=1&cc_load_policy=0"
                 title="Background Video"
@@ -40,8 +39,6 @@ function AboutHeader() {
                 }}
             />
 
-
-            {/* Overlay */}
             <Box
                 sx={{
                     position: 'absolute',
@@ -54,9 +51,10 @@ function AboutHeader() {
                 }}
             />
 
-            {/* Foreground Content */}
             <Container sx={{position: 'relative', zIndex: 2}}>
-            <Typography
+                <Typography
+                    data-aos="fade-down"
+                    data-aos-delay="200"
                     variant="h3"
                     sx={{
                         fontWeight: 700,
@@ -68,6 +66,8 @@ function AboutHeader() {
                     Innovating the Future of Snacks
                 </Typography>
                 <Typography
+                    data-aos="fade-up"
+                    data-aos-delay="400"
                     variant="h6"
                     sx={{
                         mb: 5,
@@ -77,28 +77,33 @@ function AboutHeader() {
                 >
                     Scalable. Customizable. Built to Deliver.
                 </Typography>
-                <Button
-                    variant="contained"
-                    sx={{
-                        backgroundColor: `${theme.palette.headerButton}`,
-                        color: '#fff',
-                        p: { sm: "22px 32px", xs: "15px 22px" },
-                        fontWeight: 600,
-                        fontSize: { md: "24px", sm: "20px", xs: "16px" },
-                        textTransform: 'none',
-                        borderRadius: '50px',
-                        border: `2px solid transparent`,
-                        transition: "0.3s",
-                        '&:hover': {
-                            backgroundColor: '#FFF',
-                            color: `${theme.palette.headerButton}`,
-                            border: `2px solid ${theme.palette.headerButton}`,
-                        },
-                    }}
-                    onClick={() => navigate('/')}
+                <Box
+                    data-aos="zoom-in"
+                    data-aos-delay="600"
                 >
-                    Watch Our Story
-                </Button>
+                    <Button
+                        variant="contained"
+                        sx={{
+                            backgroundColor: `${theme.palette.headerButton}`,
+                            color: '#fff',
+                            p: { sm: "22px 32px", xs: "15px 22px" },
+                            fontWeight: 600,
+                            fontSize: { md: "24px", sm: "20px", xs: "16px" },
+                            textTransform: 'none',
+                            borderRadius: '50px',
+                            border: `2px solid transparent`,
+                            transition: "0.3s",
+                            '&:hover': {
+                                backgroundColor: '#FFF',
+                                color: `${theme.palette.headerButton}`,
+                                border: `2px solid ${theme.palette.headerButton}`,
+                            },
+                        }}
+                        onClick={() => navigate('/')}
+                    >
+                        Watch Our Story
+                    </Button>
+                </Box>
             </Container>
         </Box>
     );

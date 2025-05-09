@@ -82,7 +82,7 @@ const ProductSlider = () => {
                     mb: 6,
                 }}
             >
-                Other Products
+                Similar Products
             </Typography>
 
             <Box sx={{position: 'relative'}}>

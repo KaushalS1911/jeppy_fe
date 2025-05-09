@@ -27,12 +27,12 @@ function OurSolution() {
     ]
 
     return (
-        <Box sx={{padding:"90px 0"}}>
+        <Box sx={{py: {xs: 5, md: 10} , backgroundColor:"#F4F4F4"}}>
             <Container maxWidth="xl">
                 <Typography className={'monserrat'} sx={{
                     fontSize: {md: "36px", sm: "28px", xs: "20px"},
                     fontWeight: 700,
-                    textAlign: "center"
+                    textAlign: "center",
                 }}>
                     Our Solution
                 </Typography>

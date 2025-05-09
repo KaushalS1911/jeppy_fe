@@ -6,11 +6,6 @@ import {
     Typography,
     InputBase,
     Grid,
-    Paper,
-    Card,
-    CardContent,
-    CardActionArea,
-    CardMedia,
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { Link } from 'react-router-dom';
@@ -94,10 +89,8 @@ const Products = () => {
                     mb={{xs: 3, md: 4}}
                     sx={{fontSize: {xs: '1.5rem', md: '1.8rem'}}}
                 >
-                    Our Products
+                    Products
                 </Typography>
-
-                {/* Category Buttons */}
                 <Box
                     display="flex"
                     justifyContent="center"
@@ -130,8 +123,6 @@ const Products = () => {
                         </Button>
                     ))}
                 </Box>
-
-                {/* Search Bar */}
                 <Box display="flex" justifyContent="center" mb={6}>
                     <Box
                         sx={{
@@ -160,8 +151,6 @@ const Products = () => {
                         />
                     </Box>
                 </Box>
-
-                {/* Product Grid */}
                 <Grid container spacing={3} padding={2} display="flex" justifyContent="center">
                     {filteredProducts.map((item, index) => (
                         <Grid item key={index} xs={6} sm={4} md={3} lg={2}>
