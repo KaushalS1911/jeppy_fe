@@ -29,7 +29,8 @@ function AboutUs() {
     return (
         <Box sx={{
             py: { xs: 5, md: 10 },
-            backgroundColor: "#F4F4F4"
+            backgroundColor: "#F4F4F4",
+            overflowX:"hidden",
         }}>
             <Typography
                 className={'monserrat'}

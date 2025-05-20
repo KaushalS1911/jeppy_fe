@@ -1,7 +1,8 @@
-import React from 'react';
-import { Box, Typography, Grid } from '@mui/material';
+import React, {useState} from 'react';
+import {Box, Typography, Grid} from '@mui/material';
 import imgstep4 from "../../assets/images/ourprocess/ManufacturingProcessSteps/QualityControl.png";
-import certificate1 from '../../assets/images/global/certificates/167-1671625_halal-certification-services-halal-india-logo (1).png';
+import certificate1
+    from '../../assets/images/global/certificates/167-1671625_halal-certification-services-halal-india-logo (1).png';
 import certificate2 from '../../assets/images/global/certificates/unnamed.png';
 import certificate3 from '../../assets/images/global/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM (1).jpeg';
 import certificate4 from '../../assets/images/global/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM.jpeg';
@@ -9,6 +10,28 @@ import certificate5 from '../../assets/images/global/certificates/WhatsApp Image
 import 'aos/dist/aos.css';
 
 function Ourprocessstep4() {
+
+    const [isHovered, setIsHovered] = useState(false);
+
+    const shineEffectStyles = {
+        position: 'relative',
+        overflow: 'hidden',
+        '&::before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: '-75%',
+            width: '50%',
+            height: '100%',
+            background: 'linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%)',
+            transform: 'skewX(-25deg)',
+            transition: 'all 0.75s',
+            zIndex: 1,
+        },
+        '&:hover::before': {
+            left: '125%',
+        }
+    };
 
     const data = {
         step: "STEP 4",
@@ -18,11 +41,11 @@ function Ourprocessstep4() {
             "Latest instruments are used to ensure snacks meet quality benchmarks."
         ],
         certifiedBy: [
-            { image: certificate1 },
-            { image: certificate2 },
-            { image: certificate3 },
-            { image: certificate4 },
-            { image: certificate5 },
+            {image: certificate1},
+            {image: certificate2},
+            {image: certificate3},
+            {image: certificate4},
+            {image: certificate5},
         ],
         image: imgstep4,
     };
@@ -66,7 +89,7 @@ function Ourprocessstep4() {
                                 className={'monserrat'}
                                 sx={{
                                     fontWeight: 700,
-                                    fontSize: { xl: "44px", sm: "34px", xs: "30px" },
+                                    fontSize: {xl: "44px", sm: "34px", xs: "30px"},
                                     my: 2,
                                 }}
                             >
@@ -91,7 +114,7 @@ function Ourprocessstep4() {
                                     data-aos="fade-up"
                                     data-aos-delay={400 + (idx * 100)}
                                     sx={{
-                                        fontSize: { xl: "22px", sm: "18px", xs: "16px" },
+                                        fontSize: {xl: "22px", sm: "18px", xs: "16px"},
                                         fontWeight: 500,
                                         mb: 1,
                                     }}
@@ -103,7 +126,7 @@ function Ourprocessstep4() {
                             <Typography
                                 data-aos="fade-up"
                                 data-aos-delay="600"
-                                sx={{my: 3, fontWeight: 700, fontSize: { xl: "22px", sm: "18px", xs: "16px" }}}
+                                sx={{my: 3, fontWeight: 700, fontSize: {xl: "22px", sm: "18px", xs: "16px"}}}
                             >
                                 Certified by:
                             </Typography>
@@ -127,14 +150,25 @@ function Ourprocessstep4() {
                                         sx={{
                                             display: 'flex',
                                             flexDirection: 'column',
-                                            alignItems: 'center',
+                                            alignItems: 'center'
                                         }}
                                     >
-                                        <img
-                                            src={cert.image}
-                                            alt={`Certificate ${idx + 1}`}
-                                            style={{width: 65, height: 65, objectFit: 'cover'}}
-                                        />
+                                        <Box sx={{
+                                            transition: ".3s",
+                                            '&:hover': {
+                                                transform: "scale(1.1) !important",
+                                            }
+                                        }}>
+                                            <img
+                                                src={cert.image}
+                                                alt={`Certificate ${idx + 1}`}
+                                                style={{
+                                                    width: 65,
+                                                    height: 65,
+                                                    objectFit: 'cover',
+                                                }}
+                                            />
+                                        </Box>
                                     </Box>
                                 ))}
                             </Box>
@@ -145,9 +179,18 @@ function Ourprocessstep4() {
             <Box
                 data-aos="fade-up"
                 data-aos-duration="1500"
-                sx={{height: {md:"600px", xs:"100%"}, width: "100%"}}
+                sx={{height: {md: "600px", xs: "100%"}, width: "100%", ...shineEffectStyles}}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
             >
-                <img src={imgstep4} alt="Quality Control Process" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={imgstep4} alt="Quality Control Process"
+                     style={{
+                         width: '100%',
+                         height: '100%',
+                         objectFit: 'cover',
+                         transition: "transform 0.5s ease",
+                         transform: isHovered ? "scale(1.05)" : "scale(1)",
+                     }}/>
             </Box>
         </Box>
     );

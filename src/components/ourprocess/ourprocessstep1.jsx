@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Typography, List, ListItem, ListItemText } from '@mui/material';
 import imgstep1 from "../../assets/images/ourprocess/ManufacturingProcessSteps/RawMaterialProcurement.png";
 import 'aos/dist/aos.css';
 
 function Ourprocessstep1() {
+    // Add state to track hover
+    const [isHovered, setIsHovered] = useState(false);
+
+    // Shine effect CSS
+    const shineEffectStyles = {
+        position: 'relative',
+        overflow: 'hidden',
+        '&::before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: '-75%',
+            width: '50%',
+            height: '100%',
+            background: 'linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%)',
+            transform: 'skewX(-25deg)',
+            transition: 'all 0.75s',
+            zIndex: 1,
+        },
+        '&:hover::before': {
+            left: '125%',
+        }
+    };
 
     const data = [
         {
@@ -161,7 +184,14 @@ function Ourprocessstep1() {
                     <Box
                         data-aos="fade-left"
                         data-aos-duration="1200"
-                        sx={{width:{lg:'1000px', xs:"100%"}}}
+                        sx={{
+                            width:{lg:'1000px', xs:"100%"},
+                            overflow: "hidden", // Contains the transform effect
+                            position: "relative", // For positioning the overlay if needed
+                            ...shineEffectStyles // Apply shine effect styles
+                        }}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
                     >
                         <img
                             src={item.image}
@@ -169,7 +199,10 @@ function Ourprocessstep1() {
                             style={{
                                 width: '100%',
                                 height: '100%',
-                                objectFit:"cover"
+                                objectFit: "cover",
+                                transition: "transform 0.5s ease", // Smooth transition for the transform effect
+                                transform: isHovered ? "scale(1.05)" : "scale(1)", // Scale up on hover
+                                cursor: "pointer"
                             }}
                         />
                     </Box>

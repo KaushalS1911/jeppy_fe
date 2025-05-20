@@ -26,6 +26,7 @@ function Milestone() {
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
                     color: '#fff',
+                    backgroundAttachment: 'fixed',
                 }}
             >
                 <Container maxWidth="xl">

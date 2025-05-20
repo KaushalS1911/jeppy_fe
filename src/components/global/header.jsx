@@ -72,7 +72,7 @@ function Header({ heading, subtext, buttonText, img, bgcolor, path }) {
                         textTransform: 'none',
                         borderRadius: '50px',
                         border:`2px solid transparent`,
-                        transition:"0.3s",
+                        transition:"0.3s !important",
                         '&:hover': {
                             backgroundColor: '#FFF',
                             color: `${theme.palette.headerButton}`,

@@ -1,10 +1,32 @@
-import React from 'react';
-import { Box, Typography, List, ListItem, ListItemText, useTheme } from '@mui/material';
+import React, {useState} from 'react';
+import {Box, Typography, List, ListItem, ListItemText, useTheme} from '@mui/material';
 import imgstep3 from "../../assets/images/ourprocess/ManufacturingProcessSteps/Hygiene&Automation.png";
 import 'aos/dist/aos.css';
 
 function Ourprocessstep3() {
     const theme = useTheme();
+
+    const [isHovered, setIsHovered] = useState(false);
+
+    const shineEffectStyles = {
+        position: 'relative',
+        overflow: 'hidden',
+        '&::before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: '-75%',
+            width: '50%',
+            height: '100%',
+            background: 'linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%)',
+            transform: 'skewX(-25deg)',
+            transition: 'all 0.75s',
+            zIndex: 1,
+        },
+        '&:hover::before': {
+            left: '125%',
+        }
+    };
 
     const data = [
         {
@@ -21,7 +43,7 @@ function Ourprocessstep3() {
     ];
 
     return (
-        <Box sx={{ backgroundColor: `${theme.palette.saffron}` }}>
+        <Box sx={{backgroundColor: `${theme.palette.saffron}`}}>
             <Box sx={{margin: {sm: '0 30px', lg: "0 auto", xs: "0 10px"}}}>
                 {data.map((item, index) => (
                     <Box
@@ -31,7 +53,7 @@ function Ourprocessstep3() {
                             py: 8,
                             flexDirection: {xs: 'column', lg: 'row'},
                             justifyContent: 'space-between',
-                            alignItems: {lg:'center', xs:"unset"},
+                            alignItems: {lg: 'center', xs: "unset"},
                         }}
                     >
                         <Box
@@ -65,7 +87,7 @@ function Ourprocessstep3() {
                                 sx={{
                                     my: 2,
                                     fontWeight: 700,
-                                    fontSize: { xl: "44px", sm: "34px", xs: "30px" },
+                                    fontSize: {xl: "44px", sm: "34px", xs: "30px"},
                                 }}
                             >
                                 {item.title}
@@ -79,7 +101,7 @@ function Ourprocessstep3() {
                                     listStyleType: 'disc',
                                     pl: 4,
                                     fontWeight: 500,
-                                    fontSize: { xl: "22px", sm: "18px", xs: "16px" },
+                                    fontSize: {xl: "22px", sm: "18px", xs: "16px"},
                                 }}
                             >
                                 {item.points.map((point, pointIndex) => (
@@ -87,13 +109,13 @@ function Ourprocessstep3() {
                                         key={pointIndex}
                                         data-aos="fade-up"
                                         data-aos-delay={400 + (pointIndex * 100)}
-                                        sx={{ display: 'list-item', color: '#fff' }}
+                                        sx={{display: 'list-item', color: '#fff'}}
                                     >
                                         <ListItemText
                                             primary={point}
                                             primaryTypographyProps={{
                                                 sx: {
-                                                    fontSize: { xl: "22px", sm: "18px", xs: "16px" },
+                                                    fontSize: {xl: "22px", sm: "18px", xs: "16px"},
                                                     fontWeight: 500,
                                                 },
                                             }}
@@ -106,7 +128,15 @@ function Ourprocessstep3() {
                         <Box
                             data-aos="fade-left"
                             data-aos-duration="1200"
-                            sx={{height: {lg:"470px", xs:"100%"}, alignItems: 'center', display:"flex"}}
+                            sx={{
+                                height: {lg: "470px", xs: "100%"},
+                                alignItems: 'center',
+                                display: "flex",
+                                justifyContent:"center",
+                                ...shineEffectStyles
+                            }}
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
                         >
                             <img
                                 src={item.image}
@@ -114,6 +144,8 @@ function Ourprocessstep3() {
                                 style={{
                                     width: '100%',
                                     height: '100%',
+                                    transition: "transform 0.5s ease",
+                                    transform: isHovered ? "scale(1.05)" : "scale(1)",
                                 }}
                             />
                         </Box>
