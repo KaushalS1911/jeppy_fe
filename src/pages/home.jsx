@@ -11,12 +11,12 @@ function Home() {
     return (
         <>
             <HeroSection />
-            <Products/>
             <Milestone/>
-            <OurCompany/>
+            <Products/>
             <OurSolution />
             <OurPartners />
-            <AboutUs/>
+            <OurCompany/>
+            {/*<AboutUs/>*/}
         </>
     );
 }

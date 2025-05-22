@@ -200,7 +200,7 @@ function Products() {
 
     return (
         <Container maxWidth="xl">
-            <Box sx={{ py: { xs: 5, md: 12 } }}>
+            <Box sx={{ pb: { xs: 5, md: 12 } }}>
                 <Typography
                     variant="h5"
                     fontWeight={700}

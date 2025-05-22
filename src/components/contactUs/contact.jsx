@@ -8,12 +8,12 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import {Link} from "react-router-dom";
 
 const icons = [
-    { icon: <FacebookIcon sx={{ fontSize: '35px' }} />, color: '#0866FF ', label: 'Facebook' },
-    { icon: <TwitterIcon sx={{ fontSize: '35px' }} />, color: '#249EF0', label: 'Twitter' },
-    { icon: <LinkedInIcon sx={{ fontSize: '35px' }} />, color: '#0077B5', label: 'LinkedIn' },
-    { icon: <InstagramIcon sx={{ fontSize: '35px' }} />, color: '#F16B66', label: 'Instagram' },
+    { icon: <FacebookIcon sx={{ fontSize: '35px' }} />, color: '#0866FF ', label: 'Facebook' ,link: 'https://www.facebook.com/WOW.Jeppy'},
+    { icon: <LinkedInIcon sx={{ fontSize: '35px' }} />, color: '#0077B5', label: 'LinkedIn' ,link: 'https://www.linkedin.com/company/jayant-snacks-and-beverages-private-limited'},
+    { icon: <InstagramIcon sx={{ fontSize: '35px' }} />, color: '#F16B66', label: 'Instagram' ,link: 'https://www.instagram.com/jeppy.wow'},
 ];
 
 function Contact() {
@@ -138,6 +138,8 @@ function Contact() {
                                     />
                                     {/* Icon */}
                                     <IconButton
+                                        component={Link}
+                                        to={item.link}
                                         aria-label={item.label}
                                         size="large"
                                         sx={{

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, {useRef, useEffect, useLayoutEffect} from 'react';
 import { Box, Typography } from "@mui/material";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -51,13 +51,12 @@ function HeroSection() {
         { top: '35%', left: '60%', rotation: 30, scale: 1.1 },
     ];
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const section = sectionRef.current;
         const pelletElements = pelletsRef.current;
         const textContainer = textRef.current;
         const textElements = textContainer.querySelectorAll('.text-animate');
 
-        // Initial state
         gsap.set(pelletElements, {
             opacity: 1,
             scale: 1,
@@ -85,7 +84,6 @@ function HeroSection() {
             }
         });
 
-        // Animation steps
         tl.to(pelletElements, {
             opacity: 1,
             scale: 1.5,
@@ -101,9 +99,7 @@ function HeroSection() {
             scale: (i) => pelletsPositions[i].scale,
             ease: "power3.out",
             onComplete: () => {
-                // Add continuous floating animation after scroll animation completes
                 pelletElements.forEach((pellet, index) => {
-                    // Vertical floating
                     gsap.to(pellet, {
                         y: "+=15",
                         rotation: "+=5",
@@ -113,7 +109,6 @@ function HeroSection() {
                         ease: "sine.inOut"
                     });
 
-                    // Horizontal floating
                     gsap.to(pellet, {
                         x: "+=15",
                         duration: 3 + Math.random() * 4,
@@ -123,7 +118,6 @@ function HeroSection() {
                         delay: Math.random() * 2
                     });
 
-                    // Scale pulsing
                     gsap.to(pellet, {
                         scale: "+=0.1",
                         duration: 3 + Math.random() * 2,
@@ -145,7 +139,6 @@ function HeroSection() {
 
         return () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-            // Kill all floating animations on unmount
             pelletElements.forEach(pellet => {
                 if (pellet) {
                     gsap.killTweensOf(pellet);
@@ -169,7 +162,6 @@ function HeroSection() {
                 overflow: "hidden"
             }}
         >
-            {/* Pellets */}
             {pelletImages.map((pellet, index) => (
                 <Box
                     component="img"
@@ -188,21 +180,18 @@ function HeroSection() {
                 />
             ))}
 
-            {/* Logo */}
             <Box sx={{ zIndex: 2, mb: 4 }}>
                 <Box sx={{ height: "100%", width: "300px" }}>
                     <img src={logo} alt="Jeppy Logo" style={{ height: "100%", width: "100%", objectFit: "contain" }} />
                 </Box>
             </Box>
 
-            {/* Animated Text */}
             <Box ref={textRef} sx={{ position: "relative", zIndex: 2 }}>
                 <Typography className="text-animate" sx={{ color: 'white', textAlign: 'center', fontWeight: 700, fontSize: { xs: '32px', sm: "38px", md: "54px" }, transform: "rotate(-5deg)", letterSpacing: "2px", py: 3 }}>World of</Typography>
                 <Typography className="text-animate" sx={{ color: 'white', textAlign: 'center', fontWeight: 900, fontSize: { xs: '80px', sm: "125px", md: "250px" }, transform: "rotate(-5deg)", letterSpacing: "2px" }}>Snack</Typography>
                 <Typography className="text-animate" sx={{ color: 'white', textAlign: 'center', fontWeight: 700, fontSize: { xs: '32px', sm: "38px", md: "54px" }, transform: "rotate(-5deg)", letterSpacing: "2px", py: 3 }}>Pellets</Typography>
             </Box>
 
-            {/* Background Ingredients */}
             <Box>
                 <Box sx={{ position: 'absolute', top: { md: '-10%', sm: '-5%', xs: '-1%' }, left: "-5%", width: { lg: '300px', md: '230px', sm: '150px', xs: '80px' }, height: { lg: '300px', md: '230px', sm: '150px', xs: '80px' } }}>
                     <img src={peas} alt="peas" style={{ width: "100%", height: "100%", objectFit: 'contain' }} />
