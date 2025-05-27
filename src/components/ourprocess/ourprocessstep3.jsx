@@ -33,10 +33,10 @@ function Ourprocessstep3() {
             steps: "STEP 3",
             title: "Hygiene & Automation",
             points: [
-                "The entire production line is 100% automated, ensuring:",
-                " No human touch",
-                " Top-tier hygiene standards",
-                " Efficient mass production (up to 75,000 metric tons/year)",
+                "Fully automated, touch-free production",
+                "High hygiene compliance",
+                "Scalable output: up to 75,000 MT/year",
+                // " Efficient mass production (up to 75,000 metric tons/year)",
             ],
             image: imgstep3,
         }

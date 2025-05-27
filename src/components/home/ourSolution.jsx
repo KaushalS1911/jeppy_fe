@@ -10,18 +10,18 @@ function OurSolution() {
     const solution = [
         {
             img: vector1,
-            title: "Development",
-            description: "We are working on continuous and accurate developments to meet the food market requirements.",
-        },
-        {
-            img: vector2,
-            title: "Packaging",
-            description: "Our packaging lines designed to meet all needs to cover all food bazaar and ready to eat products.",
+            title: "Product Development",
+            description: "Tailored snack solutions driven by market trends and R&D expertise.",
         },
         {
             img: vector3,
-            title: "Quality",
-            description: "From raw materials to packaging machine we preserve the fineness by meeting the highest criteria.",
+            title: "Quality Assurance",
+            description: "Strict checks from raw material to final output for consistent excellence.",
+        },
+        {
+            img: vector2,
+            title: "Packaging & Delivery",
+            description: "Flexible, retail-ready packaging lines built for global food markets.",
         },
 
     ]
@@ -34,7 +34,7 @@ function OurSolution() {
                     fontWeight: 700,
                     textAlign: "center",
                 }}>
-                    Our Solution
+                    Our Process
                 </Typography>
                 <Box
                     sx={{
@@ -53,8 +53,7 @@ function OurSolution() {
                             pb:10
                         }}
                     >
-                        Reliable process line is the success factor and primary element in the snack pellet industry.
-                        Discover our solutions coverage area.
+                        A reliable process line is the backbone of success in the snack pellet industry. Explore how our solutions cover every stage of production.
                     </Typography>
                 </Box>
                 <Box sx={{display: {sm:"flex" , xs:"unset "}, justifyContent: "center" , alignItems: "center"}}>

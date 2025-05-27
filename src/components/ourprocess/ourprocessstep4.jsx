@@ -37,8 +37,8 @@ function Ourprocessstep4() {
         step: "STEP 4",
         title: "Quality Control",
         description: [
-            "Multiple checks are conducted at each production stage.",
-            "Latest instruments are used to ensure snacks meet quality benchmarks."
+            "Real-time checks at every stage",
+            "Advanced lab testing for consistency and safety"
         ],
         certifiedBy: [
             {image: certificate1},

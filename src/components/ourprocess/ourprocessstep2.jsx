@@ -30,16 +30,16 @@ function Ourprocessstep2() {
     const data = [
         {
             steps: "STEP 2",
-            title: "Core Production Process",
+            title: "Core Production",
             points: [
-                "Weighing: Measures raw ingredients precisely.",
-                "Sieving: Removes impurities for purity.",
-                "Mixing: Blends ingredients evenly.",
-                "Moisturizing: Adds moisture to form dough.",
-                "Cooking: Cooks the mixture for texture.",
-                "Forming: Shapes snacks (2D, 3D, or sheeted).",
-                "Cutting: Cuts into required sizes.",
-                "Drying: Removes moisture for storage/frying.",
+                "Ingredients are precisely measured, sieved, mixed, and moisturized into dough",
+                "Dough is cooked, shaped (2D, 3D, or sheeted), cut, and dried",
+                "Ensures consistent texture, shape, and shelf-stable pellets",
+                // "Moisturizing: Adds moisture to form dough.",
+                // "Cooking: Cooks the mixture for texture.",
+                // "Forming: Shapes snacks (2D, 3D, or sheeted).",
+                // "Cutting: Cuts into required sizes.",
+                // "Drying: Removes moisture for storage/frying.",
             ],
             image: imgstep2,
         }

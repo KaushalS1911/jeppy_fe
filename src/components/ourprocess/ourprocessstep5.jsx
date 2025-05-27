@@ -32,12 +32,12 @@ function Ourprocessstep5() {
     const data = [
         {
             steps: "STEP 5",
-            title: "Packaging & Storage",
+            title: "Packaging & Dispatch",
             intro: "Final products are:",
             points: [
-                "Checked again",
-                "Safely packaged",
-                "Stored in hygienic conditions",
+                "Final inspection before packing",
+                "Sealed in hygienic, market-ready formats",
+                "Stored & shipped for domestic and global delivery",
             ],
             footer: "Ready for dispatch to domestic and international markets.",
             image: imgstep5,
@@ -45,7 +45,7 @@ function Ourprocessstep5() {
     ];
 
     return (
-        <Box sx={{backgroundColor: `${theme.palette.saffron}`}}>
+        <Box sx={{backgroundColor: `${theme.palette.saffron}` , mb:8}}>
             <Box sx={{margin: {sm: '0 30px', lg: "0 auto", xs: "0 10px"}}}>
                 {data.map((item, index) => (
                     <Box

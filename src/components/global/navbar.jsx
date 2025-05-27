@@ -21,10 +21,14 @@ const navItems = [
 
 function Navbar() {
     const [a,setA] = useState(null);
+    const [position,setPosition] = useState(null);
     const location = useLocation();
+    const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
         const b = location.pathname.split("/")[1] === "product";
+        const c = location.pathname === '/';
+        setPosition(c)
         setA(b);
     }, [location]);
     const [menuOpen, setMenuOpen] = useState(false);
@@ -32,12 +36,24 @@ function Navbar() {
 
     const toggleMenu = () => setMenuOpen((prev) => !prev);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <Box sx={{
             position: "fixed",
             width:'100%',
             px: {xs:3 , md:5},
             zIndex: 999,
+            display:position ? scrolled ? 'unset' : 'none' : 'unset'
         }}>
             <Container
                 maxWidth="xxl"

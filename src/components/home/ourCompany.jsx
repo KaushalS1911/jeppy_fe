@@ -30,7 +30,7 @@ function OurCompany() {
                         // my: 1.5
                     }}
                 >
-                    Our Sister Company
+                    Our Own Company
                 </Typography>
             </Box>
 
@@ -53,8 +53,8 @@ function OurCompany() {
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
-                            background: 'linear-gradient(90deg, #caefd7, #f4f4f4, #abc9e9)',
-                            boxShadow: "0px 6px 15px rgba(0, 0, 0, 0.08)",
+                            // background: 'linear-gradient(90deg, #caefd7, #f4f4f4, #abc9e9)',
+                            // boxShadow: "0px 6px 15px rgba(0, 0, 0, 0.08)",
                             height: '100%',
                             cursor: "pointer",
                             "&:hover::before": {
@@ -68,7 +68,7 @@ function OurCompany() {
                                 left: "-50%",
                                 width: "200%",
                                 height: "200%",
-                                background: "linear-gradient(0deg, transparent, transparent 30%, rgba(0,0,0,0.5))",
+                                // background: "linear-gradient(0deg, transparent, transparent 30%, rgba(0,0,0,0.5))",
                                 transform: "rotate(-45deg)",
                                 transition: "all 0.7s ease",
                                 opacity: 0,
@@ -111,8 +111,8 @@ function OurCompany() {
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
-                            background: "linear-gradient(90deg, #d3f3f1, #e9b7ce)",
-                            boxShadow: "0px 6px 15px rgba(0, 0, 0, 0.08)",
+                            // background: "linear-gradient(90deg, #d3f3f1, #e9b7ce)",
+                            // boxShadow: "0px 6px 15px rgba(0, 0, 0, 0.08)",
                             height: '100%',
                             cursor: "pointer",
                             "&:hover::before": {
@@ -126,7 +126,7 @@ function OurCompany() {
                                 left: "-50%",
                                 width: "200%",
                                 height: "200%",
-                                background: "linear-gradient(0deg, transparent, transparent 30%, rgba(0,0,0,0.5))",
+                                // background: "linear-gradient(0deg, transparent, transparent 30%, rgba(0,0,0,0.5))",
                                 transform: "rotate(-45deg)",
                                 transition: "all 0.7s ease",
                                 opacity: 0,

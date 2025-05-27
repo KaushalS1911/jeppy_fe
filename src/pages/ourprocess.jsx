@@ -15,7 +15,7 @@ function Ourprocess() {
     return (
         <>
             <Header buttonText={"Let's Connect"}
-                    subtext={'From sourcing to final packaging, Fleppy’s process is designed to deliver consistent, high-quality snacks you can trust.'}
+                    subtext={'A reliable process line is the backbone of success in the snack pellet industry. Explore how our solutions cover every stage of production.'}
                     heading={'From Idea to Crunch, We Do It Right.'}
                     img={bgimage}
                     bgcolor={'rgba(254, 195, 85, 0.7)'}
@@ -27,7 +27,7 @@ function Ourprocess() {
             <Ourprocessstep3/>
             <Ourprocessstep4/>
             <Ourprocessstep5/>
-            <FleppyCrew/>
+            {/*<FleppyCrew/>*/}
             {/*<LetsConnect/>*/}
         </>
     );

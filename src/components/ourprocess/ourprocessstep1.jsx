@@ -31,20 +31,20 @@ function Ourprocessstep1() {
     const data = [
         {
             steps: "STEP 1",
-            title: "Raw Material Procurement & Quality Testing",
+            title: "Raw Material Selection",
             points: [
-                "Raw materials such as potato, lentil, soya, rice, corn, and other vegetables are sourced from reputed suppliers.",
+                "Sourced from trusted suppliers (potato, lentil, soya, rice, etc.)",
                 {
                     text: "Before use, materials undergo strict quality tests:",
                     subpoints: [
-                        "Moisture test",
-                        "Density check",
+                        "Tested for moisture",
+                        "density",
                         "Ash content",
                         "pH level",
                         "Color & viscosity analysis"
                     ]
                 },
-                "Only materials passing these tests are used in production."
+                "Only approved materials proceed to production"
             ],
             image: imgstep1,
         }

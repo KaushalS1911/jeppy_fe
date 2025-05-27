@@ -33,14 +33,33 @@ const Footer = () => {
         {label: 'Contact', path: '/contact'},
     ]
     const icons = [
-        {icon: <FacebookIcon sx={{fontSize: '35px'}}/>, color: '#0866FF ', label: 'Facebook' , link: 'https://www.facebook.com/WOW.Jeppy'},
+        {
+            icon: <FacebookIcon sx={{fontSize: '35px'}}/>,
+            color: '#0866FF ',
+            label: 'Facebook',
+            link: 'https://www.facebook.com/WOW.Jeppy'
+        },
         // {icon: <TwitterIcon sx={{fontSize: '35px'}}/>, color: '#249EF0', label: 'Twitter'},
-        {icon: <LinkedInIcon sx={{fontSize: '35px'}}/>, color: '#0077B5', label: 'LinkedIn' , link: 'https://www.linkedin.com/company/jayant-snacks-and-beverages-private-limited'},
-        {icon: <InstagramIcon sx={{fontSize: '35px'}}/>, color: '#F16B66', label: 'Instagram', link: 'https://www.instagram.com/jeppy.wow'},
+        {
+            icon: <LinkedInIcon sx={{fontSize: '35px'}}/>,
+            color: '#0077B5',
+            label: 'LinkedIn',
+            link: 'https://www.linkedin.com/company/jayant-snacks-and-beverages-private-limited'
+        },
+        {
+            icon: <InstagramIcon sx={{fontSize: '35px'}}/>,
+            color: '#F16B66',
+            label: 'Instagram',
+            link: 'https://www.instagram.com/jeppy.wow'
+        },
     ];
     const contact = [
         {icon: <PhoneIcon sx={{fontSize: {sm: '35px', xs: "30px"}}}/>, title: '+91 75758 08749'},
-        {icon: <EmailIcon sx={{fontSize: {sm: '35px', xs: "30px"}}}/>, title: 'hello@jeppy.in'},
+        {
+            icon: <EmailIcon sx={{fontSize: {sm: '35px', xs: "30px"}}}/>,
+            title: ' inquiry@jeppy.in',
+            title2: 'export@jeppy.in'
+        },
         {
             icon: <LocationOnIcon sx={{fontSize: {sm: '35px', xs: "30px"}}}/>,
             title: 'JAYANT SNACKS & BEVERAGES PVT. LTD.\n' +
@@ -69,43 +88,43 @@ const Footer = () => {
                             </Box>
                         </Box>
 
-                        <Box>
-                            <Typography component={'h2'} className={'monserrat'}
-                                        sx={{
-                                            fontSize: {md: '24px', sm: "20px", xs: "18px"},
-                                            fontWeight: 700,
-                                            pb: 2,
-                                            display: 'flex',
-                                            justifyContent: {xs: "center", md: "unset"}
-                                        }}>
-                                Our Certificates
-                            </Typography>
-                            <Grid
-                                container
-                                spacing={1.5}
-                                sx={{
-                                    mt: 1,
-                                    alignItems: 'center',
-                                    justifyContent: {xs: "center", md: "flex-start"}
-                                }}
-                            >
-                                {[certificate1, certificate2, certificate3, certificate4, certificate5].map((cert, idx) => (
-                                    <Grid item key={idx} size={{sm: 4, xs: 6}}>
-                                        <Box sx={{
-                                            display: "flex",
-                                            justifyContent: {xs: "center", md: "unset"},
-                                            alignItems: 'center'
-                                        }}>
-                                            <img
-                                                src={cert}
-                                                alt={`Certificate ${idx + 1}`}
-                                                style={{width: 100, height: 100, objectFit: 'cover'}}
-                                            />
-                                        </Box>
-                                    </Grid>
-                                ))}
-                            </Grid>
-                        </Box>
+                        {/*<Box>*/}
+                        {/*    <Typography component={'h2'} className={'monserrat'}*/}
+                        {/*                sx={{*/}
+                        {/*                    fontSize: {md: '24px', sm: "20px", xs: "18px"},*/}
+                        {/*                    fontWeight: 700,*/}
+                        {/*                    pb: 2,*/}
+                        {/*                    display: 'flex',*/}
+                        {/*                    justifyContent: {xs: "center", md: "unset"}*/}
+                        {/*                }}>*/}
+                        {/*        Our Certificates*/}
+                        {/*    </Typography>*/}
+                        {/*    /!*<Grid*!/*/}
+                        {/*    /!*    container*!/*/}
+                        {/*    /!*    spacing={1.5}*!/*/}
+                        {/*    /!*    sx={{*!/*/}
+                        {/*    /!*        mt: 1,*!/*/}
+                        {/*    /!*        alignItems: 'center',*!/*/}
+                        {/*    /!*        justifyContent: {xs: "center", md: "flex-start"}*!/*/}
+                        {/*    /!*    }}*!/*/}
+                        {/*    /!*>*!/*/}
+                        {/*    /!*    {[certificate1, certificate2, certificate3, certificate4, certificate5].map((cert, idx) => (*!/*/}
+                        {/*    /!*        <Grid item key={idx} size={{sm: 4, xs: 6}}>*!/*/}
+                        {/*    /!*            <Box sx={{*!/*/}
+                        {/*    /!*                display: "flex",*!/*/}
+                        {/*    /!*                justifyContent: {xs: "center", md: "unset"},*!/*/}
+                        {/*    /!*                alignItems: 'center'*!/*/}
+                        {/*    /!*            }}>*!/*/}
+                        {/*    /!*                <img*!/*/}
+                        {/*    /!*                    src={cert}*!/*/}
+                        {/*    /!*                    alt={`Certificate ${idx + 1}`}*!/*/}
+                        {/*    /!*                    style={{width: 100, height: 100, objectFit: 'cover'}}*!/*/}
+                        {/*    /!*                />*!/*/}
+                        {/*    /!*            </Box>*!/*/}
+                        {/*    /!*        </Grid>*!/*/}
+                        {/*    /!*    ))}*!/*/}
+                        {/*    /!*</Grid>*!/*/}
+                        {/*</Box>*/}
                     </Grid>
 
                     <Grid item size={{md: 6, xs: 12, lg: 7}}>
@@ -145,46 +164,46 @@ const Footer = () => {
                                 </Box>
                             </Grid>
 
-                            <Grid item size={{sm: 3, xs: 6, md: 6, lg: 3}}>
-                                <Typography
-                                    fontWeight="bold"
-                                    mb={2}
-                                    textAlign={{xs: 'center', md: 'left'}}
-                                >
-                                    Products
-                                </Typography>
-                                <Box sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    alignItems: {xs: 'center', md: 'flex-start'}
-                                }}>
-                                    {[
-                                        'Veggie Snacks',
-                                        'High Protein',
-                                        'Cereal Based',
-                                        'Gluten Free',
-                                        'Sheeted Pallets',
-                                        'Veggi Pallets',
-                                    ].map((text) => (
-                                        <Box
-                                            key={text}
-                                            component={Link}
-                                            to="/products"
-                                            sx={{
-                                                display: 'block',
-                                                color: 'white',
-                                                fontWeight: '300',
-                                                lineHeight: {xs: '24px', sm: '29px'},
-                                                textDecoration: 'none',
-                                                mb: 1,
-                                                '&:hover': {textDecoration: 'underline'},
-                                            }}
-                                        >
-                                            {text}
-                                        </Box>
-                                    ))}
-                                </Box>
-                            </Grid>
+                            {/*<Grid item size={{sm: 3, xs: 6, md: 6, lg: 3}}>*/}
+                            {/*    <Typography*/}
+                            {/*        fontWeight="bold"*/}
+                            {/*        mb={2}*/}
+                            {/*        textAlign={{xs: 'center', md: 'left'}}*/}
+                            {/*    >*/}
+                            {/*        Products*/}
+                            {/*    </Typography>*/}
+                            {/*    <Box sx={{*/}
+                            {/*        display: 'flex',*/}
+                            {/*        flexDirection: 'column',*/}
+                            {/*        alignItems: {xs: 'center', md: 'flex-start'}*/}
+                            {/*    }}>*/}
+                            {/*        {[*/}
+                            {/*            'Veggie Snacks',*/}
+                            {/*            'High Protein',*/}
+                            {/*            'Cereal Based',*/}
+                            {/*            'Gluten Free',*/}
+                            {/*            'Sheeted Pallets',*/}
+                            {/*            'Veggi Pallets',*/}
+                            {/*        ].map((text) => (*/}
+                            {/*            <Box*/}
+                            {/*                key={text}*/}
+                            {/*                component={Link}*/}
+                            {/*                to="/products"*/}
+                            {/*                sx={{*/}
+                            {/*                    display: 'block',*/}
+                            {/*                    color: 'white',*/}
+                            {/*                    fontWeight: '300',*/}
+                            {/*                    lineHeight: {xs: '24px', sm: '29px'},*/}
+                            {/*                    textDecoration: 'none',*/}
+                            {/*                    mb: 1,*/}
+                            {/*                    '&:hover': {textDecoration: 'underline'},*/}
+                            {/*                }}*/}
+                            {/*            >*/}
+                            {/*                {text}*/}
+                            {/*            </Box>*/}
+                            {/*        ))}*/}
+                            {/*    </Box>*/}
+                            {/*</Grid>*/}
 
                             <Grid item size={{sm: 6, xs: 12, md: 12, lg: 6}}>
                                 <Typography
@@ -212,9 +231,16 @@ const Footer = () => {
                                             >
                                                 {text.icon}
                                             </Typography>
-                                            <Typography>
-                                                {text.title}
-                                            </Typography>
+                                            <Box>
+                                                <Typography>
+                                                    {text.title}
+                                                </Typography>
+                                                {text.title.length > 0 &&
+                                                    <Typography sx={{mb:2}}>
+                                                        {text.title2}
+                                                    </Typography>
+                                                }
+                                            </Box>
                                         </Box>
                                     ))}
                                 </Box>

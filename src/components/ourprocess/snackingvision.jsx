@@ -45,17 +45,16 @@ function Snackingvision() {
                         <Typography
                             variant="h6"
                             sx={{
-                                fontWeight: 500,
+                                fontWeight: 600,
                                 fontSize: {md: "24px", sm: "20px", xs: "16px"},
                                 lineHeight: '34px',
                                 letterSpacing: '-2%',
                                 mt: 3
                             }}
                         >
-                            At Fleppy, our process is built to deliver — from idea to final pack. Whether it’s standard
-                            shapes or custom blends, we combine smart sourcing, cutting-edge manufacturing, and
-                            intelligent
-                            packaging to create snack solutions that are scalable, safe, and snack-worthy.
+                            Whether it’s standard shapes or custom blends, we combine smart sourcing, advanced
+                            manufacturing, and efficient packaging to create snack solutions that are scalable, safe,
+                            and market-ready.
                         </Typography>
 
                     </Box>

@@ -6,6 +6,7 @@ const theme = createTheme({
         yellow: '#FECB5D',
         saffron:"#F28A1E",
         headerButton: "#E82B09",
+        purple:'#4F3C69'
     },
 });
 

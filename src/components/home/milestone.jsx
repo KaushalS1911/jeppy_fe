@@ -5,10 +5,10 @@ import CountUp from "react-countup";
 import {useInView} from 'react-intersection-observer';
 
 const milestones = [
-    {value: "300", sufix: "+", label: "SHAPES"},
-    {value: "200", sufix: "", label: "MT/DAY\nPRODUCTION"},
-    {value: "150", sufix: "+", label: "R&D BATCHES\nPER YEAR"},
-    {value: "1000", sufix: "s", label: "OF\nFORMULATIONS"}
+    {value: "400", sufix: "+", label: "SHAPES"},
+    {value: "250", sufix: "", label: "MT/DAY\nPRODUCTION"},
+    {value: "20", sufix: "+", label: "Countries Supplied\n Worldwide"},
+    {value: "200", sufix: "+", label: "Brands Trust\n Globally\n"}
 ];
 
 function Milestone() {
@@ -62,7 +62,7 @@ function Milestone() {
                                             fontWeight: 700,
                                             lineHeight: 1
                                         }}>
-                                            30
+                                            40
                                         </Typography>
                                         <Typography variant="h6" sx={{
                                             fontSize: {xs: "20px", md: "24px"},

@@ -265,27 +265,6 @@ function Products() {
                                     >
                                         {product.name}
                                     </Typography>
-                                    <Button
-                                        variant="contained"
-                                        sx={{
-                                            bgcolor: `${theme.palette.saffron}`,
-                                            textTransform: 'none',
-                                            transition: '0.5s',
-                                            border: `2px solid ${theme.palette.saffron}`,
-                                            '&:hover': {
-                                                border: `2px solid ${theme.palette.saffron}`,
-                                                backgroundColor: 'transparent',
-                                                color: `${theme.palette.saffron}`,
-                                                boxShadow: 'none',
-                                            },
-                                            boxShadow: "none",
-                                            px: { xs: 2, md: 4 },
-                                            fontSize: { xs: '14px', md: '16px' },
-                                            fontWeight: 600,
-                                        }}
-                                    >
-                                        View
-                                    </Button>
                                 </Box>
                             </Box>
                         </Grid>
