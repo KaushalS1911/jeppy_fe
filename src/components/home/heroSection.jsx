@@ -120,37 +120,38 @@ function HeroSection() {
             ))}
 
             <Box sx={{zIndex: 2, mb: 4}}>
-                <Box sx={{height: "100%", width: "300px"}}>
+                <Box sx={{height: "100%", width: {xs:"200px" , sm:'250px'}}}>
                     <img src={logo} alt="Jeppy Logo" style={{height: "100%", width: "100%", objectFit: "contain"}}/>
                 </Box>
             </Box>
 
             <Box sx={{position: "relative", zIndex: 2}}>
-                <Typography sx={{
+                <Typography className={'monserrat'} sx={{
                     color: 'white',
                     textAlign: 'center',
                     fontWeight: 700,
                     fontSize: {xs: '32px', sm: "38px", md: "54px"},
                     transform: "rotate(-5deg)",
                     letterSpacing: "2px",
-                    py: 3
+                    pt: 2
                 }}>World of</Typography>
-                <Typography sx={{
+                <Typography className={'monserrat'} sx={{
                     color: 'white',
                     textAlign: 'center',
                     fontWeight: 900,
-                    fontSize: {xs: '80px', sm: "125px", md: "250px"},
+                    fontSize: {xs: '80px', sm: "125px", md: "200px"},
                     transform: "rotate(-5deg)",
-                    letterSpacing: "2px"
+                    letterSpacing: "2px",
+                    lineHeight:'200px'
                 }}>Snack</Typography>
-                <Typography sx={{
+                <Typography className={'monserrat'} sx={{
                     color: 'white',
                     textAlign: 'center',
                     fontWeight: 700,
                     fontSize: {xs: '32px', sm: "38px", md: "54px"},
                     transform: "rotate(-5deg)",
                     letterSpacing: "2px",
-                    py: 3
+                    pt: {md:8 , xs:3},
                 }}>Pellets</Typography>
             </Box>
 
@@ -166,7 +167,7 @@ function HeroSection() {
                 </Box>
                 <Box sx={{
                     position: 'absolute',
-                    top: {sm: '-10%', xs: '-3%'},
+                    top: {sm: '-12%', xs: '-3%'},
                     left: "25%",
                     width: {lg: '300px', md: '230px', sm: '150px', xs: '80px'},
                     height: {lg: '300px', md: '230px', sm: '150px', xs: '80px'}
