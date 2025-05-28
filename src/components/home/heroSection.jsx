@@ -89,7 +89,7 @@ function HeroSection() {
         <Box
             sx={{
                 backgroundColor: theme.palette.purple,
-                py: 5,
+                py: 3,
                 minHeight: "100vh",
                 display: "flex",
                 justifyContent: "center",
