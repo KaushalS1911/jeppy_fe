@@ -115,7 +115,7 @@ function Ourprocessstep3() {
                                             primary={point}
                                             primaryTypographyProps={{
                                                 sx: {
-                                                    fontSize: {xl: "22px", sm: "18px", xs: "16px"},
+                                                    fontSize: {xl: "20px", sm: "18px", xs: "16px"},
                                                     fontWeight: 500,
                                                 },
                                             }}

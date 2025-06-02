@@ -46,7 +46,7 @@ function Snackingvision() {
                             variant="h6"
                             sx={{
                                 fontWeight: 600,
-                                fontSize: {md: "24px", sm: "20px", xs: "16px"},
+                                fontSize: {md: "22px", sm: "20px", xs: "16px"},
                                 lineHeight: '34px',
                                 letterSpacing: '-2%',
                                 mt: 3

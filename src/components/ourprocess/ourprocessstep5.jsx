@@ -132,7 +132,7 @@ function Ourprocessstep5() {
                                             primary={point}
                                             primaryTypographyProps={{
                                                 sx: {
-                                                    fontSize: {xl: "22px", sm: "18px", xs: "16px"},
+                                                    fontSize: {xl: "20px", sm: "18px", xs: "16px"},
                                                     fontWeight: 500,
                                                 },
                                             }}
@@ -146,7 +146,7 @@ function Ourprocessstep5() {
                                 data-aos-delay="800"
                                 sx={{
                                     mt: 2,
-                                    fontSize: {xl: "22px", sm: "18px", xs: "16px"},
+                                    fontSize: {xl: "20px", sm: "18px", xs: "16px"},
                                     fontWeight: 500,
                                     color: "#FFF"
                                 }}

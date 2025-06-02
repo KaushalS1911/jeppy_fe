@@ -72,7 +72,7 @@ function AboutHeader() {
                     sx={{
                         mb: 5,
                         color: '#000',
-                        fontSize: { md: "24px", sm: "20px", xs: "16px" },
+                        fontSize: { md: "22px", sm: "20px", xs: "16px" },
                     }}
                 >
                     Scalable. Customizable. Built to Deliver.
@@ -88,7 +88,7 @@ function AboutHeader() {
                             color: '#fff',
                             p: { sm: "22px 32px", xs: "15px 22px" },
                             fontWeight: 600,
-                            fontSize: { md: "24px", sm: "20px", xs: "16px" },
+                            fontSize: { md: "22px", sm: "20px", xs: "16px" },
                             textTransform: 'none',
                             borderRadius: '50px',
                             border: `2px solid transparent`,

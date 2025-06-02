@@ -257,7 +257,7 @@ function Products() {
                                     <Typography
                                         fontWeight={600}
                                         sx={{
-                                            fontSize: { xs: '18px', md: '20px' },
+                                            fontSize: { xs: '16px', md: '18px' },
                                             fontWeight: 700,
                                             color: "#141414",
                                             mb: 2

@@ -114,7 +114,7 @@ function Ourprocessstep4() {
                                     data-aos="fade-up"
                                     data-aos-delay={400 + (idx * 100)}
                                     sx={{
-                                        fontSize: {xl: "22px", sm: "18px", xs: "16px"},
+                                        fontSize: {xl: "20px", sm: "18px", xs: "16px"},
                                         fontWeight: 500,
                                         mb: 1,
                                     }}

@@ -49,8 +49,8 @@ function Whoweare() {
                                 <Typography
                                     sx={{
                                         fontWeight: 500,
-                                        fontSize: {xs: '16px', sm: '20px', md: '24px'},
-                                        lineHeight: 1.7,
+                                        fontSize: {xs: '16px', sm: '20px', md: '22px'},
+                                        lineHeight: 2,
                                         color: 'white',
                                     }}
                                     data-aos="fade-right"
@@ -128,7 +128,7 @@ function Whoweare() {
                                 <Typography
                                     sx={{
                                         fontWeight: 500,
-                                        fontSize: {xs: '16px', sm: '20px', md: '24px'},
+                                        fontSize: {xs: '16px', sm: '20px', md: '22px'},
                                         marginBottom: '24px',
                                     }}
                                     data-aos="fade-up"
@@ -142,7 +142,7 @@ function Whoweare() {
                                 <Typography
                                     sx={{
                                         fontWeight: 500,
-                                        fontSize: {xs: '16px', sm: '20px', md: '24px'},
+                                        fontSize: {xs: '16px', sm: '20px', md: '22px'},
                                     }}
                                     data-aos="fade-up"
                                     data-aos-delay="450"

@@ -90,7 +90,7 @@ function Navbar() {
                                     p:0,
                                     fontWeight: 500,
                                     textTransform: 'none',
-                                    fontSize: '20px',
+                                    fontSize: '18px',
                                     transition: '0.3s',
                                     textDecoration: 'none',
                                     '&:hover': { color: a ? "#000" : `${theme.palette.saffron}`,},
@@ -134,7 +134,7 @@ function Navbar() {
                                             textDecoration: 'none',
                                             textTransform: 'none',
                                             transition: '0.3s',
-                                            fontSize: '20px',
+                                            fontSize: '18px',
                                             '&:hover': { color: '#f78c1f' },
                                         }}
                                     >

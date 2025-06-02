@@ -257,7 +257,7 @@ function SliderAbout() {
                                             <Typography
                                                 variant="body1"
                                                 color="text.primary"
-                                                sx={{fontSize: '20px'}}
+                                                sx={{fontSize: {md:'18px' , sm:'16px' , xs:'14px'}}}
                                             >
                                                 {card.description}
                                             </Typography>

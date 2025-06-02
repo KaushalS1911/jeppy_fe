@@ -78,10 +78,9 @@ function OurVision() {
                             <Typography
                                 className={'desc'}
                                 sx={{
-                                    fontSize: {xs: "19px", sm: "21px", md: "24px"},
+                                    fontSize: {xs: "18px", sm: "20px", md: "22px"},
                                     lineHeight: {xs: "25px", sm: "30px", md: "40px"},
                                     color: "#525252",
-                                    // textAlign: 'justify',
                                     transition: '0.3s',
                                     letterSpacing:"1px"
                                 }}

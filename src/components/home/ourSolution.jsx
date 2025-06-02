@@ -47,7 +47,7 @@ function OurSolution() {
                 >
                     <Typography
                         sx={{
-                            fontSize: {md: "18px", sm: "15px", xs: "12px"},
+                            fontSize: {md: "16px", sm: "14px", xs: "12px"},
                             textAlign: "center",
                             width: "100%",
                             pb:10

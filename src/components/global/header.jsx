@@ -54,7 +54,7 @@ function Header({ heading, subtext, buttonText, img, bgcolor, path }) {
                     sx={{
                         mb: 5,
                         color: '#000',
-                        fontSize: {md: "24px", sm: "20px", xs: "16px"},
+                        fontSize: {md: "22px", sm: "20px", xs: "16px"},
                     }}
                     data-aos="fade-up"
                     data-aos-delay="400"
@@ -68,7 +68,7 @@ function Header({ heading, subtext, buttonText, img, bgcolor, path }) {
                         color: '#fff',
                         p: {sm:"22px 32px" , xs:"15px 22px"},
                         fontWeight: 600,
-                        fontSize: {md: "24px", sm: "20px", xs: "16px"},
+                        fontSize: {md: "22px", sm: "20px", xs: "16px"},
                         textTransform: 'none',
                         borderRadius: '50px',
                         border:`2px solid transparent`,
