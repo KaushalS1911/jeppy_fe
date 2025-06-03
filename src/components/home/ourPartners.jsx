@@ -6,15 +6,23 @@ import 'swiper/css/autoplay';
 
 import {Autoplay} from 'swiper/modules';
 
-import image1 from '../../assets/images/home/ourParteners/1034d6dade6515e884009abd0d5fa05fd6b94f99.png';
-import image2 from '../../assets/images/home/ourParteners/fefe1f8d2a476bfb9bc87208c2ef73e3850ac856.png';
-import image3 from '../../assets/images/home/ourParteners/2fc1a4d0238a8b54cd072be0f937c13c9a1c20d1.png';
-import image4 from '../../assets/images/home/ourParteners/692c3ae707f825d98efa71a2efce3da27a5bb7d4.png';
-import image5 from '../../assets/images/home/ourParteners/e878bf73590ea1b40036fcefbbaa5c70845de2a5.png';
-import image6 from '../../assets/images/home/ourParteners/1567673037c0d13adde8d39518de9cd7efe59c10.png';
-import image7 from '../../assets/images/home/ourParteners/451daacf11cb5a93e1618319b1679fa357118ad3.png';
+import image1 from '../../assets/images/home/ourParteners/akash.png';
+import image2 from '../../assets/images/home/ourParteners/Bablu.png';
+import image3 from '../../assets/images/home/ourParteners/balaji.png';
+import image4 from '../../assets/images/home/ourParteners/crax.png';
+import image5 from '../../assets/images/home/ourParteners/ghodawat-foods.png';
+import image6 from '../../assets/images/home/ourParteners/haldiram.png';
+import image7 from '../../assets/images/home/ourParteners/panjwani.png';
+import image8 from '../../assets/images/home/ourParteners/priniti.png';
+import image9 from '../../assets/images/home/ourParteners/real.png';
+import image10 from '../../assets/images/home/ourParteners/shyam-g.png';
+import image11 from '../../assets/images/home/ourParteners/Sunder.png';
 
-const images = [image1, image2, image3, image4, image5, image6, image7];
+
+
+
+
+const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11];
 
 function OurPartners() {
 

@@ -99,6 +99,19 @@ function HeroSection() {
                 overflow: "hidden"
             }}
         >
+            {/* Transparent black overlay */}
+            <Box
+                sx={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent black
+                    zIndex: 1
+                }}
+            />
+
             {pelletImages.map((pellet, index) => (
                 <Box
                     component="img"
@@ -119,13 +132,27 @@ function HeroSection() {
                 />
             ))}
 
-            <Box sx={{zIndex: 2, mb: 4}}>
+            {/* Logo with highlight */}
+            <Box sx={{
+                zIndex: 10, 
+                mb: 4,
+                // backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                borderRadius: '20px',
+                p: 2,
+                // backdropFilter: 'blur(10px)',
+            }}>
                 <Box sx={{height: "100%", width: {xs:"200px" , sm:'250px'}}}>
                     <img src={logo} alt="Jeppy Logo" style={{height: "100%", width: "100%", objectFit: "contain"}}/>
                 </Box>
             </Box>
 
-            <Box sx={{position: "relative", zIndex: 2}}>
+            {/* Text with highlight */}
+            <Box sx={{
+                position: "relative", 
+                zIndex: 10,
+                borderRadius: '20px',
+                p: 3,
+            }}>
                 <Typography className={'monserrat'} sx={{
                     color: 'white',
                     textAlign: 'center',
@@ -133,7 +160,7 @@ function HeroSection() {
                     fontSize: {xs: '32px', sm: "38px", md: "54px"},
                     transform: "rotate(-5deg)",
                     letterSpacing: "2px",
-                    pt: 2
+                    pt: 2,
                 }}>World of</Typography>
                 <Typography className={'monserrat'} sx={{
                     color: 'white',
@@ -142,7 +169,7 @@ function HeroSection() {
                     fontSize: {xs: '80px', sm: "125px", md: "200px"},
                     transform: "rotate(-5deg)",
                     letterSpacing: "2px",
-                    lineHeight:'200px'
+                    lineHeight:'200px',
                 }}>Snack</Typography>
                 <Typography className={'monserrat'} sx={{
                     color: 'white',

@@ -1,12 +1,10 @@
 import React from 'react';
 import {Box, Container, Typography, Grid} from "@mui/material";
 import 'aos/dist/aos.css';
-import certificate1
-    from '../../assets/images/global/certificates/167-1671625_halal-certification-services-halal-india-logo (1).png';
-import certificate2 from '../../assets/images/global/certificates/unnamed.png';
-import certificate3 from '../../assets/images/global/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM (1).jpeg';
-import certificate4 from '../../assets/images/global/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM.jpeg';
-import certificate5 from '../../assets/images/global/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM (2).jpeg';
+import certificate1 from '../../assets/images/global/certificates/aped.png';
+import certificate2 from '../../assets/images/global/certificates/fssai-certi.png';
+import certificate3 from '../../assets/images/global/certificates/halal.png';
+import certificate4 from '../../assets/images/global/certificates/isoqar.png';
 
 function OurCertificates() {
 
@@ -26,7 +24,7 @@ function OurCertificates() {
                     Our Certificates
                 </Typography>
                 <Grid container spacing={4} justifyContent="center" sx={{marginTop: 5}}>
-                    {[certificate1, certificate2, certificate3, certificate4, certificate5].map((cert, index) => (
+                    {[certificate1, certificate2, certificate3, certificate4].map((cert, index) => (
                         <Grid item size={{xs: 12, sm: 6, lg: 4, xl: 2}} key={index}>
                             <Box
                                 sx={{

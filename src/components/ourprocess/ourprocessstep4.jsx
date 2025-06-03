@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 import {Box, Typography, Grid} from '@mui/material';
 import imgstep4 from "../../assets/images/ourprocess/ManufacturingProcessSteps/QualityControl.png";
-import certificate1
-    from '../../assets/images/global/certificates/167-1671625_halal-certification-services-halal-india-logo (1).png';
-import certificate2 from '../../assets/images/global/certificates/unnamed.png';
-import certificate3 from '../../assets/images/global/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM (1).jpeg';
-import certificate4 from '../../assets/images/global/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM.jpeg';
-import certificate5 from '../../assets/images/global/certificates/WhatsApp Image 2025-05-06 at 10.55.43 AM (2).jpeg';
+import certificate1 from '../../assets/images/global/certificates/aped.png';
+import certificate2 from '../../assets/images/global/certificates/fssai-certi.png';
+import certificate3 from '../../assets/images/global/certificates/halal.png';
+import certificate4 from '../../assets/images/global/certificates/isoqar.png';
 import 'aos/dist/aos.css';
 
 function Ourprocessstep4() {
@@ -45,7 +43,6 @@ function Ourprocessstep4() {
             {image: certificate2},
             {image: certificate3},
             {image: certificate4},
-            {image: certificate5},
         ],
         image: imgstep4,
     };
