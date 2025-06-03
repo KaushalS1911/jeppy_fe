@@ -6,17 +6,17 @@ import 'swiper/css/autoplay';
 
 import {Autoplay} from 'swiper/modules';
 
-import image1 from '../../assets/images/home/ourParteners/akash.png';
-import image2 from '../../assets/images/home/ourParteners/Bablu.png';
-import image3 from '../../assets/images/home/ourParteners/balaji.png';
-import image4 from '../../assets/images/home/ourParteners/crax.png';
-import image5 from '../../assets/images/home/ourParteners/ghodawat-foods.png';
-import image6 from '../../assets/images/home/ourParteners/haldiram.png';
-import image7 from '../../assets/images/home/ourParteners/panjwani.png';
-import image8 from '../../assets/images/home/ourParteners/priniti.png';
-import image9 from '../../assets/images/home/ourParteners/real.png';
-import image10 from '../../assets/images/home/ourParteners/shyam-g.png';
-import image11 from '../../assets/images/home/ourParteners/Sunder.png';
+import image1 from '../../assets/images/home/ourParteners/akash.PNG';
+import image2 from '../../assets/images/home/ourParteners/Bablu.PNG';
+import image3 from '../../assets/images/home/ourParteners/balaji.PNG';
+import image4 from '../../assets/images/home/ourParteners/crax.PNG';
+import image5 from '../../assets/images/home/ourParteners/ghodawat-foods.PNG';
+import image6 from '../../assets/images/home/ourParteners/haldiram.PNG';
+import image7 from '../../assets/images/home/ourParteners/panjwani.PNG';
+import image8 from '../../assets/images/home/ourParteners/priniti.PNG';
+import image9 from '../../assets/images/home/ourParteners/real.PNG';
+import image10 from '../../assets/images/home/ourParteners/shyam-g.PNG';
+import image11 from '../../assets/images/home/ourParteners/Sunder.PNG';
 
 
 

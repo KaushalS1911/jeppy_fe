@@ -1,10 +1,10 @@
 import React from 'react';
 import {Box, Container, Typography, Grid} from "@mui/material";
 import 'aos/dist/aos.css';
-import certificate1 from '../../assets/images/global/certificates/aped.png';
-import certificate2 from '../../assets/images/global/certificates/fssai-certi.png';
-import certificate3 from '../../assets/images/global/certificates/halal.png';
-import certificate4 from '../../assets/images/global/certificates/isoqar.png';
+import certificate1 from '../../assets/images/global/certificates/aped.PNG';
+import certificate2 from '../../assets/images/global/certificates/fssai-certi.PNG';
+import certificate3 from '../../assets/images/global/certificates/halal.PNG';
+import certificate4 from '../../assets/images/global/certificates/isoqar.PNG';
 
 function OurCertificates() {
 

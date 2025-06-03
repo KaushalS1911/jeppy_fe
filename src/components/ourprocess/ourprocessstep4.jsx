@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {Box, Typography, Grid} from '@mui/material';
 import imgstep4 from "../../assets/images/ourprocess/ManufacturingProcessSteps/QualityControl.png";
-import certificate1 from '../../assets/images/global/certificates/aped.png';
-import certificate2 from '../../assets/images/global/certificates/fssai-certi.png';
-import certificate3 from '../../assets/images/global/certificates/halal.png';
-import certificate4 from '../../assets/images/global/certificates/isoqar.png';
+import certificate1 from '../../assets/images/global/certificates/aped.PNG';
+import certificate2 from '../../assets/images/global/certificates/fssai-certi.PNG';
+import certificate3 from '../../assets/images/global/certificates/halal.PNG';
+import certificate4 from '../../assets/images/global/certificates/isoqar.PNG';
 import 'aos/dist/aos.css';
 
 function Ourprocessstep4() {
