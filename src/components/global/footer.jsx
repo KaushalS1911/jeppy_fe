@@ -7,7 +7,7 @@ import {
     Grid,
     useTheme, IconButton,
 } from '@mui/material';
-import Logo from '../../assets/images/global/Jeppy Logo - Copy (3).png';
+import Logo from '../../assets/images/global/jeepy-logo.png';
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";

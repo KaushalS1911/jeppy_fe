@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import {Box, Typography, useTheme} from "@mui/material";
 import {keyframes} from '@emotion/react';
 
-import logo from '../../assets/images/global/Jeppy Logo - Copy (3).png';
+import logo from '../../assets/images/global/jeepy-logo.png';
 import pellets1 from '../../assets/images/home/heroSection/png/2D VEGGIE STRAW.png';
 import pellets2 from '../../assets/images/home/heroSection/png/2D PENNE.png';
 import pellets3 from '../../assets/images/home/heroSection/png/2D_0638.png';
