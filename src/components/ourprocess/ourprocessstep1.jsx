@@ -33,18 +33,9 @@ function Ourprocessstep1() {
             steps: "STEP 1",
             title: "Raw Material Selection",
             points: [
-                "Sourced from trusted suppliers (potato, lentil, soya, rice, etc.)",
-                {
-                    text: "Before use, materials undergo strict quality tests:",
-                    subpoints: [
-                        "Tested for moisture",
-                        "density",
-                        "Ash content",
-                        "pH level",
-                        "Color & viscosity analysis"
-                    ]
-                },
-                "Only approved materials proceed to production"
+                'Sourced from trusted suppliers (potato, lentil, soya, rice, etc).',
+                'Tested for moisture, density, ash content, pH, color & viscosity.',
+                'Only approved materials proceed to production.'
             ],
             image: imgstep1,
         }
@@ -197,8 +188,8 @@ function Ourprocessstep1() {
                             src={item.image}
                             alt="Raw Material Procurement"
                             style={{
-                                width: '100%',
-                                height: '100%',
+                                width: '1049px',
+                                height: '587px',
                                 objectFit: "cover",
                                 transition: "transform 0.5s ease", // Smooth transition for the transform effect
                                 transform: isHovered ? "scale(1.05)" : "scale(1)", // Scale up on hover

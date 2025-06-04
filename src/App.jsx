@@ -1,4 +1,5 @@
 import './App.css'
+import './responsive.css'
 import Navbar from "./components/global/navbar.jsx";
 import {Routes, Route, useLocation} from "react-router-dom";
 import Home from "./pages/home.jsx";

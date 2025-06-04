@@ -6,11 +6,12 @@ import AboutUs from "../components/home/aboutUs.jsx";
 import HeroSection from "../components/home/heroSection.jsx";
 import OurSolution from "../components/home/ourSolution.jsx";
 import OurPartners from "../components/home/ourPartners.jsx";
-
+import Certification from "../components/home/certification.jsx";
 function Home() {
     return (
         <>
             <HeroSection />
+            <Certification/>
             <Milestone/>
             <Products/>
             <OurSolution />
