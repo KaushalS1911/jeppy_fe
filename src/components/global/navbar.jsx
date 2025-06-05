@@ -10,7 +10,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import {Link, useLocation} from 'react-router-dom';
-import Logo from '../../assets/images/global/logo.jpg';
+import Logo from '../../assets/images/global/jeepy-logo.png';
 
 const navItems = [
     { label: 'Products', path: '/products' },
@@ -75,7 +75,7 @@ function Navbar() {
                     padding:"0px 41px"
                 }}>
                     <Box component={Link} to="/" sx={{ display: 'flex', alignItems: 'center' }}>
-                        <Box component="img" src={Logo} alt="Logo" sx={{ height: {md:"100%" , xs:"40px"} }} />
+                        <Box component="img" src={Logo} alt="Logo" sx={{ height: {md:"100%" , xs:"40px",xl:"100%"},width:'121px' }} />
                     </Box>
 
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 4 }}>

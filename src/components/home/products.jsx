@@ -183,16 +183,16 @@ import {
 } from '@mui/material';
 
 // Update these imports with your actual images
-import Img1 from '../../assets/images/home/Product/Gluten-Free-Group-Pics.png';
-import Img2 from '../../assets/images/home/Product/3D-Group-Pic.png';
-import Img3 from '../../assets/images/home/Product/Group-2D-Pic.png';
-import Img4 from '../../assets/images/home/Product/Micro-Pellets-Group-Pics.png';
+import Img1 from '../../assets/images/products/2d.PNG';
+import Img2 from '../../assets/images/products/3d.PNG';
+import Img3 from '../../assets/images/products/micropellets.PNG';
+import Img4 from '../../assets/images/products/sheeted-and-papd.PNG';
 
 const products = [
-    { id: 2, name: 'Veggie Snacks', image: Img1 },
-    { id: 3, name: 'High Protein', image: Img2 },
-    { id: 4, name: 'Cereal Based', image: Img3 },
-    { id: 5, name: 'Gluten Free', image: Img4 },
+    { id: 2, name: '2D Shapes', image: Img1 },
+    { id: 3, name: '3D Shapes', image: Img2 },
+    { id: 4, name: 'Papad & Sheeted', image: Img3 },
+    { id: 5, name: 'Micropellets', image: Img4 },
 ];
 
 function Products() {

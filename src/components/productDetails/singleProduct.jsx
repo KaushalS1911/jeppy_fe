@@ -9,8 +9,8 @@ import {
     TableRow,
     Container
 } from '@mui/material';
-import img from '../../assets/images/products/Lentil-Curl-600x600 1.png';
-import size from '../../assets/images/products/PSS9 1.png';
+import img from '../../assets/images/products/lentil.png';
+// import size from '../../assets/images/products/PSS9 1.png';
 
 const productData = [
     ['Moisture (%)', '8.5–9.5'],

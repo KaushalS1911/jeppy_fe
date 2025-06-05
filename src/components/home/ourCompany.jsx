@@ -31,7 +31,7 @@ function OurCompany() {
                         // my: 1.5
                     }}
                 >
-                    Our Own Company
+                    Our Own Brands
                 </Typography>
             </Box>
 

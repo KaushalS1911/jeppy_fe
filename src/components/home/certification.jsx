@@ -15,20 +15,20 @@ import certificate2 from '../../assets/images/global/certificates/fssai-certi.PN
 import certificate3 from '../../assets/images/global/certificates/halal.PNG';
 import certificate4 from '../../assets/images/global/certificates/isoqar.PNG';
 
-const products = [
-    { id: 1, image: certificate1 },
-    { id: 2, image: certificate2 },
-    { id: 3, image: certificate3 },
-    { id: 4, image: certificate4 },
+const Certificate = [
+    { id: 1, image: certificate1 , name: 'APED Certification' },
+    { id: 2, image: certificate2 , name: 'FSSAI Certification' },
+    { id: 3, image: certificate3 , name: 'Halal Certification' },
+    { id: 4, image: certificate4, name: 'ISO Certification' },
 ];
 
 function Certification() {
     const theme = useTheme();
 
     return (
-        <Box sx={{ position: 'relative', backgroundColor: '#4F3C69', py: '20px', overflow: 'hidden' ,marginTop:'50px'}}>
+        <Box sx={{ position: 'relative', backgroundColor: 'white', py: '20px', overflow: 'hidden' ,marginTop:'50px'}}>
             {/* Black Transparent Overlay */}
-            <Box
+            {/* <Box
                 sx={{
                     position: 'absolute',
                     top: 0,
@@ -38,7 +38,7 @@ function Certification() {
                     backgroundColor: 'rgba(0, 0, 0, 0.4)', // You can adjust the opacity here
                     zIndex: 1,
                 }}
-            />
+            /> */}
 
             {/* Content Layer */}
             <Container
@@ -54,14 +54,14 @@ function Certification() {
                         sx={{
                             fontSize: { xs: '20px', sm: '28px', md: '36px' },
                             fontWeight: 700,
-                            color: '#FFFFFF',
+                            color: 'black',
                         }}
                     >
                         Certificates
                     </Typography>
 
                     <Grid container spacing={{ xs: 4, sm: 2, md: 4 }} justifyContent="center">
-                        {products.map((product) => (
+                        {Certificate.map((product) => (
                             <Grid
                                 item
                                 xs={12}
