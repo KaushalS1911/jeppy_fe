@@ -125,7 +125,7 @@ function WhoWeAre() {
                         }}
                     >
                         <Grid container spacing={5}>
-                            <Grid item size={{xs: 12, lg: 6}}>
+                            <Grid item xs={12} lg={6}>
                                 <Typography
                                     sx={{
                                         fontWeight: 500,
