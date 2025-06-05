@@ -17,26 +17,29 @@ import 'aos/dist/aos.css';
 
 function App() {
 
-    function ScrollToTop() {
-        const {pathname} = useLocation();
-        useEffect(() => {
-            window.scrollTo(0, 0);
-        }, [pathname]);
-        return null;
-    }
+   const location = useLocation();
 
+  function ScrollToTop() {
+    const { pathname } = useLocation();
     useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: true,
-            mirror: true,
-            offset: 120,
-            easing: 'ease-in-out'
-        });
+      window.scrollTo(0, 0);
+    }, [pathname]);
+    return null;
+  }
 
-        return () => {
-        };
-    }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      mirror: true,
+      offset: 120,
+      easing: 'ease-in-out'
+    });
+  }, []);
+
+  useEffect(() => {
+    AOS.refresh();
+  }, [location]);
 
     return (
         <main>
@@ -46,7 +49,7 @@ function App() {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/products" element={<OurProducts/>}/>
                 <Route path="/product/:id" element={<ProductDetails />} />
-                <Route path="/product/:id" element={<ProductSlider />} />
+                {/* <Route path="/product/:id" element={<ProductSlider />} /> */}
                 <Route path="/process" element={<Ourprocess/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/contact" element={<Contactus/>}/>
