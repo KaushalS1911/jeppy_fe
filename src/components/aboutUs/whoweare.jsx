@@ -1,17 +1,9 @@
 import React from 'react';
-import AOS from 'aos';
-import { useEffect } from 'react';
 import {Box, Typography, Grid, Container} from '@mui/material';
 import palletimg from "../../assets/images/aboutus/pallets.jpg";
 import 'aos/dist/aos.css';
 
 function WhoWeAre() {
-
-useEffect(() => {
-  if (typeof window !== 'undefined') {
-    AOS.init({ once: true });
-  }
-}, []);
     return (
         <>
             <Box>
