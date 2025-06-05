@@ -16,7 +16,7 @@ function Milestone() {
     const theme = useTheme();
 
     return (
-        <Box ref={ref} sx={{py:10}}>
+        <Box ref={ref} sx={{py:'20px'}}>
             <Box
                 sx={{
                     py: {xs: 4, sm: 5, md: 4},

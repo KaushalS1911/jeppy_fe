@@ -29,18 +29,18 @@ function OurPartners() {
     const theme = useTheme();
 
     return (
-        <Box sx={{pt: {xs: 5, md: 10}}}>
+        <Box sx={{pt: {xs: 5, md: 10},background: `${theme.palette.saffron}`}}>
             <Typography className={'monserrat'} sx={{
                 fontSize: {md: "36px", sm: "28px", xs: "20px"},
                 fontWeight: 700,
                 textAlign: "center",
-                color: "#000",
+                color: "white",
                 pb: 4
             }}>
                 Our Success Partners
             </Typography>
 
-            <Box sx={{mt: 4, px: 2, background: `${theme.palette.saffron}`, py: {sm: 8, xs: 5}}}>
+            <Box sx={{mt: 4, px: 2,  py: {sm: 8, xs: 5}}}>
                 <Swiper
                     modules={[Autoplay]}
                     spaceBetween={0}
@@ -63,7 +63,7 @@ function OurPartners() {
                         <SwiperSlide key={index}>
                             <Box sx={{display: "flex", justifyContent: "center", alignItems: "center", px: 2}}>
                                 <img src={img} alt={`partner-${index}`}
-                                     style={{height: "120px", objectFit: "contain"}}/>
+                                     style={{height: "220px", objectFit: "contain"}}/>
                             </Box>
                         </SwiperSlide>
                     ))}

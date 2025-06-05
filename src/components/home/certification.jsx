@@ -26,7 +26,7 @@ function Certification() {
     const theme = useTheme();
 
     return (
-        <Box sx={{ position: 'relative', backgroundColor: 'white', py: '20px', overflow: 'hidden' ,marginTop:'50px'}}>
+        <Box sx={{ position: 'relative', backgroundColor: 'white', py: '0px', overflow: 'hidden' ,marginTop:'0px'}}>
             {/* Black Transparent Overlay */}
             {/* <Box
                 sx={{

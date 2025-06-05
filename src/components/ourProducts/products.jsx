@@ -18,6 +18,7 @@ import img4 from '../../assets/images/products/sheeted-and-papd.PNG';
 
 
 const categories = [
+    'All',
     '2D Pellets',
     '3D Pellets',
     'Micro Pellets',
@@ -33,12 +34,12 @@ const productData = [
 
 
 const Products = () => {
-    const [activeCategory, setActiveCategory] = useState('');
+    const [activeCategory, setActiveCategory] = useState('All');
     const [searchTerm, setSearchTerm] = useState('');
 
     const filteredProducts = productData.filter(
         (product) =>
-            (activeCategory === '' || product.category === activeCategory) &&
+            (activeCategory === 'All' || product.category === activeCategory) &&
             product.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 

@@ -191,8 +191,8 @@ import Img4 from '../../assets/images/products/sheeted-and-papd.PNG';
 const products = [
     { id: 2, name: '2D Shapes', image: Img1 },
     { id: 3, name: '3D Shapes', image: Img2 },
-    { id: 4, name: 'Papad & Sheeted', image: Img3 },
-    { id: 5, name: 'Micropellets', image: Img4 },
+    { id: 4, name: 'Micropellets', image: Img3 },
+    { id: 5, name: 'Papad & Sheeted', image: Img4 },
 ];
 
 function Products() {
@@ -247,7 +247,7 @@ function Products() {
                                         image={product.image}
                                         alt={product.name}
                                         sx={{
-                                            height: { xs: '180px', sm: '200px', md: '220px' },
+                                            height: { xs: '180px', sm: '200px', md: '235px' },
                                             objectFit: 'contain',
                                             mb: 2,
                                         }}

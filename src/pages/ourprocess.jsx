@@ -10,6 +10,7 @@ import Ourprocessstep5 from "../components/ourprocess/ourprocessstep5.jsx";
 import FleppyCrew from "../components/ourprocess/fleppycrew.jsx";
 import LetsConnect from "../components/ourprocess/letsconnect.jsx";
 import bgimage from "../assets/images/global/header/header.jpg";
+import Experts from "../components/ourProducts/experts.jsx";
 
 function Ourprocess() {
     return (
@@ -27,6 +28,8 @@ function Ourprocess() {
             <Ourprocessstep3/>
             <Ourprocessstep4/>
             <Ourprocessstep5/>
+            <Experts />
+            {/* <Experts  containerProps={{ maxWidth: "xxl",sx: { px: { xs: 2, sm: 4, md: 6 } }}}/> */}
             {/*<FleppyCrew/>*/}
             {/*<LetsConnect/>*/}
         </>
