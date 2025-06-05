@@ -3,7 +3,8 @@ import {Box, Typography, Grid, Container} from '@mui/material';
 import palletimg from "../../assets/images/aboutus/pallets.jpg";
 import 'aos/dist/aos.css';
 
-function WhoWeAre() {
+function Whoweare() {
+
     return (
         <>
             <Box>
@@ -44,8 +45,7 @@ function WhoWeAre() {
                         }}
                     >
                         <Grid container spacing={5}>
-                            <Grid item xs={12} lg={6}
-                            >
+                            <Grid item size={{xs: 12, lg: 6}}>
                                 <Typography
                                     sx={{
                                         fontWeight: 500,
@@ -64,8 +64,7 @@ function WhoWeAre() {
                                 </Typography>
                             </Grid>
 
-                            <Grid item xs={12} lg={6}
-                            >
+                            <Grid item size={{xs: 12, lg: 6}}>
                                 <Typography
                                     sx={{
                                         fontWeight: 400,
@@ -125,7 +124,7 @@ function WhoWeAre() {
                         }}
                     >
                         <Grid container spacing={5}>
-                            <Grid item xs={12} lg={6}>
+                            <Grid item size={{xs: 12, lg: 6}}>
                                 <Typography
                                     sx={{
                                         fontWeight: 500,
@@ -218,4 +217,4 @@ function WhoWeAre() {
     );
 }
 
-export default WhoWeAre;
+export default Whoweare;
