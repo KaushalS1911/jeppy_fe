@@ -1,10 +1,14 @@
 import React from 'react';
+import AOS from 'aos';
+import { useEffect } from 'react';
 import {Box, Typography, Grid, Container} from '@mui/material';
 import palletimg from "../../assets/images/aboutus/pallets.jpg";
 import 'aos/dist/aos.css';
 
 function Whoweare() {
-
+    useEffect(() => {
+  AOS.init({ once: true });
+}, []);
     return (
         <>
             <Box>
@@ -45,7 +49,8 @@ function Whoweare() {
                         }}
                     >
                         <Grid container spacing={5}>
-                            <Grid item size={{xs: 12, lg: 6}}>
+                            <Grid item xs={12} lg={6}
+                            >
                                 <Typography
                                     sx={{
                                         fontWeight: 500,
@@ -64,7 +69,8 @@ function Whoweare() {
                                 </Typography>
                             </Grid>
 
-                            <Grid item size={{xs: 12, lg: 6}}>
+                            <Grid item xs={12} lg={6}
+                            >
                                 <Typography
                                     sx={{
                                         fontWeight: 400,
