@@ -6,8 +6,11 @@ import palletimg from "../../assets/images/aboutus/pallets.jpg";
 import 'aos/dist/aos.css';
 
 function WhoWeAre() {
-    useEffect(() => {
-  AOS.init({ once: true });
+
+useEffect(() => {
+  if (typeof window !== 'undefined') {
+    AOS.init({ once: true });
+  }
 }, []);
     return (
         <>
