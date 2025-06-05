@@ -75,7 +75,7 @@ function Navbar() {
                     padding:"0px 41px"
                 }}>
                     <Box component={Link} to="/" sx={{ display: 'flex', alignItems: 'center' }}>
-                        <Box component="img" src={Logo} alt="Logo" sx={{ height: {md:"100%" , xs:"40px",xl:"100%"},width:'121px' }} />
+                        <Box component="img" src={Logo} alt="Logo" sx={{ height: {md:"100%" ,xl:"100%"},width:'121px' }} />
                     </Box>
 
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 4 }}>
