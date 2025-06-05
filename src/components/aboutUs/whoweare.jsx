@@ -5,7 +5,7 @@ import {Box, Typography, Grid, Container} from '@mui/material';
 import palletimg from "../../assets/images/aboutus/pallets.jpg";
 import 'aos/dist/aos.css';
 
-function Whoweare() {
+function WhoWeAre() {
     useEffect(() => {
   AOS.init({ once: true });
 }, []);
@@ -223,4 +223,4 @@ function Whoweare() {
     );
 }
 
-export default Whoweare;
+export default WhoWeAre;
