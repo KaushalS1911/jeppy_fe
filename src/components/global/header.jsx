@@ -61,7 +61,7 @@ function Header({ heading, subtext, buttonText, img, bgcolor, path }) {
                 >
                     {subtext}
                 </Typography>
-                <Button
+                {/* <Button
                     variant="contained"
                     sx={{
                         backgroundColor: `${theme.palette.headerButton}`,
@@ -84,7 +84,7 @@ function Header({ heading, subtext, buttonText, img, bgcolor, path }) {
                     data-aos-delay="600"
                 >
                     {buttonText}
-                </Button>
+                </Button> */}
             </Container>
         </Box>
     );
