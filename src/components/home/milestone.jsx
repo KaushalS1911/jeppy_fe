@@ -5,10 +5,12 @@ import CountUp from "react-countup";
 import {useInView} from 'react-intersection-observer';
 
 const milestones = [
-    {value: "400", sufix: "+", label: "SHAPES"},
+    {value: "150", sufix: "+", label: "SHAPES"},
     {value: "250", sufix: "", label: "MT/DAY\nPRODUCTION"},
-    {value: "20", sufix: "+", label: "Countries Supplied\n Worldwide"},
-    {value: "200", sufix: "+", label: "Brands Trust\n Globally\n"}
+    {value: "400", sufix: "", label: "Products Designed\n and Shaped"},
+    {value: "1000", sufix: "", label: "of Formulations\n"},
+    {value: "5", sufix: "", label: "Manufacturing\nFacilities"},
+    {value: "200", sufix: "+", label: "Satisfied\nCustomers"},
 ];
 
 function Milestone() {
@@ -79,7 +81,7 @@ function Milestone() {
                         <Grid item size={{xs: 12, md: 8, lg: 9}}>
                             <Grid container spacing={3}>
                                 {milestones.map((item, index) => (
-                                    <Grid item size={{xs: 6, sm: 3}} key={index}>
+                                    <Grid item size={{xs: 6, sm: 4}} key={index}>
                                         <Box sx={{
                                             display: "flex",
                                             flexDirection: "column",

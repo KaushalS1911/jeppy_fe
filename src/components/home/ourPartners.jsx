@@ -29,7 +29,7 @@ function OurPartners() {
     const theme = useTheme();
 
     return (
-        <Box sx={{pt: {xs: 5, md: 10},background: `${theme.palette.saffron}`}}>
+        <Box sx={{background: `${theme.palette.saffron}`}}>
             <Typography className={'monserrat'} sx={{
                 fontSize: {md: "36px", sm: "28px", xs: "20px"},
                 fontWeight: 700,
