@@ -11,13 +11,14 @@ function Home() {
     return (
         <>
             <HeroSection />
-            <Products/>
+            <OurCompany/>
             <Milestone/>
+            <Products/>
+{/*<AboutUs/>*/}
             {/*<OurSolution />*/}
             <OurPartners />
             <Certification/>
-            <OurCompany/>
-            {/*<AboutUs/>*/}
+
         </>
     );
 }

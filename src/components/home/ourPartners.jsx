@@ -35,7 +35,8 @@ function OurPartners() {
                 fontWeight: 700,
                 textAlign: "center",
                 color: "white",
-                pb: 4
+                pt: 10,
+                pb: {sm: 4, md: 0}
             }}>
                 Our Success Partners
             </Typography>

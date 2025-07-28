@@ -31,7 +31,7 @@ function Products() {
 
     return (
         <Container maxWidth="xl">
-            <Box sx={{ pb: { xs: 5, md: 12 } }}>
+            <Box sx={{ pb: { xs: 5, md: 10 }, pt: { xs: 0, md: 10 } }}>
                 <Typography
                     variant="h5"
                     fontWeight={700}

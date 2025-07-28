@@ -75,7 +75,7 @@ const Footer = () => {
                         sx={{
                             display: "flex",
                             justifyContent: "center",
-                            width: { xs: "250px", sm: "300px" }
+                            width: { xs: "250px" }
                         }}
                     >
                         <Box
