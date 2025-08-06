@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box, Typography, Container, Grid, useTheme} from "@mui/material";
-import bgimg from '../../assets/images/home/Milestone/assortment-salt-crackers_114579-65525.jpg';
+import bgimg from '../../assets/images/home/Milestone/IMG_3101.jpg';
 import CountUp from "react-countup";
 import {useInView} from 'react-intersection-observer';
 
