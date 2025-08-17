@@ -46,19 +46,19 @@ function Certification() {
                 sx={{ margin: '50px 0', position: 'relative', zIndex: 2 }}
             >
                 <Box>
-                    {/*<Typography*/}
-                    {/*    variant="h5"*/}
-                    {/*    fontWeight={700}*/}
-                    {/*    textAlign="center"*/}
-                    {/*    mb={{ xs: 3, md: 4 }}*/}
-                    {/*    sx={{*/}
-                    {/*        fontSize: { xs: '20px', sm: '28px', md: '36px' },*/}
-                    {/*        fontWeight: 700,*/}
-                    {/*        color: 'black',*/}
-                    {/*    }}*/}
-                    {/*>*/}
-                    {/*    Certificates*/}
-                    {/*</Typography>*/}
+                    <Typography
+                        variant="h5"
+                        fontWeight={700}
+                        textAlign="center"
+                        mb={{ xs: 3, md: 4 }}
+                        sx={{
+                            fontSize: { xs: '20px', sm: '28px', md: '36px' },
+                            fontWeight: 700,
+                            color: 'black',
+                        }}
+                    >
+                        Our Certificate
+                    </Typography>
 
                     <Grid container spacing={{ xs: 4, sm: 2, md: 4 }} justifyContent="center">
                         {Certificate.map((product) => (

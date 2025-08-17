@@ -14,8 +14,9 @@ function Home() {
             <OurCompany/>
             <Milestone/>
             <Products/>
+            <OurSolution />
+
 {/*<AboutUs/>*/}
-            {/*<OurSolution />*/}
             <OurPartners />
             <Certification/>
 

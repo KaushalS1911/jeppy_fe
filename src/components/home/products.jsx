@@ -82,6 +82,9 @@ function Products() {
                                                 height: { xs: '180px', sm: '200px', md: '235px' },
                                                 objectFit: 'contain',
                                                 mb: 2,
+                                                backgroundColor: '#f5f5f5', // Light gray background
+                                                borderRadius: '8px', // Optional: rounded corners
+                                                padding: '16px', // Optional: padding around image
                                             }}
                                         />
                                     </Box>
@@ -114,8 +117,8 @@ function Products() {
                                 sm={6}
                                 md={4}
                                 key={product.id}
-                                sx={{ 
-                                    display: 'flex', 
+                                sx={{
+                                    display: 'flex',
                                     justifyContent: 'center',
                                     maxWidth: { sm: '50%', md: '33.33%' }
                                 }}
@@ -145,6 +148,9 @@ function Products() {
                                                 height: { xs: '180px', sm: '200px', md: '235px' },
                                                 objectFit: 'contain',
                                                 mb: 2,
+                                                backgroundColor: '#f5f5f5', // Light gray background
+                                                borderRadius: '8px', // Optional: rounded corners
+                                                padding: '16px', // Optional: padding around image
                                             }}
                                         />
                                     </Box>

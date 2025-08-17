@@ -163,35 +163,54 @@ function HeroSection() {
                 <Typography
                     sx={{
                         fontSize: '14px',
-                        mb: 1,
+                        mb: 2,
                         opacity: 0.8,
                     }}
                 >
                     Scroll Down
                 </Typography>
+
+                {/* Mouse Icon */}
                 <Box
                     sx={{
-                        width: '2px',
-                        height: '30px',
-                        backgroundColor: 'white',
+                        width: '24px',
+                        height: '36px',
+                        border: '2px solid white',
+                        borderRadius: '12px',
                         margin: '0 auto',
-                        animation: 'bounce 2s infinite',
-                        '@keyframes bounce': {
-                            '0%, 20%, 50%, 80%, 100%': {
-                                transform: 'translateY(0)',
-                                opacity: 1,
-                            },
-                            '40%': {
-                                transform: 'translateY(-10px)',
-                                opacity: 0.7,
-                            },
-                            '60%': {
-                                transform: 'translateY(-5px)',
-                                opacity: 0.9,
-                            },
-                        },
+                        position: 'relative',
+                        opacity: 0.9,
                     }}
-                />
+                >
+                    {/* Mouse Wheel/Dot */}
+                    <Box
+                        sx={{
+                            width: '3px',
+                            height: '6px',
+                            backgroundColor: 'white',
+                            borderRadius: '2px',
+                            position: 'absolute',
+                            left: '50%',
+                            top: '6px',
+                            transform: 'translateX(-50%)',
+                            animation: 'mouseScroll 2s infinite',
+                            '@keyframes mouseScroll': {
+                                '0%': {
+                                    opacity: 1,
+                                    transform: 'translateX(-50%) translateY(0)',
+                                },
+                                '50%': {
+                                    opacity: 0.5,
+                                    transform: 'translateX(-50%) translateY(12px)',
+                                },
+                                '100%': {
+                                    opacity: 1,
+                                    transform: 'translateX(-50%) translateY(0)',
+                                },
+                            },
+                        }}
+                    />
+                </Box>
             </Box>
         </Box>
     );
