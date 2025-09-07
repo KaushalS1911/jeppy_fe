@@ -14,6 +14,7 @@ import img1 from '../../assets/images/products/2d.PNG';
 import img2 from '../../assets/images/products/3d.PNG';
 import img3 from '../../assets/images/products/micropellets.PNG';
 import img4 from '../../assets/images/products/sheeted-and-papd.PNG';
+import bgImg from '../../assets/images/home/Product/Prdocut BG.png';
 
 
 
@@ -45,7 +46,14 @@ const Products = () => {
 
     console.log("::::::::::::::::::::::filteredProducts",filteredProducts);
     return (
-        <Container maxWidth={"xl"}>
+        <Container maxWidth={"xl"} sx={{
+            backgroundImage: `url(${bgImg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            width: '100%',
+            minHeight: '100vh' // Optional: ensures full viewport height
+        }}>
             <Box sx={{py: {xs: 4, md: 5}}}>
                 <Typography
                     className={'monserrat'}

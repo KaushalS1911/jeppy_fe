@@ -13,6 +13,7 @@ import Img1 from '../../assets/images/products/2d.PNG';
 import Img2 from '../../assets/images/products/3d.PNG';
 import Img3 from '../../assets/images/products/micropellets.PNG';
 import Img4 from '../../assets/images/products/sheeted-and-papd.PNG';
+import bgImg from '../../assets/images/home/Product/Prdocut BG.png';
 
 const products = [
     { id: 1, name: 'Cereal snack pellets', image: Img1 },
@@ -30,7 +31,18 @@ function Products() {
     const bottomRowProducts = products.slice(3);  // Remaining 2 products
 
     return (
-        <Container maxWidth="xl">
+        <Container maxWidth={false}
+                   disableGutters
+                   sx={{
+                       backgroundImage: `url(${bgImg})`,
+                       backgroundSize: 'cover',
+                       backgroundPosition: 'center',
+                       backgroundRepeat: 'no-repeat',
+                       width: '100%',
+                       minHeight: '100vh',
+                       px: 0,
+                       mx: 0,
+                   }}>
             <Box sx={{ pb: { xs: 5, md: 10 }, pt: { xs: 0, md: 10 } }}>
                 <Typography
                     variant="h5"

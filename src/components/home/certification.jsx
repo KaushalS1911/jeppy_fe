@@ -42,7 +42,7 @@ function Certification() {
 
             {/* Content Layer */}
             <Container
-                maxWidth="xl"
+                maxWidth={false}
                 sx={{ margin: '50px 0', position: 'relative', zIndex: 2 }}
             >
                 <Box>
