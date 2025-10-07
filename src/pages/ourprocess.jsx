@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box} from "@mui/material";
+import {Box, useTheme} from "@mui/material";
 import Header from "../components/global/header.jsx";
 import Snackingvision from "../components/ourprocess/snackingvision.jsx";
 import Ourprocessstep1 from "../components/ourprocess/ourprocessstep1.jsx";
@@ -13,13 +13,14 @@ import bgimage from "../assets/images/global/header/header.jpg";
 import Experts from "../components/ourProducts/experts.jsx";
 
 function Ourprocess() {
+    const theme = useTheme();
     return (
         <>
             <Header buttonText={"Let's Connect"}
                     subtext={'A reliable process line is the backbone of success in the snack pellet industry. Explore how our solutions cover every stage of production.'}
                     heading={'From Idea to Crunch, We Do It Right.'}
                     img={bgimage}
-                    bgcolor={'rgba(254, 195, 85, 0.7)'}
+                    bgcolor={`${theme.palette.saffron}80`}
                     path={'/contact'}
             />
             <Snackingvision/>

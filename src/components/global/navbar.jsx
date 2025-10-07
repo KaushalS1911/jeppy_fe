@@ -5,24 +5,24 @@ import {
     IconButton,
     Collapse,
     List,
-    ListItem, useTheme
+    ListItem, useTheme, Button
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import {Link, useLocation} from 'react-router-dom';
+import {Link, useLocation, useNavigate} from 'react-router-dom';
 import Logo from '../../assets/images/global/jeepy-logo.png';
 
 const navItems = [
+    { label: 'Process', path: '/process' },
     { label: 'Products', path: '/products' },
-    { label: 'Our Process', path: '/process' },
-    { label: 'About us', path: '/about' },
-    { label: 'Contact', path: '/contact' },
+    { label: 'Company', path: '/about' },
 ];
 
 function Navbar() {
     const [a,setA] = useState(null);
     const [position,setPosition] = useState(null);
     const location = useLocation();
+    const navigate = useNavigate();
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -78,7 +78,7 @@ function Navbar() {
                         <Box component="img" src={Logo} alt="Logo" sx={{ height: {md:"100%" ,xl:"100%"},width:'121px' }} />
                     </Box>
 
-                    <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 4 }}>
+                    <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 8 }}>
                         {navItems.map(({ label, path }) => (
                             <Box
                                 key={label}
@@ -99,6 +99,33 @@ function Navbar() {
                                 {label}
                             </Box>
                         ))}
+                    </Box>
+
+                    <Box sx={{ display: { xs: 'none', md: 'flex' }}}>
+                        <Button
+                            variant="contained"
+                            onClick={() => navigate("/contact")}
+                            sx={{
+                                backgroundColor: `${theme.palette.saffron}`,
+                                color: '#fff',
+                                px: 3,
+                                py: 1,
+                                fontWeight: 500,
+                                textTransform: 'none',
+                                fontSize: '18px',
+                                textDecoration: 'none',
+                                whiteSpace: "nowrap",
+                                borderRadius: 2,
+                                border: `2px solid ${theme.palette.saffron}`,
+                                transition: "0.3s",
+                                "&:hover": {
+                                    bgcolor: "#fff",
+                                    color: `${theme.palette.saffron}`,
+                                },
+                            }}
+                        >
+                            Get in touch
+                        </Button>
                     </Box>
 
                     <IconButton

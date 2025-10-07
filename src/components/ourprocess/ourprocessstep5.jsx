@@ -1,12 +1,10 @@
-import React, {useState} from 'react';
-import {Box, Typography, List, ListItem, ListItemText, useTheme,Container} from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Typography, List, ListItem, ListItemText, useTheme, Container } from '@mui/material';
 import imgstep5 from "../../assets/images/ourprocess/ManufacturingProcessSteps/Packaging&Storage.png";
 import 'aos/dist/aos.css';
 
-
 function Ourprocessstep5() {
     const theme = useTheme();
-
     const [isHovered, setIsHovered] = useState(false);
 
     const shineEffectStyles = {
@@ -46,25 +44,25 @@ function Ourprocessstep5() {
 
     return (
         <Container maxWidth="xxl" sx={{ px: { xs: 2, sm: 4, md: 6 } }}>
-            <Box sx={{backgroundColor: `${theme.palette.saffron}`}}>
-                <Box sx={{margin: {sm: '0 30px', lg: "0 auto", xs: "0 10px"}}}>
+            <Box sx={{ backgroundColor: `${theme.palette.saffron}` }}>
+                <Box sx={{ margin: { sm: '0 30px', lg: "0 auto", xs: "0 10px" } }}>
                     {data.map((item, index) => (
                         <Box
                             key={index}
                             sx={{
                                 display: 'flex',
                                 py: 8,
-                                flexDirection: {xs: 'column', lg: 'row'},
+                                flexDirection: { xs: 'column', lg: 'row' },
                                 justifyContent: 'space-between',
-                                alignItems: {lg: 'center', xs: "unset"},
+                                alignItems: { lg: 'center', xs: "unset" },
                             }}
                         >
                             <Box
                                 data-aos="fade-right"
                                 data-aos-duration="1200"
                                 sx={{
-                                    pl: {xs: 2, sm: 4, md: 6, lg: 6},
-                                    py: {xs: 1, sm: 2, md: 3, lg: 4},
+                                    pl: { xs: 2, sm: 4, md: 6, lg: 6 },
+                                    py: { xs: 1, sm: 2, md: 3, lg: 4 },
                                     maxWidth: '600px',
                                 }}
                             >
@@ -73,8 +71,8 @@ function Ourprocessstep5() {
                                     data-aos-delay="200"
                                     variant="h5"
                                     sx={{
-                                        fontSize: {xl: "24px", sm: "20px", xs: "16px"},
-                                        lineHeight: '24px',
+                                        fontSize: { xl: "26px", sm: "22px", xs: "18px" },
+                                        lineHeight: '28px',
                                         fontWeight: 300,
                                         mb: 1,
                                         color: "#FFF"
@@ -91,8 +89,8 @@ function Ourprocessstep5() {
                                     sx={{
                                         my: 2,
                                         fontWeight: 700,
-                                        fontSize: {xl: "44px", sm: "34px", xs: "30px"},
-                                        color: item.steps === 'STEP 5' ? "#fff" : "#000",
+                                        fontSize: { xl: "48px", sm: "36px", xs: "32px" },
+                                        color: "#fff",
                                     }}
                                 >
                                     {item.title}
@@ -102,7 +100,7 @@ function Ourprocessstep5() {
                                     data-aos="fade-up"
                                     data-aos-delay="400"
                                     sx={{
-                                        fontSize: {xl: "22px", sm: "18px", xs: "16px"},
+                                        fontSize: { xl: "22px", sm: "20px", xs: "18px" },
                                         fontWeight: 500,
                                         mb: 1,
                                         color: "#FFF"
@@ -118,8 +116,6 @@ function Ourprocessstep5() {
                                     sx={{
                                         listStyleType: 'disc',
                                         pl: 2,
-                                        fontWeight: 500,
-                                        fontSize: {xl: "22px", sm: "18px", xs: "16px"},
                                     }}
                                 >
                                     {item.points.map((point, pointIndex) => (
@@ -127,13 +123,13 @@ function Ourprocessstep5() {
                                             key={pointIndex}
                                             data-aos="fade-up"
                                             data-aos-delay={500 + (pointIndex * 100)}
-                                            sx={{display: 'list-item', color: "#FFF"}}
+                                            sx={{ display: 'list-item', color: "#FFF" }}
                                         >
                                             <ListItemText
                                                 primary={point}
                                                 primaryTypographyProps={{
                                                     sx: {
-                                                        fontSize: {xl: "20px", sm: "18px", xs: "16px"},
+                                                        fontSize: { xl: "22px", sm: "20px", xs: "18px" },
                                                         fontWeight: 500,
                                                     },
                                                 }}
@@ -147,7 +143,7 @@ function Ourprocessstep5() {
                                     data-aos-delay="800"
                                     sx={{
                                         mt: 2,
-                                        fontSize: {xl: "20px", sm: "18px", xs: "16px"},
+                                        fontSize: { xl: "22px", sm: "20px", xs: "18px" },
                                         fontWeight: 500,
                                         color: "#FFF"
                                     }}
@@ -160,8 +156,9 @@ function Ourprocessstep5() {
                                 data-aos="fade-left"
                                 data-aos-duration="1200"
                                 sx={{
-                                    width: {lg: '1000px', xs: "100%"},
-                                    height: {lg: '550px', xs: "100%"}, ...shineEffectStyles
+                                    width: { lg: '1000px', xs: "100%" },
+                                    height: { lg: '550px', xs: "100%" },
+                                    ...shineEffectStyles
                                 }}
                                 onMouseEnter={() => setIsHovered(true)}
                                 onMouseLeave={() => setIsHovered(false)}

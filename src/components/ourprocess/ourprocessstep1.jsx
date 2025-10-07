@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
-import { Box, Typography, List, ListItem, ListItemText , Container} from '@mui/material';
+import { Box, Typography, List, ListItem, ListItemText, Container } from '@mui/material';
 import imgstep1 from "../../assets/images/ourprocess/ManufacturingProcessSteps/RawMaterialProcurement.png";
 import 'aos/dist/aos.css';
 
 function Ourprocessstep1() {
-    // Add state to track hover
     const [isHovered, setIsHovered] = useState(false);
 
-    // Shine effect CSS
+    // Shine effect
     const shineEffectStyles = {
         position: 'relative',
         overflow: 'hidden',
+        borderRadius: '16px',
+        boxShadow: '0 6px 30px rgba(0,0,0,0.1)',
+        transition: 'transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out',
         '&::before': {
             content: '""',
             position: 'absolute',
@@ -18,13 +20,17 @@ function Ourprocessstep1() {
             left: '-75%',
             width: '50%',
             height: '100%',
-            background: 'linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%)',
+            background: 'linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 100%)',
             transform: 'skewX(-25deg)',
             transition: 'all 0.75s',
-            zIndex: 1,
+            zIndex: 2,
         },
         '&:hover::before': {
             left: '125%',
+        },
+        '&:hover': {
+            transform: 'scale(1.02)',
+            boxShadow: '0 8px 40px rgba(0,0,0,0.15)',
         }
     };
 
@@ -42,165 +48,116 @@ function Ourprocessstep1() {
     ];
 
     return (
-        <Container maxWidth="xxl" sx={{ px: { xs: 2, sm: 4, md: 6 } }}>
-            <Box sx={{ margin: {sm:'0 30px' , lg:"0 auto" , xs:"0 10px"}}}>
-                {data.map((item, index) => (
+        <Container
+            maxWidth="xl"
+            sx={{
+                px: { xs: 2, sm: 4, md: 6 },
+                py: { xs: 6, sm: 8, md: 10 },
+            }}
+        >
+            {data.map((item, index) => (
+                <Box
+                    key={index}
+                    sx={{
+                        display: 'flex',
+                        flexDirection: { xs: 'column', lg: 'row' },
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        gap: { xs: 4, sm: 6, md: 10, lg: 12 },
+                    }}
+                >
+                    {/* Text Section */}
                     <Box
-                        key={index}
+                        data-aos="fade-right"
+                        data-aos-duration="1200"
                         sx={{
-                            display: 'flex',
-                            py: 8,
-                            flexDirection: { xs: 'column', lg: 'row' },
-                            justifyContent: 'space-between',
-                            alignItems: "center"
+                            flex: 1,
+                            maxWidth: { xs: '100%', md: '600px', lg: '700px' },
+                            px: { xs: 1, sm: 2, md: 3 },
                         }}
                     >
-                        <Box
-                            data-aos="fade-right"
-                            data-aos-duration="1200"
+                        <Typography
+                            variant="subtitle2"
                             sx={{
-                                pl: { xs: 2, sm: 4, md: 6, lg: 6 },
-                                py: { xs: 1, sm: 2, md: 3, lg: 4 },
+                                fontSize: { xs: '16px', sm: '18px', md: '20px' },
+                                color: 'rgba(242, 138, 30, 1)',
+                                fontWeight: 400,
+                                mb: 1,
                             }}
                         >
-                            <Typography
-                                data-aos="fade-up"
-                                data-aos-delay="200"
-                                variant="h5"
-                                sx={{
-                                    fontSize: { xl: "24px", sm: "20px", xs: "16px" },
-                                    lineHeight: '24px',
-                                    color: "rgba(242, 138, 30, 1)",
-                                    fontWeight: 300,
-                                    mr: 2,
-                                }}
-                            >
-                                {item.steps}
-                            </Typography>
-                            <Box sx={{flexGrow: 1}}>
-                                <Box sx={{display: 'flex'}}>
-                                    <Box sx={{flex: 1}}>
-                                        <Typography
-                                            data-aos="fade-up"
-                                            data-aos-delay="300"
-                                            variant="h6"
-                                            className={'monserrat'}
-                                            sx={{
-                                                my: 2,
-                                                fontWeight: '700',
-                                                fontSize: { xl: "44px", sm: "34px", xs: "30px" },
-                                            }}
-                                        >
-                                            {item.title}
-                                        </Typography>
-                                        <List
-                                            data-aos="fade-up"
-                                            data-aos-delay="400"
-                                            dense
-                                            sx={{
-                                                listStyleType: 'disc',
-                                                pl: 2,
-                                                fontWeight: 500,
-                                                fontSize: { xl: "22px", sm: "18px", xs: "16px" },
-                                            }}
-                                        >
-                                            {item.points.map((point, pointIndex) => (
-                                                <ListItem
-                                                    key={pointIndex}
-                                                    data-aos="fade-up"
-                                                    data-aos-delay={400 + (pointIndex * 100)}
-                                                    sx={{
-                                                        display: 'list-item',
-                                                    }}
-                                                >
-                                                    {typeof point === 'string' ? (
-                                                        <ListItemText
-                                                            primary={point}
-                                                            primaryTypographyProps={{
-                                                                sx: {
-                                                                    fontSize: { xl: '20px', sm: '18px', xs: '16px' },
-                                                                    fontWeight: 500,
-                                                                },
-                                                            }}
-                                                        />
-                                                    ) : (
-                                                        <>
-                                                            <ListItemText
-                                                                primary={point.text}
-                                                                primaryTypographyProps={{
-                                                                    sx: {
-                                                                        fontSize: { xl: '20px', sm: '18px', xs: '16px' },
-                                                                        fontWeight: 500,
-                                                                    },
-                                                                }}
-                                                            />
-                                                            <List
-                                                                dense
-                                                                sx={{
-                                                                    listStyleType: 'disc',
-                                                                }}
-                                                            >
-                                                                {point.subpoints.map((subpoint, subIndex) => (
-                                                                    <ListItem
-                                                                        key={subIndex}
-                                                                        data-aos="fade-up"
-                                                                        data-aos-delay={700 + (subIndex * 50)}
-                                                                        sx={{
-                                                                            display: 'list-item',
-                                                                            p: 0,
-                                                                            pl: 1
-                                                                        }}
-                                                                    >
-                                                                        <ListItemText
-                                                                            primary={subpoint}
-                                                                            primaryTypographyProps={{
-                                                                                sx: {
-                                                                                    fontSize: { xl: '20px', sm: '18px', xs: '16px' },
-                                                                                    fontWeight: 500,
-                                                                                },
-                                                                            }}
-                                                                        />
-                                                                    </ListItem>
-                                                                ))}
-                                                            </List>
-                                                        </>
-                                                    )}
-                                                </ListItem>
-                                            ))}
-                                        </List>
-                                    </Box>
-                                </Box>
-                            </Box>
-                        </Box>
+                            {item.steps}
+                        </Typography>
 
-                        <Box
-                            data-aos="fade-left"
-                            data-aos-duration="1200"
+                        <Typography
+                            variant="h3"
                             sx={{
-                                width:{lg:'1000px', xs:"100%"},
-                                overflow: "hidden", // Contains the transform effect
-                                position: "relative", // For positioning the overlay if needed
-                                ...shineEffectStyles // Apply shine effect styles
+                                fontWeight: 700,
+                                fontSize: { xs: '28px', sm: '36px', md: '44px', xl: '50px' },
+                                lineHeight: 1.3,
+                                mb: 3,
                             }}
-                            onMouseEnter={() => setIsHovered(true)}
-                            onMouseLeave={() => setIsHovered(false)}
                         >
-                            <img
-                                src={item.image}
-                                alt="Raw Material Procurement"
-                                style={{
-                                    width: '900px',
-                                    height: '587px',
-                                    objectFit: "cover",
-                                    transition: "transform 0.5s ease", // Smooth transition for the transform effect
-                                    transform: isHovered ? "scale(1.05)" : "scale(1)", // Scale up on hover
-                                    cursor: "pointer"
-                                }}
-                            />
-                        </Box>
+                            {item.title}
+                        </Typography>
+
+                        <List
+                            dense
+                            sx={{
+                                listStyleType: 'disc',
+                                pl: 3,
+                            }}
+                        >
+                            {item.points.map((point, pointIndex) => (
+                                <ListItem
+                                    key={pointIndex}
+                                    sx={{
+                                        display: 'list-item',
+                                        py: 0.5,
+                                    }}
+                                >
+                                    <ListItemText
+                                        primary={point}
+                                        primaryTypographyProps={{
+                                            sx: {
+                                                fontSize: { xs: '16px', sm: '18px', md: '20px' },
+                                                fontWeight: 500,
+                                                lineHeight: 1.5,
+                                            },
+                                        }}
+                                    />
+                                </ListItem>
+                            ))}
+                        </List>
                     </Box>
-                ))}
-            </Box>
+
+                    {/* Image Section */}
+                    <Box
+                        data-aos="fade-left"
+                        data-aos-duration="1200"
+                        sx={{
+                            flex: 1,
+                            width: '100%',
+                            maxWidth: { xs: '100%', sm: '550px', md: '700px', lg: '850px', xl: '1000px' },
+                            ...shineEffectStyles,
+                        }}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    >
+                        <img
+                            src={item.image}
+                            alt={item.title}
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                                borderRadius: '16px',
+                                display: 'block',
+                                transition: 'transform 0.6s ease',
+                                transform: isHovered ? 'scale(1.05)' : 'scale(1)',
+                            }}
+                        />
+                    </Box>
+                </Box>
+            ))}
         </Container>
     );
 }
