@@ -1,8 +1,8 @@
 import React from 'react'
-import ProductRatingSection from "../components/productDetails/ProductRatingSection.jsx";
 import Suitability from "../components/productDetails/Suitability.jsx";
 import ProductSlider from "../components/productDetails/productSlider.jsx";
 import SingleProduct from "../components/productDetails/singleProduct.jsx";
+import ShapeFuture from "../components/ourProducts/shapeFuture.jsx";
 
 const ProductDetails = () => {
     return (
@@ -10,7 +10,7 @@ const ProductDetails = () => {
             <SingleProduct/>
             <Suitability/>
             <ProductSlider/>
-            <ProductRatingSection/>
+            <ShapeFuture/>
         </>
     )
 }

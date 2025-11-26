@@ -1,14 +1,14 @@
 import React from 'react';
 import {Box, Container, Typography, useTheme} from "@mui/material";
+import "aos/dist/aos.css";
 
 function Snackingvision() {
     const theme = useTheme();
     return (
         <Box
             sx={{
-                backgroundColor: `${theme.palette.saffron}`,
+                backgroundColor: "#FFFFFF",
                 py: { xs: 6, sm: 8, md: 10 },
-                color: "white",
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -18,54 +18,39 @@ function Snackingvision() {
         >
             <Container maxWidth="lg">
                 <Box sx={{ px: { xs: 2, sm: 4, md: 0 } }}>
-
-                    {/* Small tagline */}
-                    <Typography
-                        variant="subtitle1"
-                        sx={{
-                            fontWeight: 400,
-                            fontSize: { xs: "14px", sm: "16px", md: "18px" },
-                            lineHeight: { xs: "22px", sm: "26px", md: "28px" },
-                            letterSpacing: "0.5px",
-                            opacity: 0.9,
-                            mb: 1,
-                        }}
-                    >
-                        EVERYTHING YOU NEED
-                    </Typography>
-
                     {/* Main Heading */}
                     <Typography
                         variant="h4"
                         className="monserrat"
+                        data-aos="fade-up"
                         sx={{
                             fontWeight: 700,
-                            fontSize: { xs: "26px", sm: "36px", md: "48px" },
+                            fontSize: { xs: "28px", sm: "36px", md: "48px", lg: "56px" },
                             lineHeight: { xs: "36px", sm: "48px", md: "58px" },
                             letterSpacing: "-0.5px",
-                            mb: 2,
+                            mb: 3,
+                            color: "#000000",
                         }}
                     >
-                        We turn your snacking vision into reality
+                        Quality isn't a step in our process.
                     </Typography>
 
                     {/* Supporting text */}
                     <Typography
                         variant="body1"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
                         sx={{
                             fontWeight: 400,
-                            fontSize: { xs: "14px", sm: "16px", md: "18px" },
-                            lineHeight: { xs: "24px", sm: "28px", md: "30px" },
-                            maxWidth: "850px",
+                            fontSize: { xs: "16px", sm: "18px", md: "20px" },
+                            lineHeight: { xs: "24px", sm: "28px", md: "32px" },
+                            maxWidth: "900px",
                             mx: "auto",
-                            opacity: 0.95,
-                            mt: 2,
+                            color: "#000000",
                         }}
                     >
-                        Whether it’s standard shapes or custom blends, we combine smart sourcing, advanced manufacturing,
-                        and efficient packaging to create snack solutions that are scalable, safe, and market-ready.
+                        It's embedded in everything we do. From raw material selection to packaged delivery, our integrated system ensures every pellet meets your exact specifications to create snack solutions that are scalable, safe, and market-ready.
                     </Typography>
-
                 </Box>
             </Container>
         </Box>

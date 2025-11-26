@@ -55,7 +55,7 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        backgroundColor: `${theme.palette.saffron}`,
+        backgroundColor: "#C37A3D",
         color: "white",
         pt: { xs: 4, sm: 5, md: 6 },
         pb: 2,

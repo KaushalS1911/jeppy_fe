@@ -1,20 +1,20 @@
 import React from 'react';
-import OurVision from "../components/aboutUs/ourVision.jsx";
-import Whoweare from "../components/aboutUs/whoweare.jsx";
-import GlobelAbout from "../components/aboutUs/GlobelAbout.jsx";
-import SliderAbout from "../components/aboutUs/SliderAbout.jsx";
-import OurCertificates from "../components/aboutUs/OurCertificates.jsx";
-import AboutHeader from "../components/aboutUs/aboutHeader.jsx";
+import CompanyHero from "../components/aboutUs/companyHero.jsx";
+import CompanyStats from "../components/aboutUs/companyStats.jsx";
+import CompanyVisionMission from "../components/aboutUs/companyVisionMission.jsx";
+import CompanyWhoWeAre from "../components/aboutUs/companyWhoWeAre.jsx";
+import CompanyCertifications from "../components/aboutUs/companyCertifications.jsx";
+import CompanyCTA from "../components/aboutUs/companyCTA.jsx";
 
 function About() {
     return (
         <>
-            <AboutHeader />
-            <OurVision />
-            <Whoweare />
-            <GlobelAbout />
-            <SliderAbout />
-            <OurCertificates />
+            <CompanyHero />
+            <CompanyStats />
+            <CompanyVisionMission />
+            <CompanyWhoWeAre />
+            <CompanyCertifications />
+            <CompanyCTA />
         </>
     );
 }

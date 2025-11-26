@@ -1,188 +1,455 @@
-import React, {useState} from 'react';
-import {Box, Typography, Container, Grid, IconButton, useMediaQuery, useTheme} from "@mui/material";
-import Img1 from "../../assets/images/contactUs/f6132242b4a9d1dc06825a76f30df44905f68c64.png";
-import PhoneIcon from '@mui/icons-material/Phone';
-import EmailIcon from '@mui/icons-material/Email';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import {Link} from "react-router-dom";
-
-const icons = [
-    { icon: <FacebookIcon sx={{ fontSize: '35px' }} />, color: '#0866FF ', label: 'Facebook' ,link: 'https://www.facebook.com/WOW.Jeppy'},
-    { icon: <LinkedInIcon sx={{ fontSize: '35px' }} />, color: '#0077B5', label: 'LinkedIn' ,link: 'https://www.linkedin.com/company/jayant-snacks-and-beverages-private-limited'},
-    { icon: <InstagramIcon sx={{ fontSize: '35px' }} />, color: '#F16B66', label: 'Instagram' ,link: 'https://www.instagram.com/jeppy.wow'},
-];
+import React, { useState } from "react";
+import {
+  Box,
+  Typography,
+  Container,
+  Grid,
+  TextField,
+  Button,
+} from "@mui/material";
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 function Contact() {
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-    const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phoneNumber: "",
+    emailAddress: "",
+    subject: "",
+    message: "",
+  });
 
-    return (
-        <Box>
-            <Box sx={{
-                display: 'flex',
-                flexDirection: isMobile ? 'column' : 'row',
-                width: '100%',
-            }}>
-                <Box
-                    sx={{
-                        width: isMobile ? '100%' : '50%',
-                        height: isMobile ? '50vh' : 'auto',
-                    }}
-                >
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.2679325523645!2d70.82092687602162!3d22.267838244069882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959b584d2aba6c3%3A0xfa831224b3c5ed4a!2sJeppy!5e0!3m2!1sen!2sin!4v1746606002688!5m2!1sen!2sin"
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0 }}
-                        allowFullScreen=""
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        title="Jayant Snacks & Beverages Location">
-                    </iframe>
-                </Box>
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-                <Box sx={{
-                    width: isMobile ? '100%' : '60%',
-                    height: isMobile ? '100%' : '100%',
-                    backgroundColor: '#f5f5f5',
-                    display: 'flex',
-                    py: 8,
-                    position: 'relative'
-                }}>
-                    <Box sx={{
-                        px: {lg: 15, sm: 5, xs: 2, md: 8}
-                    }}>
-                        <Box sx={{
-                            fontSize: "28px",
-                            fontWeight: "600",
-                            lineHeight: "100%",
-                        }}>
-                            Contact Information
-                        </Box>
-                        <Box sx={{
-                            fontSize: "18px",
-                            fontWeight: "400",
-                            lineHeight: "100%",
-                            pt: 1,
-                            pb: 5
-                        }}>
-                            Say something to start a live chat!
-                        </Box>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+    // Handle form submission here
+  };
 
-                        <Box sx={{my: 4}}>
-                            <Box sx={{display: 'flex', alignItems: 'center', mb: 4}}>
-                                <PhoneIcon sx={{mr: 2, color: 'black'}}/>
-                                <Typography>+91 75758 08749</Typography>
-                            </Box>
-
-                            <Box sx={{display: 'flex', alignItems: 'center', mb: 4}}>
-                                <EmailIcon sx={{mr: 2, color: 'black'}}/>
-                                <Typography sx={{letterSpacing:"1px"}}>hello@jeppy.in</Typography>
-                            </Box>
-
-                            <Box sx={{display: 'flex', alignItems: 'flex-start', mb: 4}}>
-                                <LocationOnIcon sx={{mr: 2, mt: 0.5, color: 'black'}}/>
-                                <Typography sx={{letterSpacing:"1px"}}>
-                                    JAYANT SNACKS & BEVERAGES PVT. LTD.<br/>
-                                    27 - NH, Ring Road, Near Mira Udhyog, Nr.<br/>
-                                    Bansidhar Weigh Bridge, Rajkot -<br/>
-                                    360003 (Gujarat) India.
-                                </Typography>
-                            </Box>
-                        </Box>
-
-                        <Box
-                            sx={{
-                                mt: { md: 18, xs: 10, sm: 13 },
-                                display: 'flex',
-                                gap: 2,
-                                mb: 5,
-                            }}
-                        >
-                            {icons.map((item, index) => (
-                                <Box
-                                    key={index}
-                                    sx={{
-                                        width: 80,
-                                        height: 80,
-                                        borderRadius: '50%',
-                                        overflow: 'hidden',
-                                        position: 'relative',
-                                        backgroundColor: '#fff',
-                                        border: '3px solid #fff',
-                                        textAlign: 'center',
-                                        transition: '0.5s',
-                                        cursor: 'pointer',
-                                    }}
-                                    onMouseEnter={() => setHoveredIndex(index)}
-                                    onMouseLeave={() => setHoveredIndex(null)}
-                                >
-                                    {/* Hover Background */}
-                                    <Box
-                                        sx={{
-                                            content: '""',
-                                            position: 'absolute',
-                                            top: hoveredIndex === index ? 0 : '100%',
-                                            left: 0,
-                                            width: '100%',
-                                            height: '100%',
-                                            backgroundColor: item.color,
-                                            transition: '0.5s',
-                                            zIndex: 1,
-                                        }}
-                                    />
-                                    {/* Icon */}
-                                    <IconButton
-                                        component={Link}
-                                        to={item.link}
-                                        aria-label={item.label}
-                                        size="large"
-                                        sx={{
-                                            width: '100%',
-                                            height: '100%',
-                                            position: 'relative',
-                                            zIndex: 2,
-                                            color: hoveredIndex === index ? '#fff' : '#262626',
-                                            transition: '0.5s',
-                                            transform: hoveredIndex === index ? 'rotateY(360deg)' : 'rotateY(0deg)',
-                                        }}
-                                    >
-                                        {item.icon}
-                                    </IconButton>
-                                </Box>
-                            ))}
-                        </Box>
-                    </Box>
-
-                </Box>
-            </Box>
-
-            <Box sx={{position: 'relative'}}>
-                <Box sx={{
-                    position: 'absolute',
-                    bottom: '-190px',
-                    right: "-8%",
-                    width: '27%',
-                    height: 'auto',
-                    display: {xs: 'none', md: 'block'}
-                }}>
-                    <img
-                        src={Img1}
-                        alt="Snacks"
-                        style={{
-                            width: '100%',
-                            objectFit: 'contain'
-                        }}
-                    />
-                </Box>
-            </Box>
+  return (
+    <Container maxWidth="xl" sx={{ pb: 8 }}>
+      {/* White Card Container */}
+      <Box
+        sx={{
+          backgroundColor: "white",
+          borderRadius: { xs: 3, md: 5 },
+          p: { xs: 3, sm: 4, md: 5, lg: 6 },
+          boxShadow: "0 8px 30px rgba(0,0,0,0.12)",
+          maxWidth: "1400px",
+          margin: "0 auto",
+        }}
+      >
+        {/* Let's Connect Section */}
+        <Box sx={{ mb: 6 }}>
+          <Typography
+            variant="h3"
+            sx={{
+              fontSize: { xs: "28px", sm: "36px", md: "42px" },
+              fontWeight: 700,
+              color: "#000",
+              mb: 2,
+            }}
+          >
+            Let's Connect
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: { xs: "16px", md: "18px" },
+              color: "#666",
+              lineHeight: 1.6,
+            }}
+          >
+            Whether you're a brand, distributor, or curious snack lover — we're
+            here to help.
+          </Typography>
         </Box>
-    );
+
+        <Grid container spacing={4} sx={{ mb: 6 }}>
+          {/* Left Side - Contact Information */}
+          <Grid item xs={12} md={6}>
+            {/* Office Address */}
+            <Box sx={{ mb: 4 }}>
+              <Box sx={{ display: "flex", alignItems: "center", mb: 1.5 }}>
+                <LocationOnIcon
+                  sx={{ color: "#F97316", mr: 1.5, fontSize: "24px" }}
+                />
+                <Typography
+                  sx={{
+                    fontSize: { xs: "16px", md: "18px" },
+                    fontWeight: 600,
+                    color: "#000",
+                  }}
+                >
+                  Office Address
+                </Typography>
+              </Box>
+              <Typography
+                sx={{
+                  fontSize: { xs: "14px", md: "16px" },
+                  color: "#666",
+                  ml: 5,
+                  lineHeight: 1.6,
+                }}
+              >
+                27 - NH, Ring Road, Near Mira Udhyog, Nr. Bansidhar Weigh
+                Bridge, Rajkot - 360003 (Gujarat) India.
+              </Typography>
+            </Box>
+
+            {/* Contact */}
+            <Box sx={{ mb: 4 }}>
+              <Box sx={{ display: "flex", alignItems: "center", mb: 1.5 }}>
+                <PhoneIcon
+                  sx={{ color: "#F97316", mr: 1.5, fontSize: "24px" }}
+                />
+                <Typography
+                  sx={{
+                    fontSize: { xs: "16px", md: "18px" },
+                    fontWeight: 600,
+                    color: "#000",
+                  }}
+                >
+                  Contact
+                </Typography>
+              </Box>
+              <Typography
+                sx={{
+                  fontSize: { xs: "14px", md: "16px" },
+                  color: "#666",
+                  ml: 5,
+                }}
+              >
+                +91 75758 08749
+              </Typography>
+            </Box>
+
+            {/* Email */}
+            <Box>
+              <Box sx={{ display: "flex", alignItems: "center", mb: 1.5 }}>
+                <EmailIcon
+                  sx={{ color: "#F97316", mr: 1.5, fontSize: "24px" }}
+                />
+                <Typography
+                  sx={{
+                    fontSize: { xs: "16px", md: "18px" },
+                    fontWeight: 600,
+                    color: "#000",
+                  }}
+                >
+                  Email
+                </Typography>
+              </Box>
+              <Box sx={{ ml: 5 }}>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "14px", md: "16px" },
+                    color: "#666",
+                    mb: 0.5,
+                  }}
+                >
+                  Domestic: inquiry@jeppy.in
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "14px", md: "16px" },
+                    color: "#666",
+                  }}
+                >
+                  International: export@jeppy.in
+                </Typography>
+              </Box>
+            </Box>
+          </Grid>
+
+          {/* Right Side - Map */}
+          <Grid item xs={12} md={6}>
+            <Box
+              sx={{
+                width: "100%",
+                aspectRatio: "1",
+                height: { xs: "300px", md: "400px" },
+                borderRadius: "12px",
+                overflow: "hidden",
+              }}
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.2679325523645!2d70.82092687602162!3d22.267838244069882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959b584d2aba6c3%3A0xfa831224b3c5ed4a!2sJeppy!5e0!3m2!1sen!2sin!4v1746606002688!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Jayant Snacks & Beverages Location"
+              />
+            </Box>
+          </Grid>
+        </Grid>
+
+        {/* Send us a Message Section */}
+        <Box>
+          <Typography
+            variant="h3"
+            sx={{
+              fontSize: { xs: "28px", sm: "36px", md: "42px" },
+              fontWeight: 700,
+              color: "#000",
+              mb: 1,
+              position: "relative",
+              display: "inline-block",
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                bottom: "-8px",
+                left: 0,
+                width: "60px",
+                height: "4px",
+                backgroundColor: "#F97316",
+                borderRadius: "2px",
+              },
+            }}
+          >
+            Send us a Message
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: { xs: "16px", md: "18px" },
+              color: "#666",
+              mt: 3,
+              mb: 4,
+              lineHeight: 1.6,
+            }}
+          >
+            Have a question or want to work together? Fill out the form below
+            and we'll get back to you as soon as possible.
+          </Typography>
+
+          {/* Contact Form */}
+          <Box component="form" onSubmit={handleSubmit} sx={{ width: "100%" }}>
+            <Grid container spacing={3} sx={{ mb: 3, width: "100%" }}>
+              {/* Left Column */}
+              <Grid item xs={12} md={12}>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    fontWeight: 500,
+                    color: "#333",
+                    mb: 1,
+                  }}
+                >
+                  Full Name
+                </Typography>
+                <TextField
+                  fullWidth
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  placeholder="John Doe"
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      borderRadius: "8px",
+                      backgroundColor: "#fff",
+                      "& fieldset": {
+                        borderColor: "#ddd",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "#F97316",
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "#F97316",
+                      },
+                    },
+                  }}
+                />
+              </Grid>
+
+              <Grid item xs={12} md={6}>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    fontWeight: 500,
+                    color: "#333",
+                    mb: 1,
+                  }}
+                >
+                  Phone Number
+                </Typography>
+                <TextField
+                  fullWidth
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  placeholder="+1 (555) 123-4567"
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      borderRadius: "8px",
+                      backgroundColor: "#fff",
+                      "& fieldset": {
+                        borderColor: "#ddd",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "#F97316",
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "#F97316",
+                      },
+                    },
+                  }}
+                />
+              </Grid>
+            </Grid>
+
+            <Grid container spacing={3} sx={{ mb: 3 }}>
+              {/* Right Column */}
+              <Grid item xs={12} md={6}>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    fontWeight: 500,
+                    color: "#333",
+                    mb: 1,
+                  }}
+                >
+                  Email Address
+                </Typography>
+                <TextField
+                  fullWidth
+                  name="emailAddress"
+                  type="email"
+                  value={formData.emailAddress}
+                  onChange={handleChange}
+                  placeholder="you@example.com"
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      borderRadius: "8px",
+                      backgroundColor: "#fff",
+                      "& fieldset": {
+                        borderColor: "#ddd",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "#F97316",
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "#F97316",
+                      },
+                    },
+                  }}
+                />
+              </Grid>
+
+              <Grid item xs={12} md={6}>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    fontWeight: 500,
+                    color: "#333",
+                    mb: 1,
+                  }}
+                >
+                  Subject
+                </Typography>
+                <TextField
+                  fullWidth
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  placeholder="Regarding Membership"
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      borderRadius: "8px",
+                      backgroundColor: "#fff",
+                      "& fieldset": {
+                        borderColor: "#F97316",
+                        borderWidth: "2px",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "#F97316",
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "#F97316",
+                      },
+                    },
+                  }}
+                />
+              </Grid>
+            </Grid>
+
+            {/* Message Field */}
+            <Box sx={{ mb: 4 }}>
+              <Typography
+                sx={{
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  color: "#333",
+                  mb: 1,
+                }}
+              >
+                Message
+              </Typography>
+              <TextField
+                fullWidth
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Your message here..."
+                multiline
+                rows={5}
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    borderRadius: "8px",
+                    backgroundColor: "#fff",
+                    "& fieldset": {
+                      borderColor: "#ddd",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "#F97316",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#F97316",
+                    },
+                  },
+                }}
+              />
+            </Box>
+
+            {/* Send Message Button */}
+            <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
+              <Button
+                type="submit"
+                variant="contained"
+                sx={{
+                  backgroundColor: "#F97316",
+                  color: "white",
+                  borderRadius: "8px",
+                  px: { xs: 4, md: 6 },
+                  py: 1.5,
+                  textTransform: "none",
+                  fontWeight: 600,
+                  fontSize: { xs: "16px", md: "18px" },
+                  boxShadow: "0 4px 14px rgba(249, 115, 22, 0.3)",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    backgroundColor: "#ea6b0a",
+                    transform: "translateY(-2px)",
+                    boxShadow: "0 6px 20px rgba(249, 115, 22, 0.4)",
+                  },
+                }}
+              >
+                Send Message
+              </Button>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    </Container>
+  );
 }
 
 export default Contact;

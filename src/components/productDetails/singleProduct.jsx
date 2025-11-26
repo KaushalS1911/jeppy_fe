@@ -9,85 +9,161 @@ import {
     TableRow,
     Container
 } from '@mui/material';
-import img from '../../assets/images/products/lentil.png';
-// import size from '../../assets/images/products/PSS9 1.png';
-
-const productData = [
-    ['Moisture (%)', '8.5–9.5'],
-    ['Products Pcs in 10g', '60'],
-    ['Bulk Density (Before Fry)', '546 Gm/Ltr'],
-    ['Bulk Density (After Fry)', '47 Gm/Ltr'],
-    ['Salt (%)', '2.5–3.0'],
-    ['Frying Temperature', '185°C to 190°C'],
-    ['Frying Time', '15–17 Second'],
-    ['Size', '(4) to (6) cm'],
-    ['Ingredients', 'Wheat flour - corn starch - salt'],
-];
+import { useParams } from 'react-router-dom';
+import { getProductById } from '../../data/productsData';
 
 const SingleProduct = () => {
+    const { id } = useParams();
+    const product = getProductById(id);
+
+    if (!product) {
+        return (
+            <Box sx={{ pt: "150px", textAlign: "center", py: 8 }}>
+                <Typography variant="h4">Product not found</Typography>
+            </Box>
+        );
+    }
+
     return (
-        <Box sx={{pt:"150px"}}>
-            <Container maxWidth={"xl"}>
-                <Box sx={{p: {xs: 0, sm: "4"}, mx: 'auto'}}>
+        <Box sx={{
+            backgroundColor: "#C37A3D",
+            width: "100%",
+            minHeight: "100vh",
+            pt: 24,
+            pb: { xs: 4, md: 8 },
+        }}>
+            <Container maxWidth="xl">
+                {/* Product Title Section */}
+                <Box sx={{ textAlign: "center", mb: 4 }}>
+                    <Typography
+                        variant="h2"
+                        sx={{
+                            color: "white",
+                            fontSize: { xs: "2.5rem", sm: "3rem", md: "4rem", lg: "5rem" },
+                            fontWeight: 700,
+                            mb: 2,
+                        }}
+                    >
+                        {product.name}
+                    </Typography>
+                    <Box
+                        sx={{
+                            display: "inline-block",
+                            backgroundColor: "white",
+                            borderRadius: "8px",
+                            px: 3,
+                            py: 1,
+                        }}
+                    >
+                        <Typography
+                            variant="h6"
+                            sx={{
+                                color: "#C37A3D",
+                                fontWeight: 600,
+                                fontSize: { xs: "14px", sm: "16px", md: "18px" },
+                            }}
+                        >
+                            {product.type}
+                        </Typography>
+                    </Box>
+                </Box>
+
+                {/* White Card Container */}
+                <Box
+                    sx={{
+                        backgroundColor: "white",
+                        borderRadius: { xs: 3, md: 5 },
+                        p: { xs: 3, sm: 4, md: 5, lg: 6 },
+                        boxShadow: "0 8px 30px rgba(0,0,0,0.12)",
+                        maxWidth: "1400px",
+                        margin: "0 auto",
+                        width: "100%",
+                    }}
+                >
                     <Grid container spacing={4} alignItems="center">
                         {/* Left: Images */}
-                        <Grid item size={{xs: 12, md: 6}}>
-                            <Box sx={{display: {sm: 'flex', md: 'block'}}}>
-                                <Box sx={{textAlign: 'center', mb: 2}}>
+                        <Grid item xs={12} md={6}>
+                            <Box sx={{ display: "flex", gap: 3, flexDirection: { xs: "column", sm: "row" }, mb: 3 }}>
+                                <Box sx={{ flex: 1, textAlign: "center" }}>
+                                    <Typography variant="body2" sx={{ mb: 1, color: "#666", fontWeight: 500 }}>
+                                        Raw
+                                    </Typography>
                                     <Box
                                         component="img"
-                                        src={img}
-                                        alt="Mad Stick Product"
+                                        src={product.rawImage}
+                                        alt={`${product.name} Raw`}
                                         sx={{
-                                            width: {xs: '300px', sm: '220px', md: '300px'},
-                                            maxWidth: '100%',
-                                            height: 'auto',
+                                            width: "100%",
+                                            maxWidth: "250px",
+                                            height: "auto",
+                                            borderRadius: "12px",
                                         }}
                                     />
                                 </Box>
-                                {/*<Box sx={{textAlign: 'center'}}>*/}
-                                {/*    <Box*/}
-                                {/*        component="img"*/}
-                                {/*        src={size}*/}
-                                {/*        alt="Mad Stick Size"*/}
-                                {/*        sx={{*/}
-                                {/*            width: {xs: '80%', sm: '60%', md: '70%'},*/}
-                                {/*            maxWidth: '100%',*/}
-                                {/*            height: 'auto',*/}
-                                {/*        }}*/}
-                                {/*    />*/}
-                                {/*</Box>*/}
+                                <Box sx={{ flex: 1, textAlign: "center" }}>
+                                    <Typography variant="body2" sx={{ mb: 1, color: "#666", fontWeight: 500 }}>
+                                        Fried
+                                    </Typography>
+                                    <Box
+                                        component="img"
+                                        src={product.friedImage}
+                                        alt={`${product.name} Fried`}
+                                        sx={{
+                                            width: "100%",
+                                            maxWidth: "250px",
+                                            height: "auto",
+                                            borderRadius: "12px",
+                                        }}
+                                    />
+                                </Box>
+                            </Box>
+                            
+                            {/* Main Ingredient Section */}
+                            <Box sx={{ mt: 4 }}>
+                                <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
+                                    Main Ingredient
+                                </Typography>
+                                <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
+                                    {[1, 2, 3].map((item) => (
+                                        <Box
+                                            key={item}
+                                            sx={{
+                                                flex: "1 1 150px",
+                                                minWidth: "120px",
+                                                height: "50px",
+                                                backgroundColor: "#F5F0E8",
+                                                borderRadius: "8px",
+                                                border: "1px solid rgba(0, 0, 0, 0.08)",
+                                            }}
+                                        />
+                                    ))}
+                                </Box>
                             </Box>
                         </Grid>
 
-                        {/* Right: Text Content */}
-                        <Grid item size={{xs: 12, md: 6}}>
-                            <Typography variant="h5" color="orange" fontWeight="bold" gutterBottom>
-                                MAD STICK
-                            </Typography>
-                            <Typography variant="subtitle2" gutterBottom>
-                                Product Code : 111
-                            </Typography>
-
-                            <Typography variant="h6" gutterBottom>
-                                Product Parameters
+                        {/* Right: Product Specifications */}
+                        <Grid item xs={12} md={6}>
+                            <Typography variant="h6" sx={{ mb: 3, fontWeight: 600 }}>
+                                Product Specifications
                             </Typography>
 
                             <Table size="small">
                                 <TableBody>
-                                    {productData.map(([label, value], index) => (
+                                    {product.specifications.map((spec, index) => (
                                         <TableRow key={index}>
-                                            <TableCell sx={{fontWeight: 'bold'}}>{label}</TableCell>
-                                            <TableCell>{value}</TableCell>
+                                            <TableCell sx={{ fontWeight: 600, borderBottom: "none", py: 1.5 }}>
+                                                {spec.label}
+                                            </TableCell>
+                                            <TableCell sx={{ borderBottom: "none", py: 1.5 }}>
+                                                {spec.value}
+                                            </TableCell>
                                         </TableRow>
                                     ))}
                                 </TableBody>
                             </Table>
 
-                            <Typography variant="body2" sx={{mt: 2, color: 'gray'}}>
-                                Many pellets, including the one in the picture, are manufactured using a dough foil
-                                which texture/design is protected by Community and International trademarks and other
-                                MAFIN IP rights.
+                            <Typography variant="body2" sx={{ mt: 3, color: "#666", lineHeight: 1.8 }}>
+                                {product.description}
                             </Typography>
                         </Grid>
                     </Grid>

@@ -15,10 +15,33 @@ import wowLogo from "../../assets/images/home/our Company/wow.PNG";
 import papadumLogo from "../../assets/images/home/our Company/pappadum.PNG";
 import jeppyLogo from "../../assets/images/global/jeepy-logo.png";
 
-import partner1 from "../../assets/images/home/ourParteners/panjwani 1.svg";
-import partner2 from "../../assets/images/home/ourParteners/Bablu 1.svg";
-import partner3 from "../../assets/images/home/ourParteners/balaji 1.svg";
-import partner4 from "../../assets/images/home/ourParteners/haldiram 1.svg";
+// Import partner logos
+import balajiLogo from "../../assets/images/home/ourParteners/balaji.PNG";
+import realLogo from "../../assets/images/home/ourParteners/real.PNG";
+import haldiramLogo from "../../assets/images/home/ourParteners/haldiram.PNG";
+import craxLogo from "../../assets/images/home/ourParteners/crax.PNG";
+import sunderLogo from "../../assets/images/home/ourParteners/Sunder.PNG";
+import shyamGLogo from "../../assets/images/home/ourParteners/shyam-g.PNG";
+import panjwaniLogo from "../../assets/images/home/ourParteners/panjwani.PNG";
+import akashLogo from "../../assets/images/home/ourParteners/akash.PNG";
+import prinitiLogo from "../../assets/images/home/ourParteners/priniti.PNG";
+import babluLogo from "../../assets/images/home/ourParteners/Bablu.PNG";
+import ghodawatLogo from "../../assets/images/home/ourParteners/ghodawat-foods.PNG";
+
+// Import pellet images
+import pennePellet from "../../assets/images/home/heroSection/png/2D PENNE.png";
+import wafflePellet from "../../assets/images/home/heroSection/png/2D Potato_0633.png";
+import pyramidPellet from "../../assets/images/home/heroSection/png/3D_0569.png";
+import wheelPellet from "../../assets/images/home/heroSection/png/2D_0565.png";
+import ovalPellet from "../../assets/images/home/heroSection/png/2D_0578.png";
+
+import factoryBuilding from "../../assets/images/home/heroSection/factory.png";
+
+// Import quality process images
+import rawMaterialImg from "../../assets/images/ourprocess/ManufacturingProcessSteps/RawMaterialProcurement.png";
+import manufacturingImg from "../../assets/images/ourprocess/ManufacturingProcessSteps/CoreProductionProcess.png";
+import qualityControlImg from "../../assets/images/ourprocess/ManufacturingProcessSteps/QualityControl.png";
+import packagingImg from "../../assets/images/ourprocess/ManufacturingProcessSteps/Packaging&Storage.png";
 
 function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -178,13 +201,12 @@ function HeroSection() {
         >
           <Typography
             sx={{
-              fontFamily:
-                '"Vina Sans", cursive, system-ui, -apple-system, sans-serif',
+              fontFamily: "Jua",
               fontWeight: 400,
               fontStyle: "normal",
-              fontSize: { xs: "36px", sm: "50px", md: "70px", lg: "93px" },
-              lineHeight: "110%",
-              letterSpacing: "0.02em",
+              fontSize: "84px",
+              lineHeight: "100%",
+              letterSpacing: "0%",
               textShadow:
                 "3px 3px 0px rgba(0, 0, 0, 0.3), 0px 6px 12px rgba(0, 0, 0, 0.4)",
               color: "#FFFFFF",
@@ -200,18 +222,17 @@ function HeroSection() {
           </Typography>
           <Typography
             sx={{
-              fontFamily:
-                '"Vina Sans", cursive, system-ui, -apple-system, sans-serif',
+              fontFamily: "Jua",
               fontWeight: 400,
               fontStyle: "normal",
-              fontSize: { xs: "36px", sm: "50px", md: "70px", lg: "93px" },
-              lineHeight: "110%",
-              letterSpacing: "0.02em",
+              fontSize: "84px",
+              lineHeight: "100%",
+              letterSpacing: "0%",
               textShadow:
                 "3px 3px 0px rgba(0, 0, 0, 0.3), 0px 6px 12px rgba(0, 0, 0, 0.4)",
               color: "#FFFFFF",
               textAlign: "center",
-              mb: 1,
+              mb: { xs: 1, md: 2 },
               px: 2,
               textTransform: "uppercase",
               WebkitFontSmoothing: "antialiased",
@@ -319,13 +340,14 @@ function HeroSection() {
       {/* Brands Section - Appears on Scroll */}
       <Box
         sx={{
-          minHeight: "50vh",
+          minHeight: "auto",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           padding: { xs: "60px 20px", md: "80px 40px" },
           position: "relative",
           zIndex: 2,
+          backgroundColor: "#C17C41", // Brown background
         }}
       >
         {/* Brands Showcase */}
@@ -412,32 +434,154 @@ function HeroSection() {
       {/* Pioneers Section */}
       <Box
         sx={{
-          minHeight: "100vh",
+          minHeight: "auto",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
           zIndex: 2,
-          padding: { xs: "80px 0px", md: "120px 0px" },
+          padding: { xs: "60px 20px", md: "80px 40px" },
+          backgroundColor: "#C17C41", // Brown background
+          overflow: "hidden",
         }}
       >
+        {/* Factory Building Outline - Background */}
+        <Box
+          sx={{
+            position: "absolute",
+            top: "20%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: { xs: "80%", md: "60%", lg: "50%" },
+            maxWidth: "800px",
+            height: "auto",
+            zIndex: 1,
+            opacity: 0.9,
+          }}
+        >
+          {/* Factory Building SVG */}
+          <img src={factoryBuilding} alt="Factory Building" />
+        </Box>
+
+        {/* Jeppy Text Overlay on Factory */}
+
+        {/* Scattered Pellet Images */}
+        {/* Penne Pellet - Top Left */}
+        <Box
+          component="img"
+          src={pennePellet}
+          alt="Penne Pellet"
+          sx={{
+            position: "absolute",
+            top: { xs: "15%", md: "20%" },
+            left: { xs: "5%", md: "10%" },
+            width: { xs: "40px", md: "60px" },
+            height: "auto",
+            zIndex: 3,
+            opacity: 0.8,
+            transform: "rotate(-15deg)",
+          }}
+        />
+        {/* Waffle Pellet - Top Right */}
+        <Box
+          component="img"
+          src={wafflePellet}
+          alt="Waffle Pellet"
+          sx={{
+            position: "absolute",
+            top: { xs: "10%", md: "15%" },
+            right: { xs: "8%", md: "12%" },
+            width: { xs: "50px", md: "70px" },
+            height: "auto",
+            zIndex: 3,
+            opacity: 0.8,
+            transform: "rotate(20deg)",
+          }}
+        />
+        {/* Pyramid Pellet - Bottom Left */}
+        <Box
+          component="img"
+          src={pyramidPellet}
+          alt="Pyramid Pellet"
+          sx={{
+            position: "absolute",
+            bottom: { xs: "25%", md: "30%" },
+            left: { xs: "8%", md: "15%" },
+            width: { xs: "45px", md: "65px" },
+            height: "auto",
+            zIndex: 3,
+            opacity: 0.8,
+            transform: "rotate(25deg)",
+          }}
+        />
+        {/* Wheel Pellet - Bottom Right */}
+        <Box
+          component="img"
+          src={wheelPellet}
+          alt="Wheel Pellet"
+          sx={{
+            position: "absolute",
+            bottom: { xs: "20%", md: "25%" },
+            right: { xs: "10%", md: "15%" },
+            width: { xs: "50px", md: "70px" },
+            height: "auto",
+            zIndex: 3,
+            opacity: 0.8,
+            transform: "rotate(-30deg)",
+          }}
+        />
+        {/* Oval Pellet - Middle Left */}
+        <Box
+          component="img"
+          src={ovalPellet}
+          alt="Oval Pellet"
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: { xs: "3%", md: "5%" },
+            transform: "translateY(-50%) rotate(10deg)",
+            width: { xs: "40px", md: "60px" },
+            height: "auto",
+            zIndex: 3,
+            opacity: 0.8,
+          }}
+        />
+        {/* Additional Pellet - Middle Right */}
+        <Box
+          component="img"
+          src={pennePellet}
+          alt="Penne Pellet"
+          sx={{
+            position: "absolute",
+            top: "50%",
+            right: { xs: "5%", md: "8%" },
+            transform: "translateY(-50%) rotate(-20deg)",
+            width: { xs: "35px", md: "55px" },
+            height: "auto",
+            zIndex: 3,
+            opacity: 0.8,
+          }}
+        />
+
         {/* Pioneers Title */}
         <Box
           sx={{
             textAlign: "center",
-            mb: { xs: 10, md: 24 },
+            mb: { xs: 6, md: 8 },
+            position: "relative",
+            zIndex: 4,
+            mt: { xs: "250px", md: "300px" },
           }}
         >
           <Typography
             sx={{
-              fontFamily:
-                '"Vina Sans", cursive, system-ui, -apple-system, sans-serif',
+              fontFamily: "Jua",
               fontWeight: 400,
               fontStyle: "normal",
-              fontSize: { xs: "48px", sm: "64px", md: "80px", lg: "96px" },
-              lineHeight: "110%",
-              letterSpacing: "0.02em",
+              fontSize: "84px",
+              lineHeight: "100%",
+              letterSpacing: "0%",
               textShadow:
                 "3px 3px 0px rgba(0, 0, 0, 0.3), 0px 6px 12px rgba(0, 0, 0, 0.4)",
               color: "#FFFFFF",
@@ -453,13 +597,12 @@ function HeroSection() {
           </Typography>
           <Typography
             sx={{
-              fontFamily:
-                '"Vina Sans", cursive, system-ui, -apple-system, sans-serif',
+              fontFamily: "Jua",
               fontWeight: 400,
               fontStyle: "normal",
-              fontSize: { xs: "48px", sm: "64px", md: "80px", lg: "96px" },
-              lineHeight: "110%",
-              letterSpacing: "0.02em",
+              fontSize: "84px",
+              lineHeight: "100%",
+              letterSpacing: "0%",
               textShadow:
                 "3px 3px 0px rgba(0, 0, 0, 0.3), 0px 6px 12px rgba(0, 0, 0, 0.4)",
               color: "#FFFFFF",
@@ -512,37 +655,56 @@ function HeroSection() {
       {/* Our Products Section */}
       <Box
         sx={{
-          minHeight: "100vh",
+          minHeight: "auto",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
           zIndex: 2,
-          padding: { xs: "80px 20px", md: "100px 40px" },
+          padding: { xs: "60px 20px", md: "80px 40px" },
+          backgroundColor: "#C17C41", // Brown background
         }}
       >
         {/* Products Title */}
-        <Typography
+        <Box
           sx={{
-            fontFamily:
-              '"Vina Sans", cursive, system-ui, -apple-system, sans-serif',
-            fontWeight: 400,
-            fontSize: { xs: "56px", sm: "72px", md: "88px", lg: "100px" },
-            lineHeight: "110%",
-            letterSpacing: "0.02em",
-            textShadow:
-              "3px 3px 0px rgba(0, 0, 0, 0.3), 0px 6px 12px rgba(0, 0, 0, 0.4)",
-            color: "#FFFFFF",
             textAlign: "center",
             mb: { xs: 6, md: 8 },
-            textTransform: "uppercase",
-            WebkitFontSmoothing: "antialiased",
-            MozOsxFontSmoothing: "grayscale",
           }}
         >
-          OUR PRODUCTS
-        </Typography>
+          <Typography
+            sx={{
+              fontFamily: "Jua",
+              fontWeight: 700,
+              fontSize: { xs: "24px", sm: "32px", md: "40px", lg: "48px" },
+              lineHeight: "120%",
+              letterSpacing: "0%",
+              color: "#FFFFFF",
+              textAlign: "center",
+              mb: 1,
+              WebkitFontSmoothing: "antialiased",
+              MozOsxFontSmoothing: "grayscale",
+            }}
+          >
+            The Industry's Most Extensive
+          </Typography>
+          <Typography
+            sx={{
+              fontFamily: "Jua",
+              fontWeight: 700,
+              fontSize: { xs: "48px", sm: "64px", md: "80px", lg: "96px" },
+              lineHeight: "120%",
+              letterSpacing: "0%",
+              color: "#FFFFFF",
+              textAlign: "center",
+              WebkitFontSmoothing: "antialiased",
+              MozOsxFontSmoothing: "grayscale",
+            }}
+          >
+            Shape Library
+          </Typography>
+        </Box>
 
         {/* Products Container with Tabs and Items */}
         <Box
@@ -562,7 +724,7 @@ function HeroSection() {
               justifyContent: "center",
               flexWrap: "wrap",
               gap: { xs: 2, md: 3 },
-              mb: { xs: 6, md: 8 },
+              mb: { xs: 4, md: 6 },
             }}
           >
             {categories.map((category) => (
@@ -573,7 +735,7 @@ function HeroSection() {
                   padding: { xs: "12px 24px", md: "14px 32px" },
                   borderRadius: "50px",
                   backgroundColor:
-                    activeCategory === category ? "#CD853F" : "transparent",
+                    activeCategory === category ? "#C17C41" : "transparent",
                   color: activeCategory === category ? "#FFFFFF" : "#000000",
                   border:
                     activeCategory === category ? "none" : "2px solid #E0E0E0",
@@ -583,7 +745,7 @@ function HeroSection() {
                   transition: "all 0.3s ease",
                   "&:hover": {
                     backgroundColor:
-                      activeCategory === category ? "#B8753A" : "#F5F5F5",
+                      activeCategory === category ? "#C17C41" : "#F5F5F5",
                     transform: "translateY(-2px)",
                   },
                 }}
@@ -699,16 +861,16 @@ function HeroSection() {
               sx={{
                 padding: { xs: "14px 40px", md: "16px 50px" },
                 borderRadius: "50px",
-                backgroundColor: "#CD853F",
+                backgroundColor: "#C17C41",
                 color: "#FFFFFF",
                 fontSize: { xs: "16px", md: "18px" },
                 fontWeight: 600,
                 cursor: "pointer",
                 transition: "all 0.3s ease",
                 "&:hover": {
-                  backgroundColor: "#B8753A",
+                  backgroundColor: "#C17C41",
                   transform: "translateY(-2px)",
-                  boxShadow: "0 4px 12px rgba(205, 133, 63, 0.4)",
+                  boxShadow: "0 4px 12px rgba(193, 124, 65, 0.4)",
                 },
               }}
             >
@@ -718,157 +880,490 @@ function HeroSection() {
         </Box>
       </Box>
 
+      {/* Quality Process Section */}
       <Box
         sx={{
-          minHeight: "100vh",
+          minHeight: "auto",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
           zIndex: 2,
+          padding: { xs: "60px 20px", md: "80px 40px" },
+          backgroundColor: "#FFFFFF",
         }}
       >
-        {/* Description Text - Full Width */}
-        <Box
-          sx={{
-            width: "100%",
-            backgroundColor: "#FFFFFF",
-            padding: {
-              xs: "40px 30px",
-              sm: "50px 40px",
-              md: "60px 80px",
-              lg: "80px 120px",
-            },
-            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
-          }}
-        >
-          <Box
-            sx={{
-              margin: { xs: "0 0 12px 0", md: "0 0 24px 0" },
-            }}
-          >
-            <Typography
-              sx={{
-                fontFamily: 'system-ui, -apple-system, "Segoe UI", sans-serif',
-                fontSize: { xs: "18px", sm: "24px", md: "32px", lg: "42px" },
-                lineHeight: "1.3",
-                letterSpacing: "-1px",
-                fontWeight: 500,
-                textAlign: "center",
-                color: "#000000",
-                maxWidth: "1200px",
-                margin: "0 auto",
-              }}
-            >
-              Shape the Future of Snacking.
-            </Typography>
-            <Typography
-              sx={{
-                fontFamily: 'system-ui, -apple-system, "Segoe UI", sans-serif',
-                fontSize: { xs: "18px", sm: "24px", md: "32px", lg: "42px" },
-                lineHeight: "1.3",
-                letterSpacing: "-1px",
-                fontWeight: 500,
-                textAlign: "center",
-                color: "#000000",
-                maxWidth: "1200px",
-                margin: "0 auto",
-              }}
-            >
-              Over 400 Ways.
-            </Typography>
-          </Box>
-          <Typography
-            sx={{
-              fontFamily: 'system-ui, -apple-system, "Segoe UI", sans-serif',
-              fontSize: { xs: "16px", sm: "18px", md: "20px", lg: "22px" },
-              lineHeight: "1.8",
-              textAlign: "center",
-              color: "#000000",
-              maxWidth: "1200px",
-              margin: "0 auto",
-            }}
-          >
-            Our state-of-the-art manufacturing facilities, spanning 5
-            continents, are built on a foundation of food safety, cutting-edge
-            R&D, and sustainable practices. We don't just supply pellets; we are
-            your strategic partner in growth, helping you anticipate and
-            capitalize on consumer trends with agility and confidence.{" "}
-          </Typography>
-        </Box>
-      </Box>
-
-      <Box
-        sx={{
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          position: "relative",
-          zIndex: 2,
-        }}
-      >
-        {/* Pioneers Title */}
+        {/* Section Header */}
         <Box
           sx={{
             textAlign: "center",
-            mb: { xs: 6, md: 12 },
+            maxWidth: "1200px",
+            mb: { xs: 6, md: 8 },
           }}
         >
           <Typography
             sx={{
-              fontFamily:
-                '"Vina Sans", cursive, system-ui, -apple-system, sans-serif',
-              fontWeight: 400,
-              fontStyle: "normal",
-              fontSize: { xs: "48px", sm: "64px", md: "80px", lg: "96px" },
-              lineHeight: "110%",
-              letterSpacing: "0.02em",
-              textShadow:
-                "3px 3px 0px rgba(0, 0, 0, 0.3), 0px 6px 12px rgba(0, 0, 0, 0.4)",
-              color: "#FFFFFF",
+              fontFamily: "Jua",
+              fontWeight: 700,
+              fontSize: { xs: "32px", sm: "40px", md: "48px", lg: "56px" },
+              lineHeight: "120%",
+              letterSpacing: "0%",
+              color: "#000000",
               textAlign: "center",
-              px: 2,
-              textTransform: "uppercase",
+              mb: 3,
               WebkitFontSmoothing: "antialiased",
               MozOsxFontSmoothing: "grayscale",
             }}
           >
-            SUCCESS PARTNERS
+            Quality isn't a step in our process
+          </Typography>
+          <Typography
+            sx={{
+              fontFamily: 'system-ui, -apple-system, "Segoe UI", sans-serif',
+              fontSize: { xs: "16px", sm: "18px", md: "20px" },
+              lineHeight: "1.6",
+              textAlign: "center",
+              color: "#333333",
+              maxWidth: "900px",
+              margin: "0 auto",
+            }}
+          >
+            It's embedded in everything we do. From raw material selection to
+            packaged delivery, our integrated system ensures every pellet meets
+            your exact specifications.
           </Typography>
         </Box>
 
+        {/* Process Cards */}
         <Box
           sx={{
             width: "100%",
-            backgroundColor: "rgba(255, 255, 255, 0.95)",
-            padding: { xs: "30px 20px", sm: "40px 30px", md: "50px 40px" },
-            boxShadow: "0 10px 40px rgba(0, 0, 0, 0.15)",
-            display: "flex",
-            justifyContent: "space-around",
-            alignItems: "center",
-            flexWrap: "wrap",
+            maxWidth: "1400px",
+            display: "grid",
+            gridTemplateColumns: {
+              xs: "1fr",
+              sm: "repeat(2, 1fr)",
+              lg: "repeat(4, 1fr)",
+            },
             gap: { xs: 3, md: 4 },
           }}
         >
-          {/* WOW Brand Logo */}
+          {/* Card 1: Raw Material Sourcing */}
           <Box
             sx={{
-              flex: { xs: "1 1 120px", sm: "0 1 auto" },
+              position: "relative",
+              borderRadius: "16px",
+              overflow: "hidden",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
+              "&:hover": {
+                transform: "translateY(-8px)",
+                boxShadow: "0 8px 24px rgba(0, 0, 0, 0.15)",
+              },
+            }}
+          >
+            <Box
+              sx={{
+                position: "relative",
+                width: "100%",
+                paddingTop: "125%", // 4:5 aspect ratio
+                overflow: "hidden",
+              }}
+            >
+              <Box
+                component="img"
+                src={rawMaterialImg}
+                alt="Raw Material Sourcing"
+                sx={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  filter: "sepia(0.2)",
+                }}
+              />
+              {/* Number Circle */}
+              <Box
+                sx={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  width: "80px",
+                  height: "80px",
+                  borderRadius: "50%",
+                  backgroundColor: "#FFFFFF",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontFamily: "Jua",
+                    fontSize: "36px",
+                    fontWeight: 700,
+                    color: "#000000",
+                  }}
+                >
+                  1
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                backgroundColor: "#FFFFFF",
+                padding: "20px",
+                textAlign: "center",
+              }}
+            >
+              <Typography
+                sx={{
+                  fontFamily: "Jua",
+                  fontSize: { xs: "18px", md: "20px" },
+                  fontWeight: 600,
+                  color: "#000000",
+                }}
+              >
+                Raw Material Sourcing
+              </Typography>
+            </Box>
+          </Box>
+
+          {/* Card 2: Advanced Manufacturing */}
+          <Box
+            sx={{
+              position: "relative",
+              borderRadius: "16px",
+              overflow: "hidden",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
+              "&:hover": {
+                transform: "translateY(-8px)",
+                boxShadow: "0 8px 24px rgba(0, 0, 0, 0.15)",
+              },
+            }}
+          >
+            <Box
+              sx={{
+                position: "relative",
+                width: "100%",
+                paddingTop: "125%",
+                overflow: "hidden",
+              }}
+            >
+              <Box
+                component="img"
+                src={manufacturingImg}
+                alt="Advanced Manufacturing"
+                sx={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  filter: "sepia(0.2)",
+                }}
+              />
+              <Box
+                sx={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  width: "80px",
+                  height: "80px",
+                  borderRadius: "50%",
+                  backgroundColor: "#FFFFFF",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontFamily: "Jua",
+                    fontSize: "36px",
+                    fontWeight: 700,
+                    color: "#000000",
+                  }}
+                >
+                  2
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                backgroundColor: "#FFFFFF",
+                padding: "20px",
+                textAlign: "center",
+              }}
+            >
+              <Typography
+                sx={{
+                  fontFamily: "Jua",
+                  fontSize: { xs: "18px", md: "20px" },
+                  fontWeight: 600,
+                  color: "#000000",
+                }}
+              >
+                Advanced Manufacturing
+              </Typography>
+            </Box>
+          </Box>
+
+          {/* Card 3: Quality Control */}
+          <Box
+            sx={{
+              position: "relative",
+              borderRadius: "16px",
+              overflow: "hidden",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
+              "&:hover": {
+                transform: "translateY(-8px)",
+                boxShadow: "0 8px 24px rgba(0, 0, 0, 0.15)",
+              },
+            }}
+          >
+            <Box
+              sx={{
+                position: "relative",
+                width: "100%",
+                paddingTop: "125%",
+                overflow: "hidden",
+              }}
+            >
+              <Box
+                component="img"
+                src={qualityControlImg}
+                alt="Quality Control"
+                sx={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  filter: "sepia(0.2)",
+                }}
+              />
+              <Box
+                sx={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  width: "80px",
+                  height: "80px",
+                  borderRadius: "50%",
+                  backgroundColor: "#FFFFFF",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontFamily: "Jua",
+                    fontSize: "36px",
+                    fontWeight: 700,
+                    color: "#000000",
+                  }}
+                >
+                  3
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                backgroundColor: "#FFFFFF",
+                padding: "20px",
+                textAlign: "center",
+              }}
+            >
+              <Typography
+                sx={{
+                  fontFamily: "Jua",
+                  fontSize: { xs: "18px", md: "20px" },
+                  fontWeight: 600,
+                  color: "#000000",
+                }}
+              >
+                Quality Control
+              </Typography>
+            </Box>
+          </Box>
+
+          {/* Card 4: Packaging & Logistics */}
+          <Box
+            sx={{
+              position: "relative",
+              borderRadius: "16px",
+              overflow: "hidden",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
+              "&:hover": {
+                transform: "translateY(-8px)",
+                boxShadow: "0 8px 24px rgba(0, 0, 0, 0.15)",
+              },
+            }}
+          >
+            <Box
+              sx={{
+                position: "relative",
+                width: "100%",
+                paddingTop: "125%",
+                overflow: "hidden",
+              }}
+            >
+              <Box
+                component="img"
+                src={packagingImg}
+                alt="Packaging & Logistics"
+                sx={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  filter: "sepia(0.2)",
+                }}
+              />
+              <Box
+                sx={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  width: "80px",
+                  height: "80px",
+                  borderRadius: "50%",
+                  backgroundColor: "#FFFFFF",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontFamily: "Jua",
+                    fontSize: "36px",
+                    fontWeight: 700,
+                    color: "#000000",
+                  }}
+                >
+                  4
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                backgroundColor: "#FFFFFF",
+                padding: "20px",
+                textAlign: "center",
+              }}
+            >
+              <Typography
+                sx={{
+                  fontFamily: "Jua",
+                  fontSize: { xs: "18px", md: "20px" },
+                  fontWeight: 600,
+                  color: "#000000",
+                }}
+              >
+                Packaging & Logistics
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+
+      {/* Trusted By Section */}
+      <Box
+        sx={{
+          minHeight: "auto",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "relative",
+          zIndex: 2,
+          padding: { xs: "60px 20px", md: "80px 40px" },
+          backgroundColor: "#C17C41", // Brown background
+        }}
+      >
+        {/* Section Title */}
+        <Box
+          sx={{
+            textAlign: "center",
+            mb: { xs: 6, md: 8 },
+          }}
+        >
+          <Typography
+            sx={{
+              fontFamily: "Jua",
+              fontWeight: 700,
+              fontSize: { xs: "48px", sm: "64px", md: "72px", lg: "80px" },
+              lineHeight: "120%",
+              letterSpacing: "0%",
+              color: "#FFFFFF",
+              textAlign: "center",
+              WebkitFontSmoothing: "antialiased",
+              MozOsxFontSmoothing: "grayscale",
+            }}
+          >
+            Trusted By
+          </Typography>
+        </Box>
+
+        {/* Logos Grid - 4x3 layout */}
+        <Box
+          sx={{
+            width: "100%",
+            maxWidth: "1400px",
+            display: "grid",
+            gridTemplateColumns: {
+              xs: "repeat(2, 1fr)",
+              sm: "repeat(3, 1fr)",
+              md: "repeat(4, 1fr)",
+            },
+            gap: { xs: 3, sm: 4, md: 5 },
+            padding: { xs: "20px", sm: "30px", md: "40px" },
+          }}
+        >
+          {/* Row 1 */}
+          <Box
+            sx={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              padding: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "12px",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                transform: "translateY(-5px)",
+              },
             }}
           >
             <img
-              src={partner1}
-              alt="pajwani"
+              src={balajiLogo}
+              alt="Balaji Wafers"
               style={{
                 height: "auto",
                 width: "100%",
-                maxWidth: "220px",
+                maxWidth: "180px",
                 objectFit: "contain",
               }}
             />
@@ -876,67 +1371,460 @@ function HeroSection() {
 
           <Box
             sx={{
-              flex: { xs: "1 1 120px", sm: "0 1 auto" },
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              padding: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "12px",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                transform: "translateY(-5px)",
+              },
             }}
           >
             <img
-              src={partner2}
-              alt="bablu"
+              src={haldiramLogo}
+              alt="Haldiram's"
               style={{
                 height: "auto",
                 width: "100%",
-                maxWidth: "220px",
+                maxWidth: "180px",
                 objectFit: "contain",
               }}
             />
           </Box>
 
-          {/* Jeppy Brand Logo */}
           <Box
             sx={{
-              flex: { xs: "1 1 200px", sm: "0 1 auto" },
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              padding: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "12px",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                transform: "translateY(-5px)",
+              },
             }}
           >
             <img
-              src={partner3}
-              alt="Balaji"
+              src={shyamGLogo}
+              alt="Shyam-G"
               style={{
                 height: "auto",
                 width: "100%",
-                maxWidth: "220px",
+                maxWidth: "180px",
                 objectFit: "contain",
               }}
             />
           </Box>
 
-          {/* Pappadum Brand Logo */}
           <Box
             sx={{
-              flex: { xs: "1 1 120px", sm: "0 1 auto" },
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              padding: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "12px",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                transform: "translateY(-5px)",
+              },
             }}
           >
             <img
-              src={partner4}
-              alt="haldiram"
+              src={akashLogo}
+              alt="Aakash"
               style={{
                 height: "auto",
                 width: "100%",
-                maxWidth: "220px",
+                maxWidth: "180px",
+                objectFit: "contain",
+              }}
+            />
+          </Box>
+
+          {/* Row 2 */}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "12px",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                transform: "translateY(-5px)",
+              },
+            }}
+          >
+            <img
+              src={ghodawatLogo}
+              alt="Yellow Diamond"
+              style={{
+                height: "auto",
+                width: "100%",
+                maxWidth: "180px",
+                objectFit: "contain",
+              }}
+            />
+          </Box>
+
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "12px",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                transform: "translateY(-5px)",
+              },
+            }}
+          >
+            <img
+              src={craxLogo}
+              alt="CRAX"
+              style={{
+                height: "auto",
+                width: "100%",
+                maxWidth: "180px",
+                objectFit: "contain",
+              }}
+            />
+          </Box>
+
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "12px",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                transform: "translateY(-5px)",
+              },
+            }}
+          >
+            <img
+              src={panjwaniLogo}
+              alt="Panjwani"
+              style={{
+                height: "auto",
+                width: "100%",
+                maxWidth: "180px",
+                objectFit: "contain",
+              }}
+            />
+          </Box>
+
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "12px",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                transform: "translateY(-5px)",
+              },
+            }}
+          >
+            <img
+              src={babluLogo}
+              alt="Lacy"
+              style={{
+                height: "auto",
+                width: "100%",
+                maxWidth: "180px",
+                objectFit: "contain",
+              }}
+            />
+          </Box>
+
+          {/* Row 3 */}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "12px",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                transform: "translateY(-5px)",
+              },
+            }}
+          >
+            <img
+              src={realLogo}
+              alt="REAL Namkeen"
+              style={{
+                height: "auto",
+                width: "100%",
+                maxWidth: "180px",
+                objectFit: "contain",
+              }}
+            />
+          </Box>
+
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "12px",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                transform: "translateY(-5px)",
+              },
+            }}
+          >
+            <img
+              src={sunderLogo}
+              alt="Sunder"
+              style={{
+                height: "auto",
+                width: "100%",
+                maxWidth: "180px",
+                objectFit: "contain",
+              }}
+            />
+          </Box>
+
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "12px",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                transform: "translateY(-5px)",
+              },
+            }}
+          >
+            <img
+              src={prinitiLogo}
+              alt="Priniti"
+              style={{
+                height: "auto",
+                width: "100%",
+                maxWidth: "180px",
+                objectFit: "contain",
+              }}
+            />
+          </Box>
+
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "12px",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                transform: "translateY(-5px)",
+              },
+            }}
+          >
+            <img
+              src={craxLogo}
+              alt="Modi's"
+              style={{
+                height: "auto",
+                width: "100%",
+                maxWidth: "180px",
                 objectFit: "contain",
               }}
             />
           </Box>
         </Box>
       </Box>
+
+      {/* Shape the Future Section */}
+      <Box
+        sx={{
+          minHeight: "auto",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "relative",
+          zIndex: 2,
+          padding: { xs: "60px 20px", sm: "80px 30px", md: "100px 40px", lg: "120px 60px" },
+          backgroundColor: "#FFFFFF",
+          overflow: "hidden",
+        }}
+      >
+        {/* Scattered Pellet Images */}
+        {/* Ring Pellet - Top Left */}
+        <Box
+          component="img"
+          src={wheelPellet}
+          alt="Ring Pellet"
+          sx={{
+            position: "absolute",
+            top: { xs: "10%", md: "15%" },
+            left: { xs: "5%", md: "10%" },
+            width: { xs: "50px", md: "80px" },
+            height: "auto",
+            zIndex: 1,
+            opacity: 0.9,
+          }}
+        />
+        {/* Small Ring Pellet - Middle Left */}
+        <Box
+          component="img"
+          src={ovalPellet}
+          alt="Small Ring Pellet"
+          sx={{
+            position: "absolute",
+            top: { xs: "30%", md: "35%" },
+            left: { xs: "8%", md: "15%" },
+            width: { xs: "40px", md: "60px" },
+            height: "auto",
+            zIndex: 1,
+            opacity: 0.9,
+          }}
+        />
+        {/* Small Ridged Pellet - Bottom Left */}
+        <Box
+          component="img"
+          src={pyramidPellet}
+          alt="Small Ridged Pellet"
+          sx={{
+            position: "absolute",
+            bottom: { xs: "15%", md: "20%" },
+            left: { xs: "10%", md: "18%" },
+            width: { xs: "35px", md: "55px" },
+            height: "auto",
+            zIndex: 1,
+            opacity: 0.9,
+          }}
+        />
+        {/* Large Ridged Pellet - Top Right */}
+        <Box
+          component="img"
+          src={pennePellet}
+          alt="Large Ridged Pellet"
+          sx={{
+            position: "absolute",
+            top: { xs: "15%", md: "20%" },
+            right: { xs: "5%", md: "10%" },
+            width: { xs: "45px", md: "70px" },
+            height: "auto",
+            zIndex: 1,
+            opacity: 0.9,
+          }}
+        />
+        {/* Waffle Pellet - Bottom Right */}
+        <Box
+          component="img"
+          src={wafflePellet}
+          alt="Waffle Pellet"
+          sx={{
+            position: "absolute",
+            bottom: { xs: "20%", md: "25%" },
+            right: { xs: "8%", md: "15%" },
+            width: { xs: "50px", md: "75px" },
+            height: "auto",
+            zIndex: 1,
+            opacity: 0.9,
+          }}
+        />
+
+        {/* Main Content */}
+        <Box
+          sx={{
+            position: "relative",
+            zIndex: 2,
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: { xs: 3, sm: 4, md: 5 },
+            maxWidth: "1200px",
+            mx: "auto",
+          }}
+        >
+          {/* Main Text */}
+          <Typography
+            sx={{
+              fontFamily: "Jua",
+              fontWeight: 700,
+              fontSize: { xs: "28px", sm: "36px", md: "48px", lg: "56px", xl: "64px" },
+              lineHeight: "1.2",
+              letterSpacing: "0%",
+              color: "#000000",
+              textAlign: "center",
+              whiteSpace: { xs: "normal", sm: "nowrap" },
+              WebkitFontSmoothing: "antialiased",
+              MozOsxFontSmoothing: "grayscale",
+              px: { xs: 2, sm: 0 },
+            }}
+          >
+            Shape the future of snacking
+          </Typography>
+
+          {/* Contact Us Button */}
+          <Box
+            component="a"
+            href="/contact"
+            sx={{
+              display: "inline-block",
+              padding: { xs: "14px 40px", sm: "16px 48px", md: "18px 56px", lg: "20px 64px" },
+              borderRadius: "50px",
+              backgroundColor: "#F97316",
+              color: "#FFFFFF",
+              fontSize: { xs: "16px", sm: "18px", md: "20px", lg: "22px" },
+              fontWeight: 700,
+              fontFamily: "Jua",
+              cursor: "pointer",
+              textDecoration: "none",
+              transition: "all 0.3s ease",
+              boxShadow: "0 4px 12px rgba(249, 115, 22, 0.3)",
+              "&:hover": {
+                backgroundColor: "#ea6b0a",
+                transform: "translateY(-3px)",
+                boxShadow: "0 6px 20px rgba(249, 115, 22, 0.4)",
+              },
+            }}
+          >
+            Contact Us
+          </Box>
+        </Box>
+      </Box>
+
+      
     </Box>
   );
 }
