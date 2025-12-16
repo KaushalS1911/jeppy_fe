@@ -36,6 +36,7 @@ const SingleProduct = () => {
                 {/* Product Title Section */}
                 <Box sx={{ textAlign: "center", mb: 4 }}>
                     <Typography
+                    className="jua"
                         variant="h2"
                         sx={{
                             color: "white",

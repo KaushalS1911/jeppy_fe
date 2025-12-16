@@ -200,6 +200,7 @@ function HeroSection() {
           }}
         >
           <Typography
+            className="jua"
             sx={{
               fontFamily: "Jua",
               fontWeight: 400,
@@ -221,6 +222,7 @@ function HeroSection() {
             CRAFTING JOYFUL BITES.
           </Typography>
           <Typography
+            className="jua"
             sx={{
               fontFamily: "Jua",
               fontWeight: 400,
@@ -575,6 +577,7 @@ function HeroSection() {
           }}
         >
           <Typography
+            className="jua"
             sx={{
               fontFamily: "Jua",
               fontWeight: 400,
@@ -586,16 +589,17 @@ function HeroSection() {
                 "3px 3px 0px rgba(0, 0, 0, 0.3), 0px 6px 12px rgba(0, 0, 0, 0.4)",
               color: "#FFFFFF",
               textAlign: "center",
+              mt: { xs: 10, md: 15 },
               mb: { xs: 1, md: 2 },
               px: 2,
-              textTransform: "uppercase",
               WebkitFontSmoothing: "antialiased",
               MozOsxFontSmoothing: "grayscale",
             }}
           >
-            PIONEERS IN
+            Pioneers in
           </Typography>
           <Typography
+            className="jua"
             sx={{
               fontFamily: "Jua",
               fontWeight: 400,
@@ -608,12 +612,12 @@ function HeroSection() {
               color: "#FFFFFF",
               textAlign: "center",
               px: 2,
-              textTransform: "uppercase",
+
               WebkitFontSmoothing: "antialiased",
               MozOsxFontSmoothing: "grayscale",
             }}
           >
-            PELLET TECHNOLOGY
+            Pellet Technology
           </Typography>
         </Box>
 
@@ -674,6 +678,7 @@ function HeroSection() {
           }}
         >
           <Typography
+            className="jua"
             sx={{
               fontFamily: "Jua",
               fontWeight: 700,
@@ -690,8 +695,8 @@ function HeroSection() {
             The Industry's Most Extensive
           </Typography>
           <Typography
+            className="jua"
             sx={{
-              fontFamily: "Jua",
               fontWeight: 700,
               fontSize: { xs: "48px", sm: "64px", md: "80px", lg: "96px" },
               lineHeight: "120%",
@@ -906,7 +911,7 @@ function HeroSection() {
             sx={{
               fontFamily: "Jua",
               fontWeight: 700,
-              fontSize: { xs: "32px", sm: "40px", md: "48px", lg: "56px" },
+              fontSize: { xs: "22px", sm: "30px", md: "38px", lg: "46px" },
               lineHeight: "120%",
               letterSpacing: "0%",
               color: "#000000",
@@ -1310,6 +1315,7 @@ function HeroSection() {
           }}
         >
           <Typography
+            className="jua"
             sx={{
               fontFamily: "Jua",
               fontWeight: 700,
@@ -1680,7 +1686,12 @@ function HeroSection() {
           alignItems: "center",
           position: "relative",
           zIndex: 2,
-          padding: { xs: "60px 20px", sm: "80px 30px", md: "100px 40px", lg: "120px 60px" },
+          padding: {
+            xs: "60px 20px",
+            sm: "80px 30px",
+            md: "100px 40px",
+            lg: "120px 60px",
+          },
           backgroundColor: "#FFFFFF",
           overflow: "hidden",
         }}
@@ -1778,10 +1789,17 @@ function HeroSection() {
         >
           {/* Main Text */}
           <Typography
+            className="jua"
             sx={{
               fontFamily: "Jua",
               fontWeight: 700,
-              fontSize: { xs: "28px", sm: "36px", md: "48px", lg: "56px", xl: "64px" },
+              fontSize: {
+                xs: "28px",
+                sm: "36px",
+                md: "48px",
+                lg: "56px",
+                xl: "64px",
+              },
               lineHeight: "1.2",
               letterSpacing: "0%",
               color: "#000000",
@@ -1801,7 +1819,12 @@ function HeroSection() {
             href="/contact"
             sx={{
               display: "inline-block",
-              padding: { xs: "14px 40px", sm: "16px 48px", md: "18px 56px", lg: "20px 64px" },
+              padding: {
+                xs: "14px 40px",
+                sm: "16px 48px",
+                md: "18px 56px",
+                lg: "20px 64px",
+              },
               borderRadius: "50px",
               backgroundColor: "#F97316",
               color: "#FFFFFF",
@@ -1823,8 +1846,6 @@ function HeroSection() {
           </Box>
         </Box>
       </Box>
-
-      
     </Box>
   );
 }

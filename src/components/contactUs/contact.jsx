@@ -3,9 +3,9 @@ import {
   Box,
   Typography,
   Container,
-  Grid,
   TextField,
   Button,
+  Grid,
 } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
@@ -53,6 +53,8 @@ function Contact() {
             sx={{
               fontSize: { xs: "28px", sm: "36px", md: "42px" },
               fontWeight: 700,
+              textAlign: "center",
+              fontFamily: "Inter",
               color: "#000",
               mb: 2,
             }}
@@ -233,9 +235,16 @@ function Contact() {
 
           {/* Contact Form */}
           <Box component="form" onSubmit={handleSubmit} sx={{ width: "100%" }}>
-            <Grid container spacing={3} sx={{ mb: 3, width: "100%" }}>
-              {/* Left Column */}
-              <Grid item xs={12} md={12}>
+            {/* Row 1: Full Name and Email */}
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                gap: { xs: 3, md: 3 },
+                mb: 3,
+              }}
+            >
+              <Box sx={{ flex: 1 }}>
                 <Typography
                   sx={{
                     fontSize: "14px",
@@ -268,47 +277,9 @@ function Contact() {
                     },
                   }}
                 />
-              </Grid>
+              </Box>
 
-              <Grid item xs={12} md={6}>
-                <Typography
-                  sx={{
-                    fontSize: "14px",
-                    fontWeight: 500,
-                    color: "#333",
-                    mb: 1,
-                  }}
-                >
-                  Phone Number
-                </Typography>
-                <TextField
-                  fullWidth
-                  name="phoneNumber"
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                  placeholder="+1 (555) 123-4567"
-                  sx={{
-                    "& .MuiOutlinedInput-root": {
-                      borderRadius: "8px",
-                      backgroundColor: "#fff",
-                      "& fieldset": {
-                        borderColor: "#ddd",
-                      },
-                      "&:hover fieldset": {
-                        borderColor: "#F97316",
-                      },
-                      "&.Mui-focused fieldset": {
-                        borderColor: "#F97316",
-                      },
-                    },
-                  }}
-                />
-              </Grid>
-            </Grid>
-
-            <Grid container spacing={3} sx={{ mb: 3 }}>
-              {/* Right Column */}
-              <Grid item xs={12} md={6}>
+              <Box sx={{ flex: 1 }}>
                 <Typography
                   sx={{
                     fontSize: "14px",
@@ -342,9 +313,54 @@ function Contact() {
                     },
                   }}
                 />
-              </Grid>
+              </Box>
+            </Box>
 
-              <Grid item xs={12} md={6}>
+            {/* Row 2: Phone Number and Subject */}
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                gap: { xs: 3, md: 3 },
+                mb: 3,
+              }}
+            >
+              <Box sx={{ flex: 1 }}>
+                <Typography
+                  sx={{
+                    fontSize: "14px",
+                    fontWeight: 500,
+                    color: "#333",
+                    mb: 1,
+                  }}
+                >
+                  Phone Number
+                </Typography>
+                <TextField
+                  fullWidth
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  placeholder="+1 (555) 123-4567"
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      borderRadius: "8px",
+                      backgroundColor: "#fff",
+                      "& fieldset": {
+                        borderColor: "#ddd",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "#F97316",
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "#F97316",
+                      },
+                    },
+                  }}
+                />
+              </Box>
+
+              <Box sx={{ flex: 1 }}>
                 <Typography
                   sx={{
                     fontSize: "14px",
@@ -378,8 +394,8 @@ function Contact() {
                     },
                   }}
                 />
-              </Grid>
-            </Grid>
+              </Box>
+            </Box>
 
             {/* Message Field */}
             <Box sx={{ mb: 4 }}>

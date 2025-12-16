@@ -25,7 +25,7 @@ function Snackingvision() {
                         data-aos="fade-up"
                         sx={{
                             fontWeight: 700,
-                            fontSize: { xs: "28px", sm: "36px", md: "48px", lg: "56px" },
+                            fontSize: { xs: "22px", sm: "26px", md: "38px", lg: "46px" },
                             lineHeight: { xs: "36px", sm: "48px", md: "58px" },
                             letterSpacing: "-0.5px",
                             mb: 3,

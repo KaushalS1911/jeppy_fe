@@ -91,35 +91,15 @@ function CompanyHero() {
           />
 
           {/* Jeppy Text - Overlaying the factory */}
-          <Typography
-            data-aos="fade-up"
-            data-aos-delay="200"
-            sx={{
-              fontFamily: "Jua",
-              fontWeight: 700,
-              fontSize: { xs: "64px", sm: "84px", md: "120px", lg: "140px" },
-              lineHeight: 1,
-              color: "white",
-              textShadow:
-                "3px 3px 0px rgba(0, 0, 0, 0.3), 0px 6px 12px rgba(0, 0, 0, 0.4)",
-              position: "relative",
-              zIndex: 2,
-              mt: { xs: -4, sm: -6, md: -8, lg: -10 },
-              mb: { xs: 2, md: 3 },
-              WebkitFontSmoothing: "antialiased",
-              MozOsxFontSmoothing: "grayscale",
-            }}
-          >
-            Jeppy
-          </Typography>
 
           {/* Pioneers in Pellet Technology - Below */}
           <Typography
+            className="jua"
             data-aos="fade-up"
             data-aos-delay="400"
             sx={{
               fontWeight: 700,
-              fontSize: { xs: "28px", sm: "40px", md: "56px", lg: "64px" },
+              fontSize: { xs: "38px", sm: "50px", md: "76px", lg: "84px" },
               lineHeight: 1.2,
               color: "white",
               textAlign: "center",
@@ -128,7 +108,24 @@ function CompanyHero() {
               zIndex: 2,
             }}
           >
-            Pioneers in Pellet Technology
+            Pioneers in
+          </Typography>
+          <Typography
+            className="jua"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            sx={{
+              fontWeight: 700,
+              fontSize: { xs: "38px", sm: "50px", md: "76px", lg: "84px" },
+              lineHeight: 1.2,
+              color: "white",
+              textAlign: "center",
+              textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+              position: "relative",
+              zIndex: 2,
+            }}
+          >
+            Pellet Technology
           </Typography>
         </Box>
       </Container>

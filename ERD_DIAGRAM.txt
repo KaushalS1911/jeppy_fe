@@ -1,0 +1,180 @@
+================================================================================
+                    JEPPY DATABASE - ENTITY RELATIONSHIP DIAGRAM
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           PRODUCTS (Core Entity)                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  id (PK)                                                                     │
+│  name                                                                        │
+│  product_code (UNIQUE)                                                       │
+│  category                                                                    │
+│  type                                                                        │
+│  description                                                                 │
+│  is_active                                                                   │
+│  created_at, updated_at                                                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+         │
+         ├─────────────────────────────────────────────────────────────┐
+         │                                                               │
+         │                                                               │
+    ┌────▼──────────────────────┐                              ┌───────▼──────────────┐
+    │ product_specifications    │                              │ product_images        │
+    ├──────────────────────────┤                              ├──────────────────────┤
+    │ id (PK)                   │                              │ id (PK)               │
+    │ product_id (FK) ──────────┼──────────────────────────────┼─ product_id (FK)     │
+    │ label                     │                              │ image_url             │
+    │ value                     │                              │ image_type            │
+    │ display_order             │                              │ alt_text              │
+    │ created_at                │                              │ display_order         │
+    └──────────────────────────┘                              │ created_at            │
+                                                               └──────────────────────┘
+         │
+         │
+    ┌────▼────────────────────────────────────────────────────────────────────┐
+    │                    product_suitability_tags (Junction)                   │
+    ├─────────────────────────────────────────────────────────────────────────┤
+    │ id (PK)                                                                  │
+    │ product_id (FK) ─────────────────┐                                       │
+    │ tag_id (FK) ────────────────────┼───────────────────────────────────────┐
+    │ created_at                      │                                       │
+    └─────────────────────────────────┘                                       │
+                                                                              │
+                                                                              │
+                                                                    ┌─────────▼──────────────┐
+                                                                    │ suitability_tags        │
+                                                                    ├────────────────────────┤
+                                                                    │ id (PK)                 │
+                                                                    │ name (UNIQUE)           │
+                                                                    │ slug (UNIQUE)          │
+                                                                    │ icon_url               │
+                                                                    │ description            │
+                                                                    │ is_active              │
+                                                                    │ created_at             │
+                                                                    └────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         PROCESS STEPS                                        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  id (PK)                                                                     │
+│  step_number                                                                 │
+│  step_label                                                                  │
+│  title                                                                       │
+│  image_url                                                                   │
+│  display_order                                                               │
+│  is_active                                                                   │
+│  created_at, updated_at                                                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+         │
+         │ (1:N)
+         │
+    ┌────▼──────────────────────────────┐
+    │ process_step_points               │
+    ├──────────────────────────────────┤
+    │ id (PK)                           │
+    │ process_step_id (FK) ─────────────┼──┐
+    │ point_text                        │  │
+    │ display_order                     │  │
+    │ created_at                       │  │
+    └───────────────────────────────────┘  │
+                                          │
+                                          │
+                                          │
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         INDEPENDENT TABLES                                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────┐  ┌──────────────────────┐  ┌──────────────────────┐
+│ certifications       │  │ partners             │  │ contact_inquiries    │
+├──────────────────────┤  ├──────────────────────┤  ├──────────────────────┤
+│ id (PK)              │  │ id (PK)               │  │ id (PK)               │
+│ name                 │  │ name                  │  │ full_name             │
+│ slug (UNIQUE)        │  │ logo_url              │  │ phone_number          │
+│ image_url            │  │ website_url           │  │ email_address         │
+│ issuing_authority     │  │ description           │  │ subject               │
+│ certificate_number   │  │ display_order         │  │ message               │
+│ issue_date           │  │ is_active             │  │ status                │
+│ expiry_date          │  │ created_at, updated_at│  │ ip_address            │
+│ description          │  └──────────────────────┘  │ user_agent            │
+│ display_order        │                             │ created_at, updated_at│
+│ is_active            │                             └──────────────────────┘
+│ created_at, updated_at│
+└──────────────────────┘
+
+┌──────────────────────┐  ┌──────────────────────┐
+│ company_info         │  │ company_stats        │
+├──────────────────────┤  ├──────────────────────┤
+│ id (PK)              │  │ id (PK)               │
+│ company_name         │  │ label                 │
+│ tagline              │  │ value                 │
+│ vision               │  │ suffix                │
+│ mission              │  │ display_order         │
+│ office_address       │  │ is_active             │
+│ phone_number         │  │ created_at, updated_at│
+│ email_domestic       │  └──────────────────────┘
+│ email_international  │
+│ google_maps_embed_url│
+│ years_in_business    │
+│ created_at, updated_at│
+└──────────────────────┘
+
+
+================================================================================
+                            RELATIONSHIP SUMMARY
+================================================================================
+
+1. PRODUCTS → PRODUCT_SPECIFICATIONS (One-to-Many)
+   - One product can have multiple specifications
+   - Cascade delete: Deleting a product deletes its specifications
+
+2. PRODUCTS → PRODUCT_IMAGES (One-to-Many)
+   - One product can have multiple images (main, raw, fried, gallery)
+   - Cascade delete: Deleting a product deletes its images
+
+3. PRODUCTS ↔ SUITABILITY_TAGS (Many-to-Many)
+   - Junction table: product_suitability_tags
+   - One product can have multiple tags (Vegan, Halal, etc.)
+   - One tag can be associated with multiple products
+   - Cascade delete: Deleting a product removes its tag associations
+
+4. PROCESS_STEPS → PROCESS_STEP_POINTS (One-to-Many)
+   - One process step can have multiple bullet points
+   - Cascade delete: Deleting a step deletes its points
+
+5. INDEPENDENT TABLES (No Foreign Keys)
+   - certifications
+   - partners
+   - contact_inquiries
+   - company_info (single record)
+   - company_stats
+
+
+================================================================================
+                            INDEXES SUMMARY
+================================================================================
+
+All tables have indexes on:
+- Primary Keys (automatic)
+- Foreign Keys
+- Frequently queried columns (category, type, status, is_active, display_order)
+- Unique columns (product_code, slug, email_address)
+
+
+================================================================================
+                            DATA TYPES SUMMARY
+================================================================================
+
+- IDs: INT/SERIAL (Auto-increment)
+- Text: VARCHAR(255-500) for short text, TEXT for long content
+- Dates: DATE for dates, TIMESTAMP for date-time
+- Booleans: BOOLEAN (is_active, etc.)
+- Enums: ENUM types for status, image_type (MySQL) or custom types (PostgreSQL)
+
+
+================================================================================
+
+
+
+
+

@@ -12,22 +12,25 @@ function ProcessHero() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        py: { xs: 6, md: 8 },
+        pt: { xs: 10, md: 22 },
+        pb: { xs: 6, md: 8 },
       }}
     >
       <Container maxWidth="xl">
         <Typography
-          className="monserrat"
+          className="jua"
           data-aos="fade-up"
           sx={{
             fontWeight: 700,
-            fontSize: { xs: "32px", sm: "48px", md: "64px", lg: "72px" },
+            fontSize: { xs: "42px", sm: "58px", md: "74px", lg: "82px" },
             lineHeight: 1.2,
             color: "white",
             textAlign: "center",
+            width: "60%",
+            mx: "auto",
           }}
         >
-          We turn your snacking vision into reality.
+          We turn your snacking vision into reality
         </Typography>
       </Container>
     </Box>
@@ -35,5 +38,3 @@ function ProcessHero() {
 }
 
 export default ProcessHero;
-
-

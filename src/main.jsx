@@ -4,11 +4,14 @@ import App from './App.jsx'
 import {BrowserRouter} from "react-router-dom";
 import {ThemeProvider} from "@mui/material";
 import theme from "./components/global/them/them.js";
+import {AuthProvider} from "./context/AuthContext.jsx";
 
 createRoot(document.getElementById('root')).render(
     <BrowserRouter>
         <ThemeProvider theme={theme}>
-            <App/>
+            <AuthProvider>
+                <App/>
+            </AuthProvider>
         </ThemeProvider>
     </BrowserRouter>,
 )
