@@ -1,12 +1,9 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-// Import pellet images
-import pennePellet from "../../assets/images/home/heroSection/png/2D PENNE.png";
-import wafflePellet from "../../assets/images/home/heroSection/png/2D Potato_0633.png";
-import pyramidPellet from "../../assets/images/home/heroSection/png/3D_0569.png";
-import wheelPellet from "../../assets/images/home/heroSection/png/2D_0565.png";
-import ovalPellet from "../../assets/images/home/heroSection/png/2D_0578.png";
+// Import Contact Us Bar floating images
+import contactBarImg1 from "../../assets/Contact Us Bar/2D SQUARE CHIPS.png";
+import contactBarImg2 from "../../assets/Contact Us Bar/2D_0581.png";
 
 const ShapeFuture = () => {
   return (
@@ -29,80 +26,38 @@ const ShapeFuture = () => {
         overflow: "hidden",
       }}
     >
-      {/* Scattered Pellet Images */}
-      {/* Ring Pellet - Top Left */}
+      {/* Floating Images (only 2) */}
+      {/* Left Image */}
       <Box
         component="img"
-        src={wheelPellet}
-        alt="Ring Pellet"
+        src={contactBarImg1}
+        alt="Decorative snack shape left"
         sx={{
           position: "absolute",
-          top: { xs: "10%", md: "15%" },
+          top: { xs: "22%", md: "50%" },
           left: { xs: "5%", md: "10%" },
-          width: { xs: "50px", md: "80px" },
+          transform: { xs: "none", md: "translateY(-50%)" },
+          width: { xs: "70px", sm: "90px", md: "130px" },
           height: "auto",
           zIndex: 1,
-          opacity: 0.9,
+          opacity: 0.95,
         }}
       />
-      {/* Small Ring Pellet - Middle Left */}
+
+      {/* Right Image */}
       <Box
         component="img"
-        src={ovalPellet}
-        alt="Small Ring Pellet"
+        src={contactBarImg2}
+        alt="Decorative snack shape right"
         sx={{
           position: "absolute",
-          top: { xs: "30%", md: "35%" },
-          left: { xs: "8%", md: "15%" },
-          width: { xs: "40px", md: "60px" },
-          height: "auto",
-          zIndex: 1,
-          opacity: 0.9,
-        }}
-      />
-      {/* Small Ridged Pellet - Bottom Left */}
-      <Box
-        component="img"
-        src={pyramidPellet}
-        alt="Small Ridged Pellet"
-        sx={{
-          position: "absolute",
-          bottom: { xs: "15%", md: "20%" },
-          left: { xs: "10%", md: "18%" },
-          width: { xs: "35px", md: "55px" },
-          height: "auto",
-          zIndex: 1,
-          opacity: 0.9,
-        }}
-      />
-      {/* Large Ridged Pellet - Top Right */}
-      <Box
-        component="img"
-        src={pennePellet}
-        alt="Large Ridged Pellet"
-        sx={{
-          position: "absolute",
-          top: { xs: "15%", md: "20%" },
+          top: { xs: "20%", md: "50%" },
           right: { xs: "5%", md: "10%" },
-          width: { xs: "45px", md: "70px" },
+          transform: { xs: "none", md: "translateY(-50%)" },
+          width: { xs: "70px", sm: "90px", md: "130px" },
           height: "auto",
           zIndex: 1,
-          opacity: 0.9,
-        }}
-      />
-      {/* Waffle Pellet - Bottom Right */}
-      <Box
-        component="img"
-        src={wafflePellet}
-        alt="Waffle Pellet"
-        sx={{
-          position: "absolute",
-          bottom: { xs: "20%", md: "25%" },
-          right: { xs: "8%", md: "15%" },
-          width: { xs: "50px", md: "75px" },
-          height: "auto",
-          zIndex: 1,
-          opacity: 0.9,
+          opacity: 0.95,
         }}
       />
 

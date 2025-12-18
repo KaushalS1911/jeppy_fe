@@ -6,30 +6,32 @@ import "swiper/css/autoplay";
 
 import { Autoplay } from "swiper/modules";
 
-import image1 from "../../assets/images/home/ourParteners/akash.PNG";
-import image2 from "../../assets/images/home/ourParteners/Bablu.PNG";
-import image3 from "../../assets/images/home/ourParteners/balaji.PNG";
-import image4 from "../../assets/images/home/ourParteners/crax.PNG";
-import image5 from "../../assets/images/home/ourParteners/ghodawat-foods.PNG";
-import image6 from "../../assets/images/home/ourParteners/haldiram.PNG";
-import image7 from "../../assets/images/home/ourParteners/panjwani.PNG";
-import image8 from "../../assets/images/home/ourParteners/priniti.PNG";
-import image9 from "../../assets/images/home/ourParteners/real.PNG";
-import image10 from "../../assets/images/home/ourParteners/shyam-g.PNG";
-import image11 from "../../assets/images/home/ourParteners/Sunder.PNG";
+import slide1 from "../../assets/images/home/success brands/Slide1.png";
+import slide2 from "../../assets/images/home/success brands/Slide2.PNG";
+import slide3 from "../../assets/images/home/success brands/Slide3.PNG";
+import slide4 from "../../assets/images/home/success brands/Slide4.PNG";
+import slide5 from "../../assets/images/home/success brands/Slide5.PNG";
+import slide6 from "../../assets/images/home/success brands/Slide6.PNG";
+import slide7 from "../../assets/images/home/success brands/Slide7.PNG";
+import slide8 from "../../assets/images/home/success brands/Slide8.PNG";
+import slide9 from "../../assets/images/home/success brands/Slide9.PNG";
+import slide10 from "../../assets/images/home/success brands/Slide10.PNG";
+import slide11 from "../../assets/images/home/success brands/Slide11.PNG";
+import slide12 from "../../assets/images/home/success brands/Slide12.PNG";
 
 const images = [
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image6,
-  image7,
-  image8,
-  image9,
-  image10,
-  image11,
+  slide1,
+  slide2,
+  slide3,
+  slide4,
+  slide5,
+  slide6,
+  slide7,
+  slide8,
+  slide9,
+  slide10,
+  slide11,
+  slide12,
 ];
 
 function OurPartners() {

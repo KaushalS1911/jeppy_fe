@@ -35,6 +35,13 @@ import pyramidPellet from "../../assets/images/home/heroSection/png/3D_0569.png"
 import wheelPellet from "../../assets/images/home/heroSection/png/2D_0565.png";
 import ovalPellet from "../../assets/images/home/heroSection/png/2D_0578.png";
 
+// Pioneers in Tech floating images
+import pioneerTech1 from "../../assets/images/home/Pioneers in Tech/M_S_5481.png";
+import pioneerTech2 from "../../assets/images/home/Pioneers in Tech/M_S_5497.png";
+import pioneerTech3 from "../../assets/images/home/Pioneers in Tech/M_S_5512.png";
+import pioneerTech4 from "../../assets/images/home/Pioneers in Tech/M_S_5518.png";
+import pioneerTech5 from "../../assets/images/home/Pioneers in Tech/M_S_5525.png";
+
 import factoryBuilding from "../../assets/images/home/heroSection/factory.png";
 
 // Import quality process images
@@ -472,7 +479,7 @@ function HeroSection() {
         {/* Penne Pellet - Top Left */}
         <Box
           component="img"
-          src={pennePellet}
+          src={pioneerTech1}
           alt="Penne Pellet"
           sx={{
             position: "absolute",
@@ -488,7 +495,7 @@ function HeroSection() {
         {/* Waffle Pellet - Top Right */}
         <Box
           component="img"
-          src={wafflePellet}
+          src={pioneerTech2}
           alt="Waffle Pellet"
           sx={{
             position: "absolute",
@@ -504,7 +511,7 @@ function HeroSection() {
         {/* Pyramid Pellet - Bottom Left */}
         <Box
           component="img"
-          src={pyramidPellet}
+          src={pioneerTech3}
           alt="Pyramid Pellet"
           sx={{
             position: "absolute",
@@ -520,7 +527,7 @@ function HeroSection() {
         {/* Wheel Pellet - Bottom Right */}
         <Box
           component="img"
-          src={wheelPellet}
+          src={pioneerTech4}
           alt="Wheel Pellet"
           sx={{
             position: "absolute",
@@ -536,7 +543,7 @@ function HeroSection() {
         {/* Oval Pellet - Middle Left */}
         <Box
           component="img"
-          src={ovalPellet}
+          src={pioneerTech5}
           alt="Oval Pellet"
           sx={{
             position: "absolute",
@@ -552,7 +559,7 @@ function HeroSection() {
         {/* Additional Pellet - Middle Right */}
         <Box
           component="img"
-          src={pennePellet}
+          src={pioneerTech1}
           alt="Penne Pellet"
           sx={{
             position: "absolute",

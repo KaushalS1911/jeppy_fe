@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container, Typography } from "@mui/material";
 import "aos/dist/aos.css";
-import wafflePellet from "../../assets/images/home/heroSection/png/2D Potato_0633.png";
+import wafflePellet from "../../assets/company/2D_0671.png";
 
 function CompanyWhoWeAre() {
   return (
@@ -40,13 +40,12 @@ function CompanyWhoWeAre() {
           data-aos="fade-up"
         >
           <Typography
+            className="monserrat"
             sx={{
               fontSize: { xs: "28px", sm: "32px", md: "36px" },
               color: "#F97316",
               fontWeight: 700,
               mb: 4,
-              fontFamily: "Inter",
-              textAlign: "center",
             }}
           >
             Who We Are?
@@ -58,7 +57,6 @@ function CompanyWhoWeAre() {
               color: "#000000",
               fontWeight: 400,
               mb: 3,
-              textAlign: "center",
             }}
           >
             At Jayant Snacks and Beverages Pvt. Ltd., we've been shaping the
@@ -73,7 +71,6 @@ function CompanyWhoWeAre() {
               lineHeight: { xs: "26px", sm: "30px", md: "36px" },
               color: "#000000",
               fontWeight: 400,
-              textAlign: "center",
             }}
           >
             With 40+ years of expertise, we've mastered the art of creating

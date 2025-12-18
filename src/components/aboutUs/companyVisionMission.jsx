@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Container, Typography, Grid } from "@mui/material";
 import "aos/dist/aos.css";
-import wheelPellet from "../../assets/images/home/heroSection/png/2D_0565.png";
-import wafflePellet from "../../assets/images/home/heroSection/png/2D Potato_0633.png";
+import wheelPellet from "../../assets/company/2D_0565.png";
+import wafflePellet from "../../assets/company/2D_0671.png";
 
 const visionMissionData = [
   {

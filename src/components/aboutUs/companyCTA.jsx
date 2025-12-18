@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Typography, Container, Button, useTheme } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import wheelPellet from "../../assets/images/home/heroSection/png/2D_0565.png";
-import pennePellet from "../../assets/images/home/heroSection/png/2D PENNE.png";
-import pyramidPellet from "../../assets/images/home/heroSection/png/3D_0569.png";
+import wheelPellet from "../../assets/company/2D_0565.png";
+import pennePellet from "../../assets/company/2D_0638.png";
+import pyramidPellet from "../../assets/company/3D_0571.png";
 
 const CompanyCTA = () => {
   const theme = useTheme();
@@ -89,7 +89,13 @@ const CompanyCTA = () => {
           sx={{
             fontFamily: "Jua",
             fontWeight: 700,
-            fontSize: { xs: "28px", sm: "36px", md: "48px", lg: "56px", xl: "64px" },
+            fontSize: {
+              xs: "28px",
+              sm: "36px",
+              md: "48px",
+              lg: "56px",
+              xl: "64px",
+            },
             lineHeight: "1.2",
             letterSpacing: "0%",
             color: "#000000",
@@ -107,7 +113,12 @@ const CompanyCTA = () => {
         <Button
           onClick={() => navigate("/contact")}
           sx={{
-            padding: { xs: "14px 40px", sm: "16px 48px", md: "18px 56px", lg: "20px 64px" },
+            padding: {
+              xs: "14px 40px",
+              sm: "16px 48px",
+              md: "18px 56px",
+              lg: "20px 64px",
+            },
             borderRadius: "50px",
             backgroundColor: "#F97316",
             color: "#FFFFFF",
@@ -132,6 +143,3 @@ const CompanyCTA = () => {
 };
 
 export default CompanyCTA;
-
-
-

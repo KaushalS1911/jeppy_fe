@@ -2,10 +2,10 @@ import React from "react";
 import { Box, Typography, Container, Grid, useTheme } from "@mui/material";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import pennePellet from "../../assets/images/home/heroSection/png/2D PENNE.png";
-import wheelPellet from "../../assets/images/home/heroSection/png/2D_0565.png";
-import pyramidPellet from "../../assets/images/home/heroSection/png/3D_0569.png";
-import wafflePellet from "../../assets/images/home/heroSection/png/2D Potato_0633.png";
+import pennePellet from "../../assets/company/2D_0638.png";
+import wheelPellet from "../../assets/company/2D_0565.png";
+import pyramidPellet from "../../assets/company/3D_0571.png";
+import wafflePellet from "../../assets/company/2D_0671.png";
 
 const stats = [
   { value: "150", suffix: "+", label: "Shapes" },
@@ -158,7 +158,12 @@ function CompanyStats() {
                     <Typography
                       variant="h3"
                       sx={{
-                        fontSize: { xs: "32px", sm: "40px", md: "48px", lg: "56px" },
+                        fontSize: {
+                          xs: "32px",
+                          sm: "40px",
+                          md: "48px",
+                          lg: "56px",
+                        },
                         fontWeight: 700,
                         color: "#F97316",
                       }}
@@ -191,4 +196,3 @@ function CompanyStats() {
 }
 
 export default CompanyStats;
-

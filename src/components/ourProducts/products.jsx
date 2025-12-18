@@ -28,13 +28,7 @@ const categoryImageMap = {
   SHEETED: imgSheeted,
 };
 
-// Get unique categories from productsData
-const getUniqueCategories = () => {
-  const categories = new Set(productsData.map((product) => product.category));
-  return ["All", ...Array.from(categories).sort()];
-};
-
-// Get unique suitability options from productsData
+// Get unique suitability options from productsData (for dropdown)
 const getUniqueSuitability = () => {
   const suitabilitySet = new Set();
   productsData.forEach((product) => {
@@ -57,9 +51,18 @@ const getProductImage = (product) => {
   return categoryImageMap[product.category] || img2d;
 };
 
-const categories = getUniqueCategories();
 const suitabilityOptions = getUniqueSuitability();
 const typeOptions = getUniqueTypes();
+
+// Products page nav items (All + 5 values)
+const suitabilityNavItems = [
+  "All",
+  "Cereal Based",
+  "Potato Based",
+  "Millet Pellets",
+  "Lentil Pellets",
+  "Low Sodium",
+];
 
 const productData = productsData.map((product) => ({
   id: product.id,
@@ -73,7 +76,6 @@ const productData = productsData.map((product) => ({
 }));
 
 const Products = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [typeFilter, setTypeFilter] = useState("");
   const [preferenceFilter, setPreferenceFilter] = useState("");
@@ -81,10 +83,6 @@ const Products = () => {
 
   const filteredProducts = useMemo(() => {
     return productData.filter((product) => {
-      // Category filter
-      const categoryMatch =
-        activeCategory === "All" || product.category === activeCategory;
-
       // Enhanced search filter - search across name, type, description, and product code
       const searchLower = searchTerm.toLowerCase();
       const searchMatch =
@@ -109,14 +107,14 @@ const Products = () => {
               item.toLowerCase().includes(preferenceFilter.toLowerCase())
           ));
 
-      return categoryMatch && searchMatch && typeMatch && preferenceMatch;
+      return searchMatch && typeMatch && preferenceMatch;
     });
-  }, [activeCategory, searchTerm, typeFilter, preferenceFilter]);
+  }, [searchTerm, typeFilter, preferenceFilter]);
 
   // Reset showAll when filters change
   useEffect(() => {
     setShowAll(false);
-  }, [activeCategory, searchTerm, typeFilter, preferenceFilter]);
+  }, [searchTerm, typeFilter, preferenceFilter]);
 
   // Display only 8 products initially, or all if showAll is true
   const displayedProducts = showAll
@@ -189,44 +187,57 @@ const Products = () => {
             width: "100%",
           }}
         >
-          {/* Category Buttons */}
+          {/* Suitability Nav Items (single navbar) */}
           <Box
             display="flex"
             justifyContent="center"
             flexWrap="wrap"
-            gap={{ xs: 1.5, sm: 2 }}
+            gap={{ xs: 1.25, sm: 1.5 }}
             mb={{ xs: 4, md: 5 }}
             sx={{
               overflowX: { xs: "auto", md: "visible" },
               pb: { xs: 1, md: 0 },
             }}
           >
-            {categories.map((category) => (
-              <Button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                sx={{
-                  backgroundColor:
-                    activeCategory === category ? "#F97316" : "transparent",
-                  color: activeCategory === category ? "white" : "#666",
-                  textTransform: "none",
-                  fontWeight: activeCategory === category ? 600 : 500,
-                  borderRadius: "10px",
-                  px: { xs: 2.5, md: 3.5 },
-                  py: { xs: 1, md: 1.25 },
-                  whiteSpace: "nowrap",
-                  minWidth: "auto",
-                  fontSize: { xs: "14px", md: "15px" },
-                  transition: "all 0.2s ease",
-                  "&:hover": {
-                    backgroundColor:
-                      activeCategory === category ? "#F97316" : "#f5f5f5",
-                  },
-                }}
-              >
-                {category}
-              </Button>
-            ))}
+            {suitabilityNavItems.map((label) => {
+              const isAll = label === "All";
+              const isActive = isAll
+                ? !preferenceFilter
+                : preferenceFilter.toLowerCase() === label.toLowerCase();
+
+              return (
+                <Button
+                  key={label}
+                  onClick={() =>
+                    setPreferenceFilter((prev) => {
+                      if (isAll) return "";
+                      return prev.toLowerCase() === label.toLowerCase()
+                        ? ""
+                        : label;
+                    })
+                  }
+                  sx={{
+                    backgroundColor: isActive ? "#F97316" : "#F5F0E8",
+                    color: isActive ? "white" : "#000",
+                    textTransform: "none",
+                    fontWeight: isActive ? 600 : 500,
+                    borderRadius: "999px",
+                    px: { xs: 2, md: 2.5 },
+                    py: { xs: 0.85, md: 1 },
+                    whiteSpace: "nowrap",
+                    minWidth: "auto",
+                    fontSize: { xs: "13px", md: "14px" },
+                    border: "1px solid rgba(0, 0, 0, 0.08)",
+                    transition: "all 0.2s ease",
+                    "&:hover": {
+                      backgroundColor: isActive ? "#F97316" : "#efe6db",
+                    },
+                  }}
+                >
+                  {label}
+                </Button>
+              );
+            })}
           </Box>
 
           {/* Search and Filters Row */}
@@ -368,10 +379,10 @@ const Products = () => {
                 </Select>
               </FormControl>
 
-              {/* Preference Dropdown */}
+              {/* Suitability Dropdown */}
               <FormControl
                 sx={{
-                  minWidth: { xs: "48%", sm: 150 },
+                  minWidth: { xs: "48%", sm: 170 },
                   "& .MuiInputBase-root": {
                     height: "48px",
                   },
@@ -390,6 +401,7 @@ const Products = () => {
                         backgroundColor: "#F5F0E8",
                         boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
                         border: "1px solid rgba(0, 0, 0, 0.08)",
+                        maxHeight: 300,
                         "& .MuiMenuItem-root": {
                           fontSize: "15px",
                           py: 1.5,
@@ -437,7 +449,7 @@ const Products = () => {
                   }}
                 >
                   <MenuItem value="" sx={{ color: "#000" }}>
-                    Preference
+                    Suitability
                   </MenuItem>
                   {suitabilityOptions.map((option) => (
                     <MenuItem

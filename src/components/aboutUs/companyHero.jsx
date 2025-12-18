@@ -2,9 +2,10 @@ import React from "react";
 import { Box, Container, Typography } from "@mui/material";
 import "aos/dist/aos.css";
 import factoryImg from "../../assets/images/home/heroSection/factory.png";
-import pennePellet from "../../assets/images/home/heroSection/png/2D PENNE.png";
-import wheelPellet from "../../assets/images/home/heroSection/png/2D_0565.png";
-import pyramidPellet from "../../assets/images/home/heroSection/png/3D_0569.png";
+import pennePellet from "../../assets/company/2D_0638.png";
+import wheelPellet from "../../assets/company/2D_0565.png";
+import pyramidPellet from "../../assets/company/3D_0571.png";
+import wafflePellet from "../../assets/company/2D_0671.png";
 
 function CompanyHero() {
   return (
@@ -29,9 +30,11 @@ function CompanyHero() {
           position: "absolute",
           top: { xs: "10%", md: "15%" },
           left: { xs: "5%", md: "8%" },
-          width: { xs: "50px", md: "80px" },
+          width: { xs: "70px", md: "110px" },
           height: "auto",
-          opacity: 0.3,
+          opacity: 0.55,
+          filter: "brightness(1.12) saturate(1.1)",
+          dropShadow: "0 10px 18px rgba(0,0,0,0.18)",
           zIndex: 1,
         }}
       />
@@ -43,9 +46,11 @@ function CompanyHero() {
           position: "absolute",
           top: { xs: "20%", md: "25%" },
           right: { xs: "5%", md: "10%" },
-          width: { xs: "40px", md: "60px" },
+          width: { xs: "60px", md: "95px" },
           height: "auto",
-          opacity: 0.3,
+          opacity: 0.55,
+          filter: "brightness(1.12) saturate(1.1)",
+          dropShadow: "0 10px 18px rgba(0,0,0,0.18)",
           zIndex: 1,
         }}
       />
@@ -57,9 +62,27 @@ function CompanyHero() {
           position: "absolute",
           bottom: { xs: "15%", md: "20%" },
           right: { xs: "8%", md: "12%" },
-          width: { xs: "45px", md: "70px" },
+          width: { xs: "65px", md: "105px" },
           height: "auto",
-          opacity: 0.3,
+          opacity: 0.55,
+          filter: "brightness(1.12) saturate(1.1)",
+          dropShadow: "0 10px 18px rgba(0,0,0,0.18)",
+          zIndex: 1,
+        }}
+      />
+      <Box
+        component="img"
+        src={wafflePellet}
+        alt="Waffle Pellet"
+        sx={{
+          position: "absolute",
+          bottom: { xs: "12%", md: "18%" },
+          left: { xs: "8%", md: "12%" },
+          width: { xs: "65px", md: "105px" },
+          height: "auto",
+          opacity: 0.55,
+          filter: "brightness(1.12) saturate(1.1)",
+          dropShadow: "0 10px 18px rgba(0,0,0,0.18)",
           zIndex: 1,
         }}
       />
